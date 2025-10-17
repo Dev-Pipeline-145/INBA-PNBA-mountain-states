@@ -1,0 +1,88 @@
+// Base: Typography
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+  font-weight: $weight-black;
+  line-height: 1.1;
+  color: $text-primary;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: $spacing-md;
+}
+
+h1 {
+  font-size: 36px;
+  
+  @include tablet {
+    font-size: 48px;
+  }
+  
+  @include desktop {
+    font-size: 56px;
+  }
+}
+
+h2 {
+  font-size: 32px;
+  
+  @include tablet {
+    font-size: 40px;
+  }
+  
+  @include desktop {
+    font-size: 44px;
+  }
+}
+
+h3 {
+  font-size: 24px;
+  
+  @include tablet {
+    font-size: 28px;
+  }
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: $weight-bold;
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: $weight-medium;
+}
+
+h6 {
+  font-size: 16px;
+  font-weight: $weight-medium;
+}
+
+p {
+  margin-bottom: $spacing-md;
+  line-height: 1.7;
+}
+
+// Text utilities
+.text-primary {
+  color: $text-primary;
+}
+
+.text-secondary {
+  color: $text-secondary;
+}
+
+.text-muted {
+  color: $text-muted;
+}
+
+.text-cyan {
+  color: $primary-cyan;
+  @include text-glow();
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
