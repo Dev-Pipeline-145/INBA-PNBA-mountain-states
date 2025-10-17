@@ -1,0 +1,148 @@
+// INBA/PNBA Mountain States - SCSS Mixins
+// Reusable mixins for common patterns
+
+// Media Queries
+@mixin mobile {
+  @media (min-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin wide {
+  @media (min-width: $wide) {
+    @content;
+  }
+}
+
+// Flexbox utilities
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Button styles
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-sm $spacing-lg;
+  border: none;
+  border-radius: $radius-sm;
+  font-family: $font-primary;
+  font-weight: $font-medium;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all $transition-normal;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-glow;
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+@mixin button-primary {
+  @include button-base;
+  background: $gradient-primary;
+  color: $text-primary;
+  
+  &:hover {
+    background: linear-gradient(135deg, lighten($primary-cyan, 10%) 0%, lighten($primary-purple, 10%) 100%);
+  }
+}
+
+@mixin button-secondary {
+  @include button-base;
+  background: transparent;
+  color: $primary-cyan;
+  border: 2px solid $primary-cyan;
+  
+  &:hover {
+    background: $primary-cyan;
+    color: $dark-bg;
+  }
+}
+
+// Card styles
+@mixin card-base {
+  background: $dark-surface;
+  border: 1px solid $dark-border;
+  border-radius: $radius-md;
+  padding: $spacing-xl;
+  box-shadow: $shadow-md;
+  transition: all $transition-normal;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+    border-color: $primary-cyan;
+  }
+}
+
+// Typography
+@mixin heading-base {
+  font-family: $font-primary;
+  font-weight: $font-black;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 $spacing-lg 0;
+}
+
+@mixin text-glow {
+  text-shadow: 0 0 10px currentColor;
+}
+
+// Container
+@mixin container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+  
+  @include tablet {
+    padding: 0 $spacing-xl;
+  }
+}
+
+// Grid
+@mixin grid($columns: 1, $gap: $spacing-lg) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+  
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include desktop {
+    grid-template-columns: repeat($columns, 1fr);
+  }
+}

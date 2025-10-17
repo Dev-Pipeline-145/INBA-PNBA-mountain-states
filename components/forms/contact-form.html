@@ -1,0 +1,35 @@
+<div class="contact-form">
+    <h3 class="contact-form__title">Send us a Message</h3>
+    <form class="form" id="contactForm">
+        <div class="form-group">
+            <label for="name" class="form-label">Full Name *</label>
+            <input type="text" id="name" name="name" class="form-input" required>
+        </div>
+        <div class="form-group">
+            <label for="email" class="form-label">Email Address *</label>
+            <input type="email" id="email" name="email" class="form-input" required>
+        </div>
+        <div class="form-group">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" id="phone" name="phone" class="form-input">
+        </div>
+        <div class="form-group">
+            <label for="subject" class="form-label">Subject *</label>
+            <select id="subject" name="subject" class="form-select" required>
+                <option value="">Select a subject</option>
+                <option value="competition">Competition Registration</option>
+                <option value="coaching">Coaching Services</option>
+                <option value="general">General Question</option>
+                <option value="sponsorship">Sponsorship</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="message" class="form-label">Message *</label>
+            <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn--primary btn--lg">Send Message</button>
+        </div>
+    </form>
+</div>
