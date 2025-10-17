@@ -1,0 +1,54 @@
+// Abstracts: Variables - DARK MODE
+// Primary Colors
+$primary-cyan: #00FFFF;              // Cyan/Aqua - Primary
+$primary-dark: #00B8B8;              // Darker cyan
+$primary-light: #5AFFFF;             // Lighter cyan
+
+// Secondary Colors
+$secondary-purple: #9D4EDD;          // Purple - Secondary
+$secondary-dark: #7B2CBF;            // Darker purple
+$secondary-light: #C77DFF;           // Lighter purple
+
+// Dark Mode Colors
+$bg-dark: #0a0a0a;                   // Deep black background
+$bg-dark-secondary: #141414;         // Secondary dark
+$bg-dark-elevated: #1e1e1e;          // Elevated elements
+$bg-dark-card: #1a1a1a;              // Card backgrounds
+
+// Text Colors
+$text-primary: #ffffff;              // Primary text
+$text-secondary: #b0b0b0;            // Secondary text
+$text-muted: #808080;                // Muted text
+
+// Border Colors
+$border-dark: #2a2a2a;               // Subtle borders
+$border-medium: #404040;             // Medium borders
+
+// Accent Colors
+$success: #00ff88;                   // Bright green
+$accent-gold: #ffd700;               // Gold
+$accent-pink: #FF006E;               // Hot pink accent
+
+// Spacing
+$spacing-xs: 8px;
+$spacing-sm: 16px;
+$spacing-md: 24px;
+$spacing-lg: 32px;
+$spacing-xl: 48px;
+$spacing-xxl: 64px;
+
+// Typography
+$font-heading: 'Montserrat', sans-serif;
+$font-body: 'Roboto', sans-serif;
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-bold: 700;
+$weight-black: 900;
+
+// Breakpoints
+$breakpoint-mobile: 320px;
+$breakpoint-mobile-lg: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-desktop-lg: 1280px;
+$breakpoint-desktop-xl: 1440px;
