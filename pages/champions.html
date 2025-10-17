@@ -19,34 +19,34 @@
     <header class="header">
         <nav class="nav">
             <div class="nav__brand">
-                <a href="../index.html">
-                    <img class="nav__logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='Montserrat' font-size='24' font-weight='900' fill='%2300FFFF'%3EINBA/PNBA%3C/text%3E%3Ctext x='10' y='55' font-family='Roboto' font-size='12' fill='%23b0b0b0'%3EMountain States%3C/text%3E%3C/svg%3E" alt="INBA/PNBA Mountain States">
-                </a>
+                <img class="nav__logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='Montserrat' font-size='24' font-weight='900' fill='%2300FFFF'%3EINBA/PNBA%3C/text%3E%3Ctext x='10' y='55' font-family='Roboto' font-size='12' fill='%23b0b0b0'%3EMountain States%3C/text%3E%3C/svg%3E" alt="INBA/PNBA Mountain States">
             </div>
-            <button class="nav__toggle" id="navToggle">
+            <button class="nav__toggle" aria-label="Toggle navigation" id="navToggle">
                 <span class="nav__toggle-line"></span>
                 <span class="nav__toggle-line"></span>
                 <span class="nav__toggle-line"></span>
             </button>
-            <ul class="nav__menu" id="navMenu">
-                <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
-                <li class="nav__item nav__item--dropdown" id="showsDropdown">
-                    <a href="#" class="nav__link">Shows</a>
-                    <ul class="nav__dropdown">
-                        <li class="nav__dropdown-item"><a href="shows.html" class="nav__link">All Shows</a></li>
-                        <li class="nav__dropdown-item"><a href="shows.html#utah-state-naturals" class="nav__link">Utah State Naturals</a></li>
-                        <li class="nav__dropdown-item"><a href="shows.html#colorado-rapids" class="nav__link">Colorado Rapids</a></li>
-                        <li class="nav__dropdown-item"><a href="shows.html#red-rock-classic" class="nav__link">Red Rock Classic</a></li>
-                        <li class="nav__dropdown-item"><a href="shows.html#night-of-champions" class="nav__link">Night of Champions</a></li>
-                    </ul>
-                </li>
-                <li class="nav__item"><a href="champions.html" class="nav__link">Champions</a></li>
-                <li class="nav__item"><a href="results.html" class="nav__link">Results</a></li>
-                <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
-                <li class="nav__item nav__cta">
-                    <a href="contact.html" class="btn btn--primary">Register Now</a>
-                </li>
-            </ul>
+            <div class="nav__menu" id="navMenu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item nav__item--dropdown" id="showsDropdown">
+                        <a href="shows.html" class="nav__link">Shows</a>
+                        <ul class="nav__dropdown">
+                            <li class="nav__dropdown-item"><a href="shows.html" class="nav__link">All Shows</a></li>
+                            <li class="nav__dropdown-item"><a href="shows.html#utah-state-naturals" class="nav__link">Utah State Naturals</a></li>
+                            <li class="nav__dropdown-item"><a href="shows.html#colorado-rapids" class="nav__link">Colorado Rapids</a></li>
+                            <li class="nav__dropdown-item"><a href="shows.html#red-rock-classic" class="nav__link">Red Rock Classic</a></li>
+                            <li class="nav__dropdown-item"><a href="shows.html#night-of-champions" class="nav__link">Night of Champions</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item"><a href="champions.html" class="nav__link">Champions</a></li>
+                    <li class="nav__item"><a href="results.html" class="nav__link">Results</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                    <li class="nav__item nav__cta">
+                        <a href="contact.html#register" class="btn btn--primary">Register Now</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -324,41 +324,40 @@
             <div class="footer__main">
                 <div class="footer__brand">
                     <img class="footer__logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='Montserrat' font-size='24' font-weight='900' fill='%2300FFFF'%3EINBA/PNBA%3C/text%3E%3Ctext x='10' y='55' font-family='Roboto' font-size='12' fill='%23b0b0b0'%3EMountain States%3C/text%3E%3C/svg%3E" alt="INBA/PNBA Mountain States">
-                    <p class="footer__brand-text">Promoting natural bodybuilding excellence across the Mountain States region. Drug-free competition, world-class athletes, and unforgettable experiences.</p>
+                    <p class="footer__brand-text">Promoting natural bodybuilding excellence across the Mountain States region. Drug-tested competitions, professional support, and a community dedicated to health and athletic achievement.</p>
                 </div>
                 <div class="footer__links">
                     <div class="footer__column">
-                        <h3 class="footer__column-title">Shows</h3>
+                        <h4 class="footer__column-title">Quick Links</h4>
                         <ul class="footer__list">
-                            <li class="footer__list-item"><a href="shows.html" class="footer__link">All Shows</a></li>
-                            <li class="footer__list-item"><a href="shows.html#utah-state-naturals" class="footer__link">Utah State Naturals</a></li>
-                            <li class="footer__list-item"><a href="shows.html#colorado-rapids" class="footer__link">Colorado Rapids</a></li>
-                            <li class="footer__list-item"><a href="shows.html#red-rock-classic" class="footer__link">Red Rock Classic</a></li>
-                            <li class="footer__list-item"><a href="shows.html#night-of-champions" class="footer__link">Night of Champions</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer__column">
-                        <h3 class="footer__column-title">Resources</h3>
-                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="../index.html" class="footer__link">Home</a></li>
+                            <li class="footer__list-item"><a href="#shows" class="footer__link">Shows</a></li>
                             <li class="footer__list-item"><a href="champions.html" class="footer__link">Champions</a></li>
                             <li class="footer__list-item"><a href="results.html" class="footer__link">Results</a></li>
-                            <li class="footer__list-item"><a href="contact.html" class="footer__link">Contact</a></li>
-                            <li class="footer__list-item"><a href="#rules" class="footer__link">Competition Rules</a></li>
                         </ul>
                     </div>
                     <div class="footer__column">
-                        <h3 class="footer__column-title">Connect</h3>
+                        <h4 class="footer__column-title">Resources</h4>
                         <ul class="footer__list">
-                            <li class="footer__list-item"><a href="https://facebook.com" class="footer__link" target="_blank">Facebook</a></li>
-                            <li class="footer__list-item"><a href="https://instagram.com" class="footer__link" target="_blank">Instagram</a></li>
-                            <li class="footer__list-item"><a href="https://youtube.com" class="footer__link" target="_blank">YouTube</a></li>
-                            <li class="footer__list-item"><a href="mailto:info@inbamountainstates.com" class="footer__link">Email Us</a></li>
+                            <li class="footer__list-item"><a href="#natural-bodybuilding" class="footer__link">Natural Bodybuilding</a></li>
+                            <li class="footer__list-item"><a href="#trainers" class="footer__link">Find a Trainer</a></li>
+                            <li class="footer__list-item"><a href="#sponsors" class="footer__link">Become a Sponsor</a></li>
+                            <li class="footer__list-item"><a href="contact.html" class="footer__link">Contact Us</a></li>
                         </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h4 class="footer__column-title">Follow Us</h4>
+                        <div class="footer__social">
+                            <a href="#facebook" class="footer__social-link" aria-label="Facebook">f</a>
+                            <a href="#instagram" class="footer__social-link" aria-label="Instagram">📷</a>
+                            <a href="#twitter" class="footer__social-link" aria-label="Twitter">𝕏</a>
+                            <a href="#youtube" class="footer__social-link" aria-label="YouTube">▶</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="footer__bottom">
-                <p class="footer__copyright">&copy; 2024 INBA/PNBA Mountain States. All rights reserved.</p>
+                <p class="footer__copyright">&copy; 2025 INBA/PNBA Mountain States. All rights reserved.</p>
                 <ul class="footer__legal">
                     <li class="footer__legal-item"><a href="#privacy" class="footer__link">Privacy Policy</a></li>
                     <li class="footer__legal-item"><a href="#terms" class="footer__link">Terms & Conditions</a></li>
