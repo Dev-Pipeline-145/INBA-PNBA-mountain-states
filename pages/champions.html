@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="INBA/PNBA Mountain States Champions - Meet our elite natural bodybuilding champions and their inspiring stories of dedication and excellence.">
+    <meta name="keywords" content="INBA champions, PNBA champions, natural bodybuilding champions, mountain states champions, bodybuilding winners">
+    <meta name="author" content="INBA/PNBA Mountain States">
+    <meta property="og:title" content="Champions - INBA/PNBA Mountain States">
+    <meta property="og:description" content="Meet our elite natural bodybuilding champions and their inspiring stories">
+    <meta property="og:type" content="website">
+    <title>Champions | INBA/PNBA Mountain States</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__brand">
+                <a href="../index.html">
+                    <img class="nav__logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='Montserrat' font-size='24' font-weight='900' fill='%2300FFFF'%3EINBA/PNBA%3C/text%3E%3Ctext x='10' y='55' font-family='Roboto' font-size='12' fill='%23b0b0b0'%3EMountain States%3C/text%3E%3C/svg%3E" alt="INBA/PNBA Mountain States">
+                </a>
+            </div>
+            <button class="nav__toggle" id="navToggle">
+                <span class="nav__toggle-line"></span>
+                <span class="nav__toggle-line"></span>
+                <span class="nav__toggle-line"></span>
+            </button>
+            <ul class="nav__menu" id="navMenu">
+                <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
+                <li class="nav__item nav__item--dropdown" id="showsDropdown">
+                    <a href="#" class="nav__link">Shows</a>
+                    <ul class="nav__dropdown">
+                        <li class="nav__dropdown-item"><a href="shows.html" class="nav__link">All Shows</a></li>
+                        <li class="nav__dropdown-item"><a href="shows.html#utah-state-naturals" class="nav__link">Utah State Naturals</a></li>
+                        <li class="nav__dropdown-item"><a href="shows.html#colorado-rapids" class="nav__link">Colorado Rapids</a></li>
+                        <li class="nav__dropdown-item"><a href="shows.html#red-rock-classic" class="nav__link">Red Rock Classic</a></li>
+                        <li class="nav__dropdown-item"><a href="shows.html#night-of-champions" class="nav__link">Night of Champions</a></li>
+                    </ul>
+                </li>
+                <li class="nav__item"><a href="champions.html" class="nav__link">Champions</a></li>
+                <li class="nav__item"><a href="results.html" class="nav__link">Results</a></li>
+                <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                <li class="nav__item nav__cta">
+                    <a href="contact.html" class="btn btn--primary">Register Now</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Our Champions</h1>
+                    <p class="hero__subtitle">Elite Natural Bodybuilding Champions Across the Mountain States</p>
+                    <div class="hero__actions">
+                        <a href="contact.html" class="btn btn--primary btn--lg">Join Our Champions</a>
+                        <a href="#champions" class="btn btn--secondary btn--lg">Meet the Champions</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="section section--gray">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Champion Gallery</h2>
+                    <p class="section__subtitle">Filter by division or year to discover our champions</p>
+                </div>
+                
+                <div class="champion-filters">
+                    <div class="filter-group">
+                        <label for="division-filter" class="filter-label">Division:</label>
+                        <select id="division-filter" class="filter-select">
+                            <option value="all">All Divisions</option>
+                            <option value="mens-physique">Men's Physique</option>
+                            <option value="womens-bikini">Women's Bikini</option>
+                            <option value="classic-physique">Classic Physique</option>
+                            <option value="bodybuilding">Bodybuilding</option>
+                            <option value="wellness">Wellness</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="year-filter" class="filter-label">Year:</label>
+                        <select id="year-filter" class="filter-select">
+                            <option value="all">All Years</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <button id="clear-filters" class="btn btn--secondary">Clear Filters</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Champions Grid Section -->
+        <section class="section" id="champions">
+            <div class="container">
+                <div class="champion-grid">
+                    <!-- Champion 1 - Men's Physique 2024 -->
+                    <article class="champion" data-division="mens-physique" data-year="2024">
+                        <div class="champion__image-wrapper">
+                            <div class="champion__image">🏆</div>
+                            <div class="champion__badge">1st Place</div>
+                            <div class="champion__stats">
+                                <div class="champion__stat">
+                                    <div class="champion__stat-label">Division</div>
+                                    <div class="champion__stat-value">Men's Physique</div>
+                                </div>
+                                <div class="champion__stat">
+                                    <div class="champion__stat-label">Year</div>
+                                    <div class="champion__stat-value">2024</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="champion__content">
+                            <h3 class="champion__name">Marcus Rodriguez</h3>
+                            <p class="champion__title">Utah State Naturals Champion</p>
+                            <div class="champion__show">🏆 Utah State Naturals 2024</div>
+                            <blockquote class="champion__quote">
+                                "Natural bodybuilding taught me that true strength comes from within. Every rep, every meal, every choice matters when you're building something real."
+                            </blockquote>
+                            <div class="champion__actions">
+                                <a href="#" class="champion__link">View Profile</a>
+                                <div class="champion__social">
+                                    <a href="#" class="champion__social-link">📱</a>
+                                    <a href="#" class="champion__social-link">📧</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Champion 2 - Women's Bikini 2024 -->
+                    <article class="champion" data-division="womens-bikini" data-year="2024">
+                        <div class="champion__image-wrapper">
+                            <div class="champion__image">👑</div>
+                            <div class="champion__badge">1st Place</div>
+                            <div class="champion__stats">
+                                <div class="champion__stat">
+                                    <div class="champion__stat-label">Division</div>
+                                    <div class="champion__stat-value">Women's Bikini</div>
+                                </div>
+                                <div class="champion__stat">
+                                    <div class="champion__stat-label">Year</div>
+                                    <div class="champion__stat-value">2024</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="champion__content">
+                            <h3 class="champion__name">Sarah Chen</h3>
+                            <p class="champion__title">Colorado Rapids Champion</p>
+                            <div class="champion__show">🏆 Colorado Rapids 2024</div>
+                            <blockquote class="champion__quote">
+                                "Confidence isn't about being perfect, it's about embracing your journey and celebrating every small victory along the way."
+                            </blockquote>
+                            <div class="champion__actions">
+                                <a href="#" class="champion__link">View Profile</a>
+                                <div class="champion__social">
+                                    <a href="#" class="champion__social-link">📱</a>
+                                    <a href="#" class="champion__social-link">📧</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Champion 3 - Classic Physique 2023 -->
+                    <article class="champion" data-division="classic-physique" data-year="2023">
+                        <div class="champion__image-wrapper">
+                            <div class="champion__image">💪</div>
+                            <div class="champion__badge">1st Place</div>
+                            <div class="champion__stats">
+                                <div class="champion__stat">
+                                    <div class="champion__stat-label">Division</div>
+                                    <div class="champion__stat-value">Classic Physique</div>
+                                </div>
+                                <div class="champion__stat">
+                                    <div class="champion__stat-label">Year</div>
+                                    <div class="champion__stat-value">2023</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="champion__content">
+                            <h3 class="champion__name">David Thompson</h3>
+                            <p class="champion__title">Red Rock Classic Champion</p>
+                            <div class="champion__show">🏆 Red Rock Classic 2023</div>
+                            <blockquote class="champion__quote">
+                                "The stage is where dreams become reality. But the real victory is in the discipline and dedication it takes to get there."
+                            </blockquote>
+                            <div class="champion__actions">
+                                <a href="#" class="champion__link">View Profile</a>
+                                <div class="champion__social">
+                                    <a href="#" class="champion__social-link">📱</a>
+                                    <a href="#" class="champion__social-link">📧</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Champion 4 - Bodybuilding 2024 -->
+                    <article class="champion" data-division="bodybuilding" data-year="2024">
+                        <div class="champion__image-wrapper">
+                            <div class="champion__image">🏅</div>
+                            <div class="champion__badge">1st Place</div>
+                            <div class="champion__stats">
+                                <div class="champion__stat">
+                                    <div class="champion__stat-label">Division</div>
+                                    <div class="champion__stat-value">Bodybuilding</div>
+                                </div>
+                                <div class="champion__stat">
+                                    <div class="champion__stat-label">Year</div>
+                                    <div class="champion__stat-value">2024</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="champion__content">
+                            <h3 class="champion__name">Alex Johnson</h3>
+                            <p class="champion__title">Night of Champions Winner</p>
+                            <div class="champion__show">🏆 Night of Champions 2024</div>
+                            <blockquote class="champion__quote">
+                                "Natural bodybuilding is about building character as much as muscle. Every challenge makes you stronger, both physically and mentally."
+                            </blockquote>
+                            <div class="champion__actions">
+                                <a href="#" class="champion__link">View Profile</a>
+                                <div class="champion__social">
+                                    <a href="#" class="champion__social-link">📱</a>
+                                    <a href="#" class="champion__social-link">📧</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Champion 5 - Wellness 2023 -->
+                    <article class="champion" data-division="wellness" data-year="2023">
+                        <div class="champion__image-wrapper">
+                            <div class="champion__image">✨</div>
+                            <div class="champion__badge">1st Place</div>
+                            <div class="champion__stats">
+                                <div class="champion__stat">
+                                    <div class="champion__stat-label">Division</div>
+                                    <div class="champion__stat-value">Wellness</div>
+                                </div>
+                                <div class="champion__stat">
+                                    <div class="champion__stat-label">Year</div>
+                                    <div class="champion__stat-value">2023</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="champion__content">
+                            <h3 class="champion__name">Jessica Martinez</h3>
+                            <p class="champion__title">Utah State Naturals Champion</p>
+                            <div class="champion__show">🏆 Utah State Naturals 2023</div>
+                            <blockquote class="champion__quote">
+                                "Wellness is about balance - strength and grace, power and femininity, hard work and self-care. It's the complete package."
+                            </blockquote>
+                            <div class="champion__actions">
+                                <a href="#" class="champion__link">View Profile</a>
+                                <div class="champion__social">
+                                    <a href="#" class="champion__social-link">📱</a>
+                                    <a href="#" class="champion__social-link">📧</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Champion 6 - Men's Physique 2022 -->
+                    <article class="champion" data-division="mens-physique" data-year="2022">
+                        <div class="champion__image-wrapper">
+                            <div class="champion__image">🥇</div>
+                            <div class="champion__badge">1st Place</div>
+                            <div class="champion__stats">
+                                <div class="champion__stat">
+                                    <div class="champion__stat-label">Division</div>
+                                    <div class="champion__stat-value">Men's Physique</div>
+                                </div>
+                                <div class="champion__stat">
+                                    <div class="champion__stat-label">Year</div>
+                                    <div class="champion__stat-value">2022</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="champion__content">
+                            <h3 class="champion__name">Michael Davis</h3>
+                            <p class="champion__title">Colorado Rapids Champion</p>
+                            <div class="champion__show">🏆 Colorado Rapids 2022</div>
+                            <blockquote class="champion__quote">
+                                "The journey to the stage is long, but every step teaches you something about yourself. That's the real prize."
+                            </blockquote>
+                            <div class="champion__actions">
+                                <a href="#" class="champion__link">View Profile</a>
+                                <div class="champion__social">
+                                    <a href="#" class="champion__social-link">📱</a>
+                                    <a href="#" class="champion__social-link">📧</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta">
+            <div class="cta__container container">
+                <h2 class="cta__title">Ready to Become a Champion?</h2>
+                <p class="cta__text">Join our elite community of natural bodybuilders and start your journey to the stage.</p>
+                <div class="hero__actions">
+                    <a href="contact.html" class="btn btn--primary btn--lg">Register for Competition</a>
+                    <a href="contact.html" class="btn btn--secondary btn--lg">Get Coaching</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__main">
+                <div class="footer__brand">
+                    <img class="footer__logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='Montserrat' font-size='24' font-weight='900' fill='%2300FFFF'%3EINBA/PNBA%3C/text%3E%3Ctext x='10' y='55' font-family='Roboto' font-size='12' fill='%23b0b0b0'%3EMountain States%3C/text%3E%3C/svg%3E" alt="INBA/PNBA Mountain States">
+                    <p class="footer__brand-text">Promoting natural bodybuilding excellence across the Mountain States region. Drug-free competition, world-class athletes, and unforgettable experiences.</p>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Shows</h3>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="shows.html" class="footer__link">All Shows</a></li>
+                            <li class="footer__list-item"><a href="shows.html#utah-state-naturals" class="footer__link">Utah State Naturals</a></li>
+                            <li class="footer__list-item"><a href="shows.html#colorado-rapids" class="footer__link">Colorado Rapids</a></li>
+                            <li class="footer__list-item"><a href="shows.html#red-rock-classic" class="footer__link">Red Rock Classic</a></li>
+                            <li class="footer__list-item"><a href="shows.html#night-of-champions" class="footer__link">Night of Champions</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Resources</h3>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="champions.html" class="footer__link">Champions</a></li>
+                            <li class="footer__list-item"><a href="results.html" class="footer__link">Results</a></li>
+                            <li class="footer__list-item"><a href="contact.html" class="footer__link">Contact</a></li>
+                            <li class="footer__list-item"><a href="#rules" class="footer__link">Competition Rules</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Connect</h3>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="https://facebook.com" class="footer__link" target="_blank">Facebook</a></li>
+                            <li class="footer__list-item"><a href="https://instagram.com" class="footer__link" target="_blank">Instagram</a></li>
+                            <li class="footer__list-item"><a href="https://youtube.com" class="footer__link" target="_blank">YouTube</a></li>
+                            <li class="footer__list-item"><a href="mailto:info@inbamountainstates.com" class="footer__link">Email Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2024 INBA/PNBA Mountain States. All rights reserved.</p>
+                <ul class="footer__legal">
+                    <li class="footer__legal-item"><a href="#privacy" class="footer__link">Privacy Policy</a></li>
+                    <li class="footer__legal-item"><a href="#terms" class="footer__link">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Champion filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const divisionFilter = document.getElementById('division-filter');
+            const yearFilter = document.getElementById('year-filter');
+            const clearFilters = document.getElementById('clear-filters');
+            const champions = document.querySelectorAll('.champion');
+
+            function filterChampions() {
+                const selectedDivision = divisionFilter.value;
+                const selectedYear = yearFilter.value;
+
+                champions.forEach(champion => {
+                    const championDivision = champion.dataset.division;
+                    const championYear = champion.dataset.year;
+
+                    const divisionMatch = selectedDivision === 'all' || championDivision === selectedDivision;
+                    const yearMatch = selectedYear === 'all' || championYear === selectedYear;
+
+                    if (divisionMatch && yearMatch) {
+                        champion.style.display = 'block';
+                        champion.classList.add('fade-in');
+                    } else {
+                        champion.style.display = 'none';
+                        champion.classList.remove('fade-in');
+                    }
+                });
+            }
+
+            divisionFilter.addEventListener('change', filterChampions);
+            yearFilter.addEventListener('change', filterChampions);
+
+            clearFilters.addEventListener('click', function() {
+                divisionFilter.value = 'all';
+                yearFilter.value = 'all';
+                filterChampions();
+            });
+
+            // Initial filter
+            filterChampions();
+        });
+    </script>
+</body>
+</html>
