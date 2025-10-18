@@ -13,50 +13,50 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../src/assets/css/style.css">
+    <link rel="stylesheet" href="../src/assets/css/style-clean.css">
 </head>
 <body>
     <header class="header">
-        <nav class="nav">
-            <div class="nav__brand">
-                <a href="../../index.html">
-                    <img class="nav__logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='Montserrat' font-size='24' font-weight='900' fill='%2300FFFF'%3EINBA/PNBA%3C/text%3E%3Ctext x='10' y='55' font-family='Roboto' font-size='12' fill='%23b0b0b0'%3EMountain States%3C/text%3E%3C/svg%3E" alt="INBA/PNBA Mountain States">
-                </a>
-            </div>
-            <button class="nav__toggle" id="navToggle">
-                <span class="nav__toggle-line"></span>
-                <span class="nav__toggle-line"></span>
-                <span class="nav__toggle-line"></span>
-            </button>
-            <ul class="nav__menu" id="navMenu">
-                <li class="nav__item"><a href="../../index.html" class="nav__link">Home</a></li>
+    <nav class="nav">
+        <div class="nav__brand">
+            <a href="../index.html">
+                <img class="nav__logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='Montserrat' font-size='24' font-weight='900' fill='%2300FFFF'%3EINBA/PNBA%3C/text%3E%3Ctext x='10' y='55' font-family='Roboto' font-size='12' fill='%23b0b0b0'%3EMountain States%3C/text%3E%3C/svg%3E" alt="INBA/PNBA Mountain States">
+            </a>
+        </div>
+        <button class="nav__toggle" aria-label="Toggle navigation" id="navToggle">
+            <span class="nav__toggle-line"></span>
+            <span class="nav__toggle-line"></span>
+            <span class="nav__toggle-line"></span>
+        </button>
+        <div class="nav__menu" id="navMenu">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
                 <li class="nav__item nav__item--dropdown" id="showsDropdown">
-                    <a href="#" class="nav__link">Shows</a>
+                    <a href="shows.html" class="nav__link">Shows</a>
                     <ul class="nav__dropdown">
-                        <li class="nav__dropdown-item"><a href="../shows.html" class="nav__link">All Shows</a></li>
-                        <li class="nav__dropdown-item"><a href="shows.html#utah-state-naturals" class="nav__link">Utah State Naturals</a></li>
-                        <li class="nav__dropdown-item"><a href="shows.html#colorado-rapids" class="nav__link">Colorado Rapids</a></li>
-                        <li class="nav__dropdown-item"><a href="shows.html#red-rock-classic" class="nav__link">Red Rock Classic</a></li>
-                        <li class="nav__dropdown-item"><a href="shows.html#night-of-champions" class="nav__link">Night of Champions</a></li>
+                        <li class="nav__dropdown-item"><a href="shows/utah-state-naturals.html" class="nav__link">Utah State Naturals</a></li>
+                        <li class="nav__dropdown-item"><a href="shows/colorado-rapids.html" class="nav__link">Colorado Rapids</a></li>
+                        <li class="nav__dropdown-item"><a href="shows/red-rock.html" class="nav__link">Red Rock Classic</a></li>
+                        <li class="nav__dropdown-item"><a href="shows/night-of-champions.html" class="nav__link">Night of Champions</a></li>
                     </ul>
                 </li>
-                <li class="nav__item"><a href="../champions.html" class="nav__link">Champions</a></li>
-                <li class="nav__item"><a href="../results.html" class="nav__link">Results</a></li>
-                <li class="nav__item"><a href="../contact.html" class="nav__link">Contact</a></li>
+                <li class="nav__item"><a href="champions.html" class="nav__link">Champions</a></li>
+                <li class="nav__item"><a href="results.html" class="nav__link">Results</a></li>
+                <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
                 <li class="nav__item nav__cta">
-                    <a href="../contact.html" class="btn btn--primary">Register Now</a>
+                    <a href="contact.html#register" class="btn btn--primary">Register Now</a>
                 </li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
+</header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="results__hero">
+        <section class="hero">
             <div class="hero__container container">
                 <div class="hero__content">
-                    <h1 class="hero__title">Competition Results and Archives</h1>
-                    <p class="hero__subtitle">View results from past competitions, track athlete progress, and explore our comprehensive competition archives.</p>
+                    <h1 class="hero__title">Competition Results & Archives</h1>
+                    <p class="hero__subtitle">View results from past competitions, track athlete progress, and explore our comprehensive competition archives across the Mountain States.</p>
                     <div class="hero__actions">
                         <a href="#current-results" class="btn btn--primary btn--lg">Current Results</a>
                         <a href="#archives" class="btn btn--secondary btn--lg">View Archives</a>
@@ -64,28 +64,59 @@
                 </div>
             </div>
         </section>
-        <section class="hero">
-            <div class="hero__container container">
-                <div class="hero__content">
-                    <h1 class="hero__title">Competition Results</h1>
-                    <p class="hero__subtitle">View Results and Rankings from All Our Natural Bodybuilding Competitions</p>
-                    <div class="hero__actions">
-                        <a href="../contact.html" class="btn btn--primary btn--lg">Register for Next Show</a>
-                        <a href="#results" class="btn btn--secondary btn--lg">View Results</a>
+
+        <!-- Current Results Section -->
+        <section class="section" id="current-results">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Current Season Results</h2>
+                    <p class="section__subtitle">Latest competition results and rankings from our ongoing season</p>
+                </div>
+                
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-card__header">
+                            <h3 class="result-card__title">Utah State Naturals 2025</h3>
+                            <span class="result-card__date">May 2025</span>
+                        </div>
+                        <div class="result-card__content">
+                            <p class="result-card__description">Complete results from our premier Utah competition featuring all divisions and age groups.</p>
+                            <a href="#" class="btn btn--primary">View Full Results</a>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="result-card__header">
+                            <h3 class="result-card__title">Red Rock Classic 2025</h3>
+                            <span class="result-card__date">October 2025</span>
+                        </div>
+                        <div class="result-card__content">
+                            <p class="result-card__description">Results from the spectacular Red Rock competition in Southern Utah.</p>
+                            <a href="#" class="btn btn--primary">View Full Results</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Filter Section -->
-        <section class="section section--gray">
+        <!-- Archived Results Section -->
+        <section class="section section--gray" id="archives">
             <div class="container">
                 <div class="section__header">
-                    <h2 class="section__title">Results Archive</h2>
-                    <p class="section__subtitle">Filter results by show, division, or year</p>
+                    <h2 class="section__title">Archived Results</h2>
+                    <p class="section__subtitle">Browse historical competition results by year and show</p>
                 </div>
                 
-                <div class="results-filters">
+                <div class="archive-filters">
+                    <div class="filter-group">
+                        <label for="year-filter" class="filter-label">Year:</label>
+                        <select id="year-filter" class="filter-select">
+                            <option value="all">All Years</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                        </select>
+                    </div>
                     <div class="filter-group">
                         <label for="show-filter" class="filter-label">Show:</label>
                         <select id="show-filter" class="filter-select">
@@ -97,38 +128,13 @@
                         </select>
                     </div>
                     <div class="filter-group">
-                        <label for="division-filter" class="filter-label">Division:</label>
-                        <select id="division-filter" class="filter-select">
-                            <option value="all">All Divisions</option>
-                            <option value="mens-physique">Men's Physique</option>
-                            <option value="womens-bikini">Women's Bikini</option>
-                            <option value="classic-physique">Classic Physique</option>
-                            <option value="bodybuilding">Bodybuilding</option>
-                            <option value="wellness">Wellness</option>
-                        </select>
-                    </div>
-                    <div class="filter-group">
-                        <label for="year-filter" class="filter-label">Year:</label>
-                        <select id="year-filter" class="filter-select">
-                            <option value="all">All Years</option>
-                            <option value="2024">2024</option>
-                            <option value="2023">2023</option>
-                            <option value="2022">2022</option>
-                        </select>
-                    </div>
-                    <div class="filter-group">
                         <button id="clear-filters" class="btn btn--secondary">Clear Filters</button>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Results Section -->
-        <section class="section" id="results">
-            <div class="container">
+                
                 <!-- 2024 Results -->
                 <div class="results-year" data-year="2024">
-                    <h2 class="results-year-title">2024 Season Results</h2>
+                    <h3 class="results-year-title">2024 Season Results</h3>
                     
                     <!-- Utah State Naturals 2024 -->
                     <div class="results-show" data-show="utah-state-naturals" data-year="2024">
@@ -138,62 +144,107 @@
                             <h4 class="results-division-title">Men's Physique</h4>
                             <div class="results-table">
                                 <div class="results-table-header">
-                                    <div class="results-table-cell">Place</div>
-                                    <div class="results-table-cell">Name</div>
-                                    <div class="results-table-cell">Location</div>
-                                    <div class="results-table-cell">Points</div>
-                                </div>
+                                    <div class="results-table-cell">Place</a>
+            </div>
+                                    <div class="results-table-cell">Name</a>
+            </div>
+                                    <div class="results-table-cell">Location</a>
+            </div>
+                                    <div class="results-table-cell">Points</a>
+            </div>
+                                </a>
+            </div>
                                 <div class="results-table-row results-table-row--gold">
-                                    <div class="results-table-cell">1st</div>
-                                    <div class="results-table-cell">Marcus Rodriguez</div>
-                                    <div class="results-table-cell">Salt Lake City, UT</div>
-                                    <div class="results-table-cell">95</div>
-                                </div>
+                                    <div class="results-table-cell">1st</a>
+            </div>
+                                    <div class="results-table-cell">Marcus Rodriguez</a>
+            </div>
+                                    <div class="results-table-cell">Salt Lake City, UT</a>
+            </div>
+                                    <div class="results-table-cell">95</a>
+            </div>
+                                </a>
+            </div>
                                 <div class="results-table-row results-table-row--silver">
-                                    <div class="results-table-cell">2nd</div>
-                                    <div class="results-table-cell">James Wilson</div>
-                                    <div class="results-table-cell">Provo, UT</div>
-                                    <div class="results-table-cell">92</div>
-                                </div>
+                                    <div class="results-table-cell">2nd</a>
+            </div>
+                                    <div class="results-table-cell">James Wilson</a>
+            </div>
+                                    <div class="results-table-cell">Provo, UT</a>
+            </div>
+                                    <div class="results-table-cell">92</a>
+            </div>
+                                </a>
+            </div>
                                 <div class="results-table-row results-table-row--bronze">
-                                    <div class="results-table-cell">3rd</div>
-                                    <div class="results-table-cell">Ryan Chen</div>
-                                    <div class="results-table-cell">Ogden, UT</div>
-                                    <div class="results-table-cell">89</div>
-                                </div>
-                            </div>
-                        </div>
+                                    <div class="results-table-cell">3rd</a>
+            </div>
+                                    <div class="results-table-cell">Ryan Chen</a>
+            </div>
+                                    <div class="results-table-cell">Ogden, UT</a>
+            </div>
+                                    <div class="results-table-cell">89</a>
+            </div>
+                                </a>
+            </div>
+                            </a>
+            </div>
+                        </a>
+            </div>
 
                         <div class="results-division" data-division="womens-bikini">
                             <h4 class="results-division-title">Women's Bikini</h4>
                             <div class="results-table">
                                 <div class="results-table-header">
-                                    <div class="results-table-cell">Place</div>
-                                    <div class="results-table-cell">Name</div>
-                                    <div class="results-table-cell">Location</div>
-                                    <div class="results-table-cell">Points</div>
-                                </div>
+                                    <div class="results-table-cell">Place</a>
+            </div>
+                                    <div class="results-table-cell">Name</a>
+            </div>
+                                    <div class="results-table-cell">Location</a>
+            </div>
+                                    <div class="results-table-cell">Points</a>
+            </div>
+                                </a>
+            </div>
                                 <div class="results-table-row results-table-row--gold">
-                                    <div class="results-table-cell">1st</div>
-                                    <div class="results-table-cell">Sarah Chen</div>
-                                    <div class="results-table-cell">Park City, UT</div>
-                                    <div class="results-table-cell">98</div>
-                                </div>
+                                    <div class="results-table-cell">1st</a>
+            </div>
+                                    <div class="results-table-cell">Sarah Chen</a>
+            </div>
+                                    <div class="results-table-cell">Park City, UT</a>
+            </div>
+                                    <div class="results-table-cell">98</a>
+            </div>
+                                </a>
+            </div>
                                 <div class="results-table-row results-table-row--silver">
-                                    <div class="results-table-cell">2nd</div>
-                                    <div class="results-table-cell">Emily Davis</div>
-                                    <div class="results-table-cell">St. George, UT</div>
-                                    <div class="results-table-cell">94</div>
-                                </div>
+                                    <div class="results-table-cell">2nd</a>
+            </div>
+                                    <div class="results-table-cell">Emily Davis</a>
+            </div>
+                                    <div class="results-table-cell">St. George, UT</a>
+            </div>
+                                    <div class="results-table-cell">94</a>
+            </div>
+                                </a>
+            </div>
                                 <div class="results-table-row results-table-row--bronze">
-                                    <div class="results-table-cell">3rd</div>
-                                    <div class="results-table-cell">Lisa Thompson</div>
-                                    <div class="results-table-cell">Logan, UT</div>
-                                    <div class="results-table-cell">91</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                    <div class="results-table-cell">3rd</a>
+            </div>
+                                    <div class="results-table-cell">Lisa Thompson</a>
+            </div>
+                                    <div class="results-table-cell">Logan, UT</a>
+            </div>
+                                    <div class="results-table-cell">91</a>
+            </div>
+                                </a>
+            </div>
+                            </a>
+            </div>
+                        </a>
+            </div>
+                    </a>
+            </div>
 
                     <!-- Colorado Rapids 2024 -->
                     <div class="results-show" data-show="colorado-rapids" data-year="2024">
@@ -203,33 +254,57 @@
                             <h4 class="results-division-title">Classic Physique</h4>
                             <div class="results-table">
                                 <div class="results-table-header">
-                                    <div class="results-table-cell">Place</div>
-                                    <div class="results-table-cell">Name</div>
-                                    <div class="results-table-cell">Location</div>
-                                    <div class="results-table-cell">Points</div>
-                                </div>
+                                    <div class="results-table-cell">Place</a>
+            </div>
+                                    <div class="results-table-cell">Name</a>
+            </div>
+                                    <div class="results-table-cell">Location</a>
+            </div>
+                                    <div class="results-table-cell">Points</a>
+            </div>
+                                </a>
+            </div>
                                 <div class="results-table-row results-table-row--gold">
-                                    <div class="results-table-cell">1st</div>
-                                    <div class="results-table-cell">David Thompson</div>
-                                    <div class="results-table-cell">Denver, CO</div>
-                                    <div class="results-table-cell">96</div>
-                                </div>
+                                    <div class="results-table-cell">1st</a>
+            </div>
+                                    <div class="results-table-cell">David Thompson</a>
+            </div>
+                                    <div class="results-table-cell">Denver, CO</a>
+            </div>
+                                    <div class="results-table-cell">96</a>
+            </div>
+                                </a>
+            </div>
                                 <div class="results-table-row results-table-row--silver">
-                                    <div class="results-table-cell">2nd</div>
-                                    <div class="results-table-cell">Mike Johnson</div>
-                                    <div class="results-table-cell">Boulder, CO</div>
-                                    <div class="results-table-cell">93</div>
-                                </div>
+                                    <div class="results-table-cell">2nd</a>
+            </div>
+                                    <div class="results-table-cell">Mike Johnson</a>
+            </div>
+                                    <div class="results-table-cell">Boulder, CO</a>
+            </div>
+                                    <div class="results-table-cell">93</a>
+            </div>
+                                </a>
+            </div>
                                 <div class="results-table-row results-table-row--bronze">
-                                    <div class="results-table-cell">3rd</div>
-                                    <div class="results-table-cell">Chris Martinez</div>
-                                    <div class="results-table-cell">Colorado Springs, CO</div>
-                                    <div class="results-table-cell">90</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                    <div class="results-table-cell">3rd</a>
+            </div>
+                                    <div class="results-table-cell">Chris Martinez</a>
+            </div>
+                                    <div class="results-table-cell">Colorado Springs, CO</a>
+            </div>
+                                    <div class="results-table-cell">90</a>
+            </div>
+                                </a>
+            </div>
+                            </a>
+            </div>
+                        </a>
+            </div>
+                    </a>
+            </div>
+                </a>
+            </div>
 
                 <!-- 2023 Results -->
                 <div class="results-year" data-year="2023">
@@ -243,63 +318,110 @@
                             <h4 class="results-division-title">Bodybuilding</h4>
                             <div class="results-table">
                                 <div class="results-table-header">
-                                    <div class="results-table-cell">Place</div>
-                                    <div class="results-table-cell">Name</div>
-                                    <div class="results-table-cell">Location</div>
-                                    <div class="results-table-cell">Points</div>
-                                </div>
+                                    <div class="results-table-cell">Place</a>
+            </div>
+                                    <div class="results-table-cell">Name</a>
+            </div>
+                                    <div class="results-table-cell">Location</a>
+            </div>
+                                    <div class="results-table-cell">Points</a>
+            </div>
+                                </a>
+            </div>
                                 <div class="results-table-row results-table-row--gold">
-                                    <div class="results-table-cell">1st</div>
-                                    <div class="results-table-cell">Alex Johnson</div>
-                                    <div class="results-table-cell">Las Vegas, NV</div>
-                                    <div class="results-table-cell">97</div>
-                                </div>
+                                    <div class="results-table-cell">1st</a>
+            </div>
+                                    <div class="results-table-cell">Alex Johnson</a>
+            </div>
+                                    <div class="results-table-cell">Las Vegas, NV</a>
+            </div>
+                                    <div class="results-table-cell">97</a>
+            </div>
+                                </a>
+            </div>
                                 <div class="results-table-row results-table-row--silver">
-                                    <div class="results-table-cell">2nd</div>
-                                    <div class="results-table-cell">Robert Smith</div>
-                                    <div class="results-table-cell">Henderson, NV</div>
-                                    <div class="results-table-cell">94</div>
-                                </div>
+                                    <div class="results-table-cell">2nd</a>
+            </div>
+                                    <div class="results-table-cell">Robert Smith</a>
+            </div>
+                                    <div class="results-table-cell">Henderson, NV</a>
+            </div>
+                                    <div class="results-table-cell">94</a>
+            </div>
+                                </a>
+            </div>
                                 <div class="results-table-row results-table-row--bronze">
-                                    <div class="results-table-cell">3rd</div>
-                                    <div class="results-table-cell">Kevin Brown</div>
-                                    <div class="results-table-cell">Reno, NV</div>
-                                    <div class="results-table-cell">91</div>
-                                </div>
-                            </div>
-                        </div>
+                                    <div class="results-table-cell">3rd</a>
+            </div>
+                                    <div class="results-table-cell">Kevin Brown</a>
+            </div>
+                                    <div class="results-table-cell">Reno, NV</a>
+            </div>
+                                    <div class="results-table-cell">91</a>
+            </div>
+                                </a>
+            </div>
+                            </a>
+            </div>
+                        </a>
+            </div>
 
                         <div class="results-division" data-division="wellness">
                             <h4 class="results-division-title">Wellness</h4>
                             <div class="results-table">
                                 <div class="results-table-header">
-                                    <div class="results-table-cell">Place</div>
-                                    <div class="results-table-cell">Name</div>
-                                    <div class="results-table-cell">Location</div>
-                                    <div class="results-table-cell">Points</div>
-                                </div>
+                                    <div class="results-table-cell">Place</a>
+            </div>
+                                    <div class="results-table-cell">Name</a>
+            </div>
+                                    <div class="results-table-cell">Location</a>
+            </div>
+                                    <div class="results-table-cell">Points</a>
+            </div>
+                                </a>
+            </div>
                                 <div class="results-table-row results-table-row--gold">
-                                    <div class="results-table-cell">1st</div>
-                                    <div class="results-table-cell">Jessica Martinez</div>
-                                    <div class="results-table-cell">Las Vegas, NV</div>
-                                    <div class="results-table-cell">95</div>
-                                </div>
+                                    <div class="results-table-cell">1st</a>
+            </div>
+                                    <div class="results-table-cell">Jessica Martinez</a>
+            </div>
+                                    <div class="results-table-cell">Las Vegas, NV</a>
+            </div>
+                                    <div class="results-table-cell">95</a>
+            </div>
+                                </a>
+            </div>
                                 <div class="results-table-row results-table-row--silver">
-                                    <div class="results-table-cell">2nd</div>
-                                    <div class="results-table-cell">Amanda Wilson</div>
-                                    <div class="results-table-cell">Henderson, NV</div>
-                                    <div class="results-table-cell">92</div>
-                                </div>
+                                    <div class="results-table-cell">2nd</a>
+            </div>
+                                    <div class="results-table-cell">Amanda Wilson</a>
+            </div>
+                                    <div class="results-table-cell">Henderson, NV</a>
+            </div>
+                                    <div class="results-table-cell">92</a>
+            </div>
+                                </a>
+            </div>
                                 <div class="results-table-row results-table-row--bronze">
-                                    <div class="results-table-cell">3rd</div>
-                                    <div class="results-table-cell">Rachel Davis</div>
-                                    <div class="results-table-cell">Reno, NV</div>
-                                    <div class="results-table-cell">89</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                    <div class="results-table-cell">3rd</a>
+            </div>
+                                    <div class="results-table-cell">Rachel Davis</a>
+            </div>
+                                    <div class="results-table-cell">Reno, NV</a>
+            </div>
+                                    <div class="results-table-cell">89</a>
+            </div>
+                                </a>
+            </div>
+                            </a>
+            </div>
+                        </a>
+            </div>
+                    </a>
+            </div>
+                </a>
+            </div>
+            </a>
             </div>
         </section>
 
@@ -311,7 +433,9 @@
                 <div class="hero__actions">
                     <a href="../contact.html" class="btn btn--primary btn--lg">Register Now</a>
                     <a href="../shows.html" class="btn btn--secondary btn--lg">View Upcoming Shows</a>
-                </div>
+                </a>
+            </div>
+            </a>
             </div>
         </section>
     </main>
@@ -322,7 +446,8 @@
                 <div class="footer__brand">
                     <img class="footer__logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='Montserrat' font-size='24' font-weight='900' fill='%2300FFFF'%3EINBA/PNBA%3C/text%3E%3Ctext x='10' y='55' font-family='Roboto' font-size='12' fill='%23b0b0b0'%3EMountain States%3C/text%3E%3C/svg%3E" alt="INBA/PNBA Mountain States">
                     <p class="footer__brand-text">Promoting natural bodybuilding excellence across the Mountain States region. Drug-free competition, world-class athletes, and unforgettable experiences.</p>
-                </div>
+                </a>
+            </div>
                 <div class="footer__links">
                     <div class="footer__column">
                         <h3 class="footer__column-title">Shows</h3>
@@ -333,7 +458,8 @@
                             <li class="footer__list-item"><a href="shows.html#red-rock-classic" class="footer__link">Red Rock Classic</a></li>
                             <li class="footer__list-item"><a href="shows.html#night-of-champions" class="footer__link">Night of Champions</a></li>
                         </ul>
-                    </div>
+                    </a>
+            </div>
                     <div class="footer__column">
                         <h3 class="footer__column-title">Resources</h3>
                         <ul class="footer__list">
@@ -342,7 +468,8 @@
                             <li class="footer__list-item"><a href="../contact.html" class="footer__link">Contact</a></li>
                             <li class="footer__list-item"><a href="#rules" class="footer__link">Competition Rules</a></li>
                         </ul>
-                    </div>
+                    </a>
+            </div>
                     <div class="footer__column">
                         <h3 class="footer__column-title">Connect</h3>
                         <ul class="footer__list">
@@ -351,8 +478,11 @@
                             <li class="footer__list-item"><a href="https://youtube.com" class="footer__link" target="_blank">YouTube</a></li>
                             <li class="footer__list-item"><a href="mailto:info@inbamountainstates.com" class="footer__link">Email Us</a></li>
                         </ul>
-                    </div>
-                </div>
+                    </a>
+            </div>
+                </a>
+            </div>
+            </a>
             </div>
             <div class="footer__bottom">
                 <p class="footer__copyright">&copy; 2024 INBA/PNBA Mountain States. All rights reserved.</p>
@@ -360,11 +490,13 @@
                     <li class="footer__legal-item"><a href="#privacy" class="footer__link">Privacy Policy</a></li>
                     <li class="footer__legal-item"><a href="#terms" class="footer__link">Terms & Conditions</a></li>
                 </ul>
+            </a>
             </div>
-        </div>
+        </a>
+            </div>
     </footer>
 
-    <script src="../src/assets/js/main.js"></script>
+    <script src="../src/assets/js/main-clean.js"></script>
     <script>
         // Results filtering functionality
         document.addEventListener('DOMContentLoaded', function() {

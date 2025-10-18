@@ -13,13 +13,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../src/assets/css/style.css">
+    <link rel="stylesheet" href="../src/assets/css/style-clean.css">
 </head>
 <body>
     <header class="header">
         <nav class="nav">
             <div class="nav__brand">
-                <img class="nav__logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='Montserrat' font-size='24' font-weight='900' fill='%2300FFFF'%3EINBA/PNBA%3C/text%3E%3Ctext x='10' y='55' font-family='Roboto' font-size='12' fill='%23b0b0b0'%3EMountain States%3C/text%3E%3C/svg%3E" alt="INBA/PNBA Mountain States">
+                <a href="../index.html">
+                    <img class="nav__logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='Montserrat' font-size='24' font-weight='900' fill='%2300FFFF'%3EINBA/PNBA%3C/text%3E%3Ctext x='10' y='55' font-family='Roboto' font-size='12' fill='%23b0b0b0'%3EMountain States%3C/text%3E%3C/svg%3E" alt="INBA/PNBA Mountain States">
+                </a>
             </div>
             <button class="nav__toggle" aria-label="Toggle navigation" id="navToggle">
                 <span class="nav__toggle-line"></span>
@@ -30,7 +32,7 @@
                 <ul class="nav__list">
                     <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
                     <li class="nav__item nav__item--dropdown" id="showsDropdown">
-                        <a href="#shows" class="nav__link">Shows</a>
+                        <a href="shows.html" class="nav__link">Shows</a>
                         <ul class="nav__dropdown">
                             <li class="nav__dropdown-item"><a href="shows/utah-state-naturals.html" class="nav__link">Utah State Naturals</a></li>
                             <li class="nav__dropdown-item"><a href="shows/colorado-rapids.html" class="nav__link">Colorado Rapids</a></li>
@@ -51,113 +53,129 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="contact__hero">
+        <section class="hero hero--contact">
             <div class="hero__container container">
                 <div class="hero__content">
-                    <h1 class="hero__title">Get in Touch with INBA/PNBA Mountain States</h1>
-                    <p class="hero__subtitle">Register for competitions, get coaching, or reach out with questions about natural bodybuilding. We're here to support your journey.</p>
-                    <div class="hero__actions">
-                        <a href="#register" class="btn btn--primary btn--lg">Register Now</a>
-                        <a href="#contact-info" class="btn btn--secondary btn--lg">Contact Info</a>
-                    </div>
+                    <h1 class="hero__title">Contact Our Team</h1>
+                    <p class="hero__subtitle">Got questions about natural bodybuilding competitions or need help with registration? We're here to help. Connect with our friendly team and get registered in less than 5 minutes.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Registration Section -->
+        <!-- Contact Section -->
         <section class="section" id="register">
             <div class="container">
-                <div class="section__header">
-                    <h2 class="section__title">Competition Registration</h2>
-                    <p class="section__subtitle">Register for upcoming natural bodybuilding competitions</p>
-                </div>
-                
-                <div class="registration-grid">
-                    <div class="registration-form">
-                        <h3 class="registration-form__title">Register for Competition</h3>
-                        <form class="form" id="registrationForm">
-                            <div class="form-group">
-                                <label for="reg-name" class="form-label">Full Name *</label>
-                                <input type="text" id="reg-name" name="name" class="form-input" required>
+                <div class="contact-layout">
+                    <!-- Left Column: Contact Form -->
+                    <div class="contact-form-section">
+                        <form class="form" id="contactForm">
+                            <div class="form__row">
+                                <div class="form__group">
+                                    <label for="firstName" class="form__label">First name</label>
+                                    <input type="text" id="firstName" name="firstName" class="form__input" placeholder="First name" required>
+                                </div>
+                                <div class="form__group">
+                                    <label for="lastName" class="form__label">Last name</label>
+                                    <input type="text" id="lastName" name="lastName" class="form__input" placeholder="Last name" required>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="reg-email" class="form-label">Email Address *</label>
-                                <input type="email" id="reg-email" name="email" class="form-input" required>
+
+                            <div class="form__group">
+                                <label for="email" class="form__label">Email</label>
+                                <input type="email" id="email" name="email" class="form__input" placeholder="you@company.com" required>
                             </div>
-                            <div class="form-group">
-                                <label for="reg-phone" class="form-label">Phone Number *</label>
-                                <input type="tel" id="reg-phone" name="phone" class="form-input" required>
+
+                            <div class="form__group">
+                                <label for="phone" class="form__label">Phone Number</label>
+                                <div class="form__phone">
+                                    <select class="form__select" id="countryCode">
+                                        <option value="+1">US</option>
+                                        <option value="+1">CA</option>
+                                        <option value="+44">UK</option>
+                                        <option value="+61">AU</option>
+                                    </select>
+                                    <input type="tel" id="phone" name="phone" class="form__input" placeholder="+1 (555) 000-0000" required>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="reg-show" class="form-label">Select Show *</label>
-                                <select id="reg-show" name="show" class="form-select" required>
-                                    <option value="">Choose a competition</option>
-                                    <option value="utah-state-naturals">Utah State Naturals - March 15, 2025</option>
-                                    <option value="colorado-rapids">Colorado Rapids - June 22, 2025</option>
-                                    <option value="red-rock-classic">Red Rock Classic - September 14, 2025</option>
-                                    <option value="night-of-champions">Night of Champions - December 7, 2025</option>
-                                </select>
+
+                            <div class="form__group">
+                                <label for="message" class="form__label">Message</label>
+                                <textarea id="message" name="message" class="form__textarea" placeholder="Leave us a message..." rows="4" required></textarea>
                             </div>
-                            <div class="form-group">
-                                <label for="reg-division" class="form-label">Division *</label>
-                                <select id="reg-division" name="division" class="form-select" required>
-                                    <option value="">Select your division</option>
-                                    <option value="mens-physique">Men's Physique</option>
-                                    <option value="womens-bikini">Women's Bikini</option>
-                                    <option value="classic-physique">Classic Physique</option>
-                                    <option value="bodybuilding">Bodybuilding</option>
-                                    <option value="wellness">Wellness</option>
-                                </select>
+
+                            <div class="form__group">
+                                <fieldset class="form__fieldset">
+                                    <legend class="form__legend">Services</legend>
+                                    <div class="form__checkboxes">
+                                        <div class="form__checkbox-group">
+                                            <input type="checkbox" id="competition-coaching" name="services" value="competition-coaching" class="form__checkbox">
+                                            <label for="competition-coaching" class="form__checkbox-label">Competition Coaching</label>
+                                        </div>
+                                        <div class="form__checkbox-group">
+                                            <input type="checkbox" id="nutrition-planning" name="services" value="nutrition-planning" class="form__checkbox">
+                                            <label for="nutrition-planning" class="form__checkbox-label">Nutrition Planning</label>
+                                        </div>
+                                        <div class="form__checkbox-group">
+                                            <input type="checkbox" id="training-program" name="services" value="training-program" class="form__checkbox">
+                                            <label for="training-program" class="form__checkbox-label">Training Program</label>
+                                        </div>
+                                        <div class="form__checkbox-group">
+                                            <input type="checkbox" id="show-registration" name="services" value="show-registration" class="form__checkbox">
+                                            <label for="show-registration" class="form__checkbox-label">Show Registration</label>
+                                        </div>
+                                        <div class="form__checkbox-group">
+                                            <input type="checkbox" id="sponsorship" name="services" value="sponsorship" class="form__checkbox">
+                                            <label for="sponsorship" class="form__checkbox-label">Sponsorship</label>
+                                        </div>
+                                        <div class="form__checkbox-group">
+                                            <input type="checkbox" id="other" name="services" value="other" class="form__checkbox">
+                                            <label for="other" class="form__checkbox-label">Other</label>
+                                        </div>
+                                    </div>
+                                </fieldset>
                             </div>
-                            <div class="form-group">
-                                <label for="reg-experience" class="form-label">Competition Experience</label>
-                                <select id="reg-experience" name="experience" class="form-select">
-                                    <option value="first-time">First Time Competitor</option>
-                                    <option value="1-2">1-2 Previous Competitions</option>
-                                    <option value="3-5">3-5 Previous Competitions</option>
-                                    <option value="6+">6+ Previous Competitions</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-checkbox">
-                                    <input type="checkbox" name="terms" required>
-                                    <span class="form-checkbox__text">I agree to the <a href="#terms" class="form-link">Terms & Conditions</a> and <a href="#privacy" class="form-link">Privacy Policy</a> *</span>
-                                </label>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn--primary btn--lg">Register Now</button>
-                            </div>
+
+                            <button type="submit" class="btn btn--primary btn--lg form__submit">Send message</button>
                         </form>
                     </div>
 
-                    <div class="registration-info">
-                        <h3 class="registration-info__title">Registration Information</h3>
-                        <div class="info-item">
-                            <h4 class="info-item__title">Registration Fees</h4>
-                            <ul class="info-list">
-                                <li>Early Bird (3+ months): $75</li>
-                                <li>Standard (1-3 months): $95</li>
-                                <li>Late Registration (< 1 month): $125</li>
-                            </ul>
+                    <!-- Right Column: Contact Methods -->
+                    <div class="contact-methods-section">
+                        <div class="contact-method">
+                            <h3 class="contact-method__title">Chat with us</h3>
+                            <p class="contact-method__description">Speak to our friendly team via live chat.</p>
+                            <div class="contact-method__actions">
+                                <a href="#chat" class="contact-method__link">
+                                    <span class="contact-method__icon">💬</span>
+                                    Start a live chat
+                                </a>
+                                <a href="mailto:info@inba-pnba-mountainstates.com" class="contact-method__link">
+                                    <span class="contact-method__icon">✉️</span>
+                                    Shoot us an email
+                                </a>
+                                <a href="#social" class="contact-method__link">
+                                    <span class="contact-method__icon">📱</span>
+                                    Message us on X
+                                </a>
+                            </div>
                         </div>
-                        <div class="info-item">
-                            <h4 class="info-item__title">What's Included</h4>
-                            <ul class="info-list">
-                                <li>Competition entry</li>
-                                <li>Pre-judging and finals</li>
-                                <li>Competitor goodie bag</li>
-                                <li>Digital photos</li>
-                                <li>Results certificate</li>
-                            </ul>
+
+                        <div class="contact-method">
+                            <h3 class="contact-method__title">Call us</h3>
+                            <p class="contact-method__description">Call our team Mon-Fri from 8am to 5pm.</p>
+                            <a href="tel:+15551234567" class="contact-method__phone">
+                                <span class="contact-method__icon">📞</span>
+                                +1 (555) 123-4567
+                            </a>
                         </div>
-                        <div class="info-item">
-                            <h4 class="info-item__title">Requirements</h4>
-                            <ul class="info-list">
-                                <li>Valid ID required</li>
-                                <li>Drug-free certification</li>
-                                <li>Competition attire</li>
-                                <li>Music for routine (if applicable)</li>
-                            </ul>
+
+                        <div class="contact-method">
+                            <h3 class="contact-method__title">Visit us</h3>
+                            <p class="contact-method__description">Meet us in person at our regional headquarters.</p>
+                            <a href="#location" class="contact-method__address">
+                                <span class="contact-method__icon">📍</span>
+                                123 Fitness Way, Denver CO 80202
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -165,129 +183,25 @@
         </section>
 
         <!-- FAQ Section -->
-        <section class="section">
+        <section class="section section--dark">
             <div class="container">
-                <div class="section__header">
-                    <h2 class="section__title">Frequently Asked Questions</h2>
-                    <p class="section__subtitle">Common questions about our competitions and registration</p>
-                </div>
-                
-                <div class="faq-list">
+                <h2 class="section__title">Frequently Asked Questions</h2>
+                <div class="faq-grid">
                     <div class="faq-item">
-                        <button class="faq-question" data-faq="1">
-                            <span>What is the difference between INBA and PNBA?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer" id="faq-1">
-                            <p>INBA (International Natural Bodybuilding Association) and PNBA (Professional Natural Bodybuilding Association) are both drug-free bodybuilding organizations. INBA focuses on amateur competitions, while PNBA handles professional-level events. We host both types of competitions.</p>
-                        </div>
+                        <h3 class="faq-item__question">How do I register for a competition?</h3>
+                        <p class="faq-item__answer">Registration is simple! Fill out the contact form above, select "Show Registration" in the services section, and our team will guide you through the process.</p>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question" data-faq="2">
-                            <span>How do I prepare for my first competition?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer" id="faq-2">
-                            <p>Preparation typically takes 12-16 weeks and includes diet, training, posing practice, and tanning. We recommend working with a coach experienced in natural bodybuilding. Check our resources page for detailed preparation guides.</p>
-                        </div>
+                        <h3 class="faq-item__question">What are the drug testing requirements?</h3>
+                        <p class="faq-item__answer">All INBA/PNBA competitions are 100% natural. We conduct comprehensive drug testing to ensure fair competition for all athletes.</p>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question" data-faq="3">
-                            <span>What divisions are available?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer" id="faq-3">
-                            <p>We offer Men's Physique, Women's Bikini, Classic Physique, Bodybuilding, and Wellness divisions. Each division has specific criteria and judging standards. Check our rules page for detailed information about each division.</p>
-                        </div>
+                        <h3 class="faq-item__question">Do you provide coaching services?</h3>
+                        <p class="faq-item__answer">Yes! We have certified coaches available for training, nutrition, and competition preparation. Select "Competition Coaching" in the form above.</p>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question" data-faq="4">
-                            <span>Is drug testing required?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer" id="faq-4">
-                            <p>Yes, all competitors must pass drug testing to compete. We use polygraph testing and random drug screening to ensure fair, natural competition. This is what makes our competitions truly natural bodybuilding events.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Information Section -->
-        <section class="section section--gray" id="contact-info">
-            <div class="container">
-                <div class="section__header">
-                    <h2 class="section__title">Contact Information</h2>
-                    <p class="section__subtitle">Get in touch with our team for questions or support</p>
-                </div>
-                
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <h3 class="contact-info__title">Get in Touch</h3>
-                        <div class="contact-item">
-                            <div class="contact-item__icon">📧</div>
-                            <div class="contact-item__content">
-                                <h4 class="contact-item__title">Email</h4>
-                                <p class="contact-item__text">info@inbamountainstates.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-item__icon">📱</div>
-                            <div class="contact-item__content">
-                                <h4 class="contact-item__title">Phone</h4>
-                                <p class="contact-item__text">(801) 555-0123</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-item__icon">📍</div>
-                            <div class="contact-item__content">
-                                <h4 class="contact-item__title">Address</h4>
-                                <p class="contact-item__text">123 Fitness Way<br>Salt Lake City, UT 84101</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-item__icon">⏰</div>
-                            <div class="contact-item__content">
-                                <h4 class="contact-item__title">Office Hours</h4>
-                                <p class="contact-item__text">Mon-Fri: 9:00 AM - 6:00 PM<br>Sat: 10:00 AM - 4:00 PM</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contact-form">
-                        <h3 class="contact-form__title">Send us a Message</h3>
-                        <form class="form" id="contactForm">
-                            <div class="form-group">
-                                <label for="name" class="form-label">Full Name *</label>
-                                <input type="text" id="name" name="name" class="form-input" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email" class="form-label">Email Address *</label>
-                                <input type="email" id="email" name="email" class="form-input" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone" class="form-label">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" class="form-input">
-                            </div>
-                            <div class="form-group">
-                                <label for="subject" class="form-label">Subject *</label>
-                                <select id="subject" name="subject" class="form-select" required>
-                                    <option value="">Select a subject</option>
-                                    <option value="competition">Competition Registration</option>
-                                    <option value="coaching">Coaching Services</option>
-                                    <option value="general">General Question</option>
-                                    <option value="sponsorship">Sponsorship</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="message" class="form-label">Message *</label>
-                                <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn--primary btn--lg">Send Message</button>
-                            </div>
-                        </form>
+                        <h3 class="faq-item__question">What's the cost to compete?</h3>
+                        <p class="faq-item__answer">Competition fees vary by show and division. Contact us for specific pricing and early bird discounts available for early registration.</p>
                     </div>
                 </div>
             </div>
@@ -299,94 +213,48 @@
             <div class="footer__main">
                 <div class="footer__brand">
                     <img class="footer__logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='Montserrat' font-size='24' font-weight='900' fill='%2300FFFF'%3EINBA/PNBA%3C/text%3E%3Ctext x='10' y='55' font-family='Roboto' font-size='12' fill='%23b0b0b0'%3EMountain States%3C/text%3E%3C/svg%3E" alt="INBA/PNBA Mountain States">
-                    <p class="footer__brand-text">Promoting natural bodybuilding excellence across the Mountain States region. Drug-free competition, world-class athletes, and unforgettable experiences.</p>
+                    <p class="footer__brand-text">Promoting natural bodybuilding excellence across the Mountain States region. Drug-tested competitions, professional support, and a community dedicated to health and athletic achievement.</p>
                 </div>
                 <div class="footer__links">
                     <div class="footer__column">
-                        <h3 class="footer__column-title">Shows</h3>
+                        <h4 class="footer__column-title">Quick Links</h4>
                         <ul class="footer__list">
-                            <li class="footer__list-item"><a href="../shows.html" class="footer__link">All Shows</a></li>
-                            <li class="footer__list-item"><a href="shows.html#utah-state-naturals" class="footer__link">Utah State Naturals</a></li>
-                            <li class="footer__list-item"><a href="shows.html#colorado-rapids" class="footer__link">Colorado Rapids</a></li>
-                            <li class="footer__list-item"><a href="shows.html#red-rock-classic" class="footer__link">Red Rock Classic</a></li>
-                            <li class="footer__list-item"><a href="shows.html#night-of-champions" class="footer__link">Night of Champions</a></li>
+                            <li class="footer__list-item"><a href="../index.html" class="footer__link">Home</a></li>
+                            <li class="footer__list-item"><a href="shows.html" class="footer__link">Shows</a></li>
+                            <li class="footer__list-item"><a href="champions.html" class="footer__link">Champions</a></li>
+                            <li class="footer__list-item"><a href="results.html" class="footer__link">Results</a></li>
                         </ul>
                     </div>
                     <div class="footer__column">
-                        <h3 class="footer__column-title">Resources</h3>
+                        <h4 class="footer__column-title">Resources</h4>
                         <ul class="footer__list">
-                            <li class="footer__list-item"><a href="../champions.html" class="footer__link">Champions</a></li>
-                            <li class="footer__list-item"><a href="../results.html" class="footer__link">Results</a></li>
-                            <li class="footer__list-item"><a href="../contact.html" class="footer__link">Contact</a></li>
-                            <li class="footer__list-item"><a href="#rules" class="footer__link">Competition Rules</a></li>
+                            <li class="footer__list-item"><a href="#natural-bodybuilding" class="footer__link">Natural Bodybuilding</a></li>
+                            <li class="footer__list-item"><a href="#trainers" class="footer__link">Find a Trainer</a></li>
+                            <li class="footer__list-item"><a href="#sponsors" class="footer__link">Become a Sponsor</a></li>
+                            <li class="footer__list-item"><a href="contact.html" class="footer__link">Contact Us</a></li>
                         </ul>
                     </div>
                     <div class="footer__column">
-                        <h3 class="footer__column-title">Connect</h3>
-                        <ul class="footer__list">
-                            <li class="footer__list-item"><a href="https://facebook.com" class="footer__link" target="_blank">Facebook</a></li>
-                            <li class="footer__list-item"><a href="https://instagram.com" class="footer__link" target="_blank">Instagram</a></li>
-                            <li class="footer__list-item"><a href="https://youtube.com" class="footer__link" target="_blank">YouTube</a></li>
-                            <li class="footer__list-item"><a href="mailto:info@inbamountainstates.com" class="footer__link">Email Us</a></li>
-                        </ul>
+                        <h4 class="footer__column-title">Follow Us</h4>
+                        <div class="footer__social">
+                            <a href="#facebook" class="footer__social-link" aria-label="Facebook">f</a>
+                            <a href="#instagram" class="footer__social-link" aria-label="Instagram">📷</a>
+                            <a href="#twitter" class="footer__social-link" aria-label="Twitter">𝕏</a>
+                            <a href="#youtube" class="footer__social-link" aria-label="YouTube">▶</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="footer__bottom">
-                <p class="footer__copyright">&copy; 2024 INBA/PNBA Mountain States. All rights reserved.</p>
+                <p class="footer__copyright">&copy; 2025 INBA/PNBA Mountain States. All rights reserved.</p>
                 <ul class="footer__legal">
-                    <li class="footer__legal-item"><a href="#privacy" class="footer__link">Privacy Policy</a></li>
-                    <li class="footer__legal-item"><a href="#terms" class="footer__link">Terms & Conditions</a></li>
+                    <li class="footer__legal-item"><a href="contact.html#privacy" class="footer__link">Privacy Policy</a></li>
+                    <li class="footer__legal-item"><a href="contact.html#terms" class="footer__link">Terms & Conditions</a></li>
                 </ul>
             </div>
         </div>
     </footer>
 
-    <script src="../src/assets/js/main.js"></script>
-    <script>
-        // FAQ functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const faqQuestions = document.querySelectorAll('.faq-question');
-            
-            faqQuestions.forEach(question => {
-                question.addEventListener('click', function() {
-                    const faqId = this.dataset.faq;
-                    const answer = document.getElementById(`faq-${faqId}`);
-                    const icon = this.querySelector('.faq-icon');
-                    
-                    if (answer.style.display === 'block') {
-                        answer.style.display = 'none';
-                        icon.textContent = '+';
-                    } else {
-                        // Close all other FAQs
-                        faqQuestions.forEach(q => {
-                            const otherFaqId = q.dataset.faq;
-                            const otherAnswer = document.getElementById(`faq-${otherFaqId}`);
-                            const otherIcon = q.querySelector('.faq-icon');
-                            otherAnswer.style.display = 'none';
-                            otherIcon.textContent = '+';
-                        });
-                        
-                        answer.style.display = 'block';
-                        icon.textContent = '-';
-                    }
-                });
-            });
-
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="../src/assets/js/main-clean.js"></script>
 </body>
 </html>
