@@ -13,53 +13,52 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../src/assets/css/style.css">
 </head>
 <body>
     <header class="header">
         <nav class="nav">
             <div class="nav__brand">
-                <a href="../../index.html">
-                    <img class="nav__logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='Montserrat' font-size='24' font-weight='900' fill='%2300FFFF'%3EINBA/PNBA%3C/text%3E%3Ctext x='10' y='55' font-family='Roboto' font-size='12' fill='%23b0b0b0'%3EMountain States%3C/text%3E%3C/svg%3E" alt="INBA/PNBA Mountain States">
-                </a>
+                <img class="nav__logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='Montserrat' font-size='24' font-weight='900' fill='%2300FFFF'%3EINBA/PNBA%3C/text%3E%3Ctext x='10' y='55' font-family='Roboto' font-size='12' fill='%23b0b0b0'%3EMountain States%3C/text%3E%3C/svg%3E" alt="INBA/PNBA Mountain States">
             </div>
-            <button class="nav__toggle" id="navToggle">
+            <button class="nav__toggle" aria-label="Toggle navigation" id="navToggle">
                 <span class="nav__toggle-line"></span>
                 <span class="nav__toggle-line"></span>
                 <span class="nav__toggle-line"></span>
             </button>
-            <ul class="nav__menu" id="navMenu">
-                <li class="nav__item"><a href="../../index.html" class="nav__link">Home</a></li>
-                <li class="nav__item nav__item--dropdown" id="showsDropdown">
-                    <a href="#" class="nav__link">Shows</a>
-                    <ul class="nav__dropdown">
-                        <li class="nav__dropdown-item"><a href="../shows.html" class="nav__link">All Shows</a></li>
-                        <li class="nav__dropdown-item"><a href="shows.html#utah-state-naturals" class="nav__link">Utah State Naturals</a></li>
-                        <li class="nav__dropdown-item"><a href="shows.html#colorado-rapids" class="nav__link">Colorado Rapids</a></li>
-                        <li class="nav__dropdown-item"><a href="shows.html#red-rock-classic" class="nav__link">Red Rock Classic</a></li>
-                        <li class="nav__dropdown-item"><a href="shows.html#night-of-champions" class="nav__link">Night of Champions</a></li>
-                    </ul>
-                </li>
-                <li class="nav__item"><a href="../champions.html" class="nav__link">Champions</a></li>
-                <li class="nav__item"><a href="../results.html" class="nav__link">Results</a></li>
-                <li class="nav__item"><a href="../contact.html" class="nav__link">Contact</a></li>
-                <li class="nav__item nav__cta">
-                    <a href="#register" class="btn btn--primary">Register Now</a>
-                </li>
-            </ul>
+            <div class="nav__menu" id="navMenu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item nav__item--dropdown" id="showsDropdown">
+                        <a href="#shows" class="nav__link">Shows</a>
+                        <ul class="nav__dropdown">
+                            <li class="nav__dropdown-item"><a href="shows/utah-state-naturals.html" class="nav__link">Utah State Naturals</a></li>
+                            <li class="nav__dropdown-item"><a href="shows/colorado-rapids.html" class="nav__link">Colorado Rapids</a></li>
+                            <li class="nav__dropdown-item"><a href="shows/red-rock.html" class="nav__link">Red Rock Classic</a></li>
+                            <li class="nav__dropdown-item"><a href="shows/night-of-champions.html" class="nav__link">Night of Champions</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item"><a href="champions.html" class="nav__link">Champions</a></li>
+                    <li class="nav__item"><a href="results.html" class="nav__link">Results</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                    <li class="nav__item nav__cta">
+                        <a href="#register" class="btn btn--primary">Register Now</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="contact__hero">
             <div class="hero__container container">
                 <div class="hero__content">
-                    <h1 class="hero__title">Join the Competition</h1>
-                    <p class="hero__subtitle">Register for upcoming natural bodybuilding competitions or get in touch with our team</p>
+                    <h1 class="hero__title">Get in Touch with INBA/PNBA Mountain States</h1>
+                    <p class="hero__subtitle">Register for competitions, get coaching, or reach out with questions about natural bodybuilding. We're here to support your journey.</p>
                     <div class="hero__actions">
-                        <a href="#register" class="btn btn--primary btn--lg">Register for Competition</a>
-                        <a href="#contact-info" class="btn btn--secondary btn--lg">Contact Information</a>
+                        <a href="#register" class="btn btn--primary btn--lg">Register Now</a>
+                        <a href="#contact-info" class="btn btn--secondary btn--lg">Contact Info</a>
                     </div>
                 </div>
             </div>
@@ -343,7 +342,7 @@
         </div>
     </footer>
 
-    <script src="../../assets/js/main.js"></script>
+    <script src="../src/assets/js/main.js"></script>
     <script>
         // FAQ functionality
         document.addEventListener('DOMContentLoaded', function() {

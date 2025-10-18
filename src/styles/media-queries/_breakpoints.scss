@@ -1,0 +1,52 @@
+// Media Queries: Breakpoints
+@media (min-width: 768px) {
+    .nav__toggle {
+        display: none;
+    }
+
+    .nav__menu {
+        display: block;
+        position: static;
+        box-shadow: none;
+        padding: 0;
+        border-top: none;
+    }
+
+    .nav__list {
+        flex-direction: row;
+        gap: var(--spacing-lg);
+        align-items: center;
+    }
+
+    .nav__item {
+        padding: 0;
+        border-bottom: none;
+    }
+
+    .hero__title {
+        font-size: 56px;
+    }
+
+    .hero__subtitle {
+        font-size: 20px;
+    }
+
+    .hero__actions {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero__title {
+        font-size: 64px;
+    }
+
+    .footer__main {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .footer__links {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

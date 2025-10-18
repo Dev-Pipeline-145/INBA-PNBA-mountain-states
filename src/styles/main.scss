@@ -16,11 +16,21 @@
 @import 'components/forms';
 @import 'components/hero';
 @import 'components/navigation';
-@import 'components/footer';
+@import 'components/feature-list';
+@import 'components/show-list';
+@import 'components/champion';
+@import 'components/trainer';
 
 // Layout
 @import 'layout/header';
 @import 'layout/footer';
+
+// Pages
+@import 'pages/home';
+@import 'pages/shows';
+@import 'pages/champions';
+@import 'pages/results';
+@import 'pages/contact';
 
 // Media Queries
 @import 'media-queries/breakpoints';

@@ -1,0 +1,13 @@
+// Components: Cards
+.card {
+    background: var(--bg-dark-card);
+    border: 1px solid var(--border-dark);
+    border-radius: 8px;
+    padding: var(--spacing-lg);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--primary-cyan);
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.1);
+}

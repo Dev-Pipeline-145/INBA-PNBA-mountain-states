@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../src/assets/css/style.css">
 </head>
 <body>
     <header class="header">
@@ -52,6 +52,18 @@
 
     <main>
         <!-- Hero Section -->
+        <section class="results__hero">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Competition Results and Archives</h1>
+                    <p class="hero__subtitle">View results from past competitions, track athlete progress, and explore our comprehensive competition archives.</p>
+                    <div class="hero__actions">
+                        <a href="#current-results" class="btn btn--primary btn--lg">Current Results</a>
+                        <a href="#archives" class="btn btn--secondary btn--lg">View Archives</a>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="hero">
             <div class="hero__container container">
                 <div class="hero__content">
@@ -352,7 +364,7 @@
         </div>
     </footer>
 
-    <script src="../../assets/js/main.js"></script>
+    <script src="../src/assets/js/main.js"></script>
     <script>
         // Results filtering functionality
         document.addEventListener('DOMContentLoaded', function() {
