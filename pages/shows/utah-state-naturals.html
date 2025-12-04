@@ -12,7 +12,7 @@
     <title>Utah State Naturals | INBA/PNBA Mountain States</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700&family=Birthstone&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../src/assets/css/style.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
     <nav class="nav">
         <div class="nav__brand">
             <a href="../../index.html">
-                <img class="nav__logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='Montserrat' font-size='24' font-weight='900' fill='%2300FFFF'%3EINBA/PNBA%3C/text%3E%3Ctext x='10' y='55' font-family='Roboto' font-size='12' fill='%23b0b0b0'%3EMountain States%3C/text%3E%3C/svg%3E" alt="INBA/PNBA Mountain States">
+                <img class="nav__logo" src="../../src/assets/images/00_INBA Globa Logo.png" alt="INBA Global">
             </a>
         </div>
         <button class="nav__toggle" aria-label="Toggle navigation" id="navToggle">
@@ -42,9 +42,10 @@
                 </li>
                 <li class="nav__item"><a href="../champions.html" class="nav__link">Champions</a></li>
                 <li class="nav__item"><a href="../results.html" class="nav__link">Results</a></li>
+                <li class="nav__item"><a href="../shop.html" class="nav__link">Shop</a></li>
                 <li class="nav__item"><a href="../contact.html" class="nav__link">Contact</a></li>
                 <li class="nav__item nav__cta">
-                    <a href="../contact.html#register" class="btn btn--primary">Register Now</a>
+                    <a href="https://naturalbodybuilding.com/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Register Now</a>
                 </li>
             </ul>
         </div>
@@ -59,7 +60,7 @@
                     <h1 class="hero__title">Utah State Naturals</h1>
                     <p class="hero__subtitle">Premier natural bodybuilding competition in Springville, Utah. May 2026. The ultimate test of dedication, discipline, and natural athletic excellence.</p>
                     <div class="hero__actions">
-                        <a href="../contact.html#register" class="btn btn--primary btn--lg">Register Now</a>
+                        <a href="https://naturalbodybuilding.com/" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">Register Now</a>
                         <a href="#details" class="btn btn--secondary btn--lg">Show Details</a>
                     </div>
                 </div>
@@ -69,22 +70,49 @@
         <!-- Quick Facts Box -->
         <section class="section" id="details">
             <div class="container">
-                <div class="show__quick-facts">
-                    <div class="show__fact">
-                        <h3>📍 Venue</h3>
-                        <p>Springville High School Auditorium<br>Springville, Utah</p>
+                <div class="show__details-wrapper">
+                    <div class="show__left-content">
+                        <div class="show__quick-facts">
+                            <div class="show__fact">
+                                <h3>📍 Venue</h3>
+                                <p>Maple Mountain High School<br>51 N Spanish Fork Pkwy<br>Spanish Fork, UT 84660</p>
+                            </div>
+                            <div class="show__fact">
+                                <h3>📅 Date</h3>
+                                <p>August 22, 2026</p>
+                            </div>
+                            <div class="show__fact">
+                                <h3>⏰ Show Time</h3>
+                                <p>Athletes Meeting: 9:00 AM<br>Show Starts: 10:00 AM</p>
+                            </div>
+                            <div class="show__fact">
+                                <h3>📞 Contact</h3>
+                                <p>info@inba-pnba-mountainstates.com<br>(801) 555-0123</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Competition Divisions -->
+                        <div class="show__divisions-section">
+                            <h2 class="section__title" style="margin-bottom: var(--spacing-md);">Competition Divisions</h2>
+                            <p class="section__subtitle" style="margin-bottom: var(--spacing-lg);">Multiple divisions for athletes of all levels and ages</p>
+                            <div class="divisions__grid">
+                                <a href="https://naturalbodybuilding.com/categories/male-categories/" target="_blank" rel="noopener noreferrer" class="division__card division__card--link">
+                                    <h3>Male Categories</h3>
+                                    <p>View all male competition divisions</p>
+                                </a>
+                                <a href="https://naturalbodybuilding.com/categories/female/" target="_blank" rel="noopener noreferrer" class="division__card division__card--link">
+                                    <h3>Female Categories</h3>
+                                    <p>View all female competition divisions</p>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="show__fact">
-                        <h3>📅 Date</h3>
-                        <p>May 2026<br>Exact date TBA</p>
-                    </div>
-                    <div class="show__fact">
-                        <h3>⏰ Show Time</h3>
-                        <p>Prejudging: 10:00 AM<br>Finals: 6:00 PM</p>
-                    </div>
-                    <div class="show__fact">
-                        <h3>📞 Contact</h3>
-                        <p>info@inba-pnba-mountainstates.com<br>(801) 555-0123</p>
+                    <div class="show__poster">
+                        <h3 class="show__poster-title">Event Poster</h3>
+                        <div class="show__poster-container">
+                            <embed src="../../src/assets/images/USN.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" type="application/pdf" class="show__poster-pdf" title="Utah State Naturals 2026 Poster">
+                            <a href="../../src/assets/images/USN.pdf" target="_blank" rel="noopener noreferrer" class="btn btn--secondary" style="margin-top: var(--spacing-md);">Download Poster</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -132,101 +160,38 @@
                 </div>
                 <div class="services__grid">
                     <div class="service__card">
-                        <h3>💇‍♀️ Hair Services</h3>
-                        <p><strong>Elite Styling by Sarah</strong><br>
-                        Professional competition styling<br>
+                        <h3>Hair Services</h3>
+                        <p><strong>No Hair Services Available</strong><br>
+                        <!-- Professional competition styling<br>
                         Booking: (801) 555-0124<br>
-                        $75-150 depending on style</p>
+                        $75-150 depending on style</p> -->
                     </div>
                     <div class="service__card">
-                        <h3>💄 Makeup Services</h3>
-                        <p><strong>Glamour by Jessica</strong><br>
-                        Stage-ready makeup artistry<br>
+                        <h3>Makeup Services</h3>
+                        <p><strong>No Makeup Services Available</strong><br>
+                        <!-- Stage-ready makeup artistry<br>
                         Portfolio: @glamourbyjessica<br>
-                        $100-200 for full service</p>
+                        $100-200 for full service</p> -->
                     </div>
                     <div class="service__card">
-                        <h3>🏨 Host Hotel</h3>
+                        <h3>Host Hotel</h3>
                         <p><strong>Springville Inn & Suites</strong><br>
                         123 Main Street, Springville, UT<br>
-                        Group Rate: $89/night (Code: INBA2026)<br>
+                        Group Rate: TBA/night (Code: INBA2026)<br>
                         Booking Deadline: April 15, 2026</p>
                     </div>
                     <div class="service__card">
-                        <h3>🌞 Show Tanner</h3>
-                        <p><strong>ProTan Competition Services</strong><br>
+                        <h3>Show Tanner</h3>
+                        <p><strong>Heyther Tanning</strong><br>
                         Official show tanner<br>
-                        Application Times: Fri 2-8 PM, Sat 6-10 AM<br>
-                        $50-75 per application</p>
+                        Phone: (801) 808-3568<br>
+                        <a href="https://www.instagram.com/tansbyheyther/" target="_blank" rel="noopener noreferrer" style="color: var(--primary-cyan); text-decoration: none;">@tansbyheyther</a><br>
+                        $150-175 per application</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Competition Divisions -->
-        <section class="section section--gray">
-            <div class="container">
-                <div class="section__header">
-                    <h2 class="section__title">Competition Divisions</h2>
-                    <p class="section__subtitle">Multiple divisions for athletes of all levels and ages</p>
-                </div>
-                <div class="divisions__grid">
-                    <div class="division__card">
-                        <h3>Men's Bodybuilding</h3>
-                        <ul>
-                            <li>Lightweight (under 165 lbs)</li>
-                            <li>Middleweight (165-185 lbs)</li>
-                            <li>Light Heavyweight (185-205 lbs)</li>
-                            <li>Heavyweight (205+ lbs)</li>
-                        </ul>
-                    </div>
-                    <div class="division__card">
-                        <h3>Women's Figure</h3>
-                        <ul>
-                            <li>Class A (under 5'4")</li>
-                            <li>Class B (5'4"-5'6")</li>
-                            <li>Class C (5'6"-5'8")</li>
-                            <li>Class D (5'8"+)</li>
-                        </ul>
-                    </div>
-                    <div class="division__card">
-                        <h3>Women's Bikini</h3>
-                        <ul>
-                            <li>Class A (under 5'4")</li>
-                            <li>Class B (5'4"-5'6")</li>
-                            <li>Class C (5'6"-5'8")</li>
-                            <li>Class D (5'8"+)</li>
-                        </ul>
-                    </div>
-                    <div class="division__card">
-                        <h3>Men's Physique</h3>
-                        <ul>
-                            <li>Class A (under 5'8")</li>
-                            <li>Class B (5'8"-5'10")</li>
-                            <li>Class C (5'10"-6'0")</li>
-                            <li>Class D (6'0"+)</li>
-                        </ul>
-                    </div>
-                    <div class="division__card">
-                        <h3>Classic Physique</h3>
-                        <ul>
-                            <li>Class A (under 5'8")</li>
-                            <li>Class B (5'8"-5'10")</li>
-                            <li>Class C (5'10"-6'0")</li>
-                            <li>Class D (6'0"+)</li>
-                        </ul>
-                    </div>
-                    <div class="division__card">
-                        <h3>Masters Divisions</h3>
-                        <ul>
-                            <li>Masters 40+ (All divisions)</li>
-                            <li>Masters 50+ (All divisions)</li>
-                            <li>Masters 60+ (All divisions)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Last Year's Champions -->
         <section class="section">
@@ -238,14 +203,15 @@
                 <div class="champion-grid">
                     <article class="champion">
                         <div class="champion__image-wrapper">
+                            <div class="champion__type-badge">PRO</div>
                             <div class="champion__image">
-                                <!-- Champion photo placeholder -->
+                                <img src="../../src/assets/champions/IMG_1264-3.jpg" alt="Bikini Pro Champion 2025">
                             </div>
-                            <span class="champion__badge">Overall Winner</span>
+                            <div class="champion__badge">1st Place</div>
                             <div class="champion__stats">
                                 <div class="champion__stat">
                                     <div class="champion__stat-label">Division</div>
-                                    <div class="champion__stat-value">Men's BB</div>
+                                    <div class="champion__stat-value">Bikini Pro</div>
                                 </div>
                                 <div class="champion__stat">
                                     <div class="champion__stat-label">Year</div>
@@ -254,15 +220,15 @@
                             </div>
                         </div>
                         <div class="champion__content">
-                            <h3 class="champion__name">Mike Thompson</h3>
-                            <p class="champion__title">Overall Men's Bodybuilding Champion</p>
-                            <p class="champion__show">Utah State Naturals 2025</p>
+                            <h3 class="champion__name">Shar Hess</h3>
+                            <p class="champion__title">Bikini Pro Champion</p>
+                            <div class="champion__show">🏆 Utah State Naturals 2025</div>
                             <blockquote class="champion__quote">
-                                "Winning Utah State Naturals was the culmination of years of hard work and dedication to natural bodybuilding."
+                                "Competing naturally has been the most rewarding experience of my life. The support from the INBA/PNBA community is incredible."
                             </blockquote>
                         </div>
                         <div class="champion__actions">
-                            <a href="#profile" class="champion__link">View Profile</a>
+                            <a href="../champions.html" class="champion__link">View All Champions</a>
                             <div class="champion__social">
                                 <a href="#" class="champion__social-link" aria-label="Instagram">📷</a>
                                 <a href="#" class="champion__social-link" aria-label="Facebook">f</a>
@@ -272,14 +238,15 @@
 
                     <article class="champion">
                         <div class="champion__image-wrapper">
+                            <div class="champion__type-badge">PRO</div>
                             <div class="champion__image">
-                                <!-- Champion photo placeholder -->
+                                <img src="../../src/assets/champions/IMG_2006-3.jpg" alt="Wellness Pro Champion 2025">
                             </div>
-                            <span class="champion__badge">Overall Winner</span>
+                            <div class="champion__badge">1st Place</div>
                             <div class="champion__stats">
                                 <div class="champion__stat">
                                     <div class="champion__stat-label">Division</div>
-                                    <div class="champion__stat-value">Figure</div>
+                                    <div class="champion__stat-value">Wellness Pro</div>
                                 </div>
                                 <div class="champion__stat">
                                     <div class="champion__stat-label">Year</div>
@@ -288,15 +255,156 @@
                             </div>
                         </div>
                         <div class="champion__content">
-                            <h3 class="champion__name">Sarah Johnson</h3>
-                            <p class="champion__title">Overall Women's Figure Champion</p>
-                            <p class="champion__show">Utah State Naturals 2025</p>
+                            <h3 class="champion__name">Shar Hess</h3>
+                            <p class="champion__title">Wellness Pro Champion</p>
+                            <div class="champion__show">🏆 Utah State Naturals 2025</div>
                             <blockquote class="champion__quote">
-                                "The support from the INBA/PNBA community made this victory even more special."
+                                "Wellness is about balance - strength and grace, power and femininity, hard work and self-care. It's the complete package."
                             </blockquote>
                         </div>
                         <div class="champion__actions">
-                            <a href="#profile" class="champion__link">View Profile</a>
+                            <a href="../champions.html" class="champion__link">View All Champions</a>
+                            <div class="champion__social">
+                                <a href="#" class="champion__social-link" aria-label="Instagram">📷</a>
+                                <a href="#" class="champion__social-link" aria-label="Facebook">f</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="champion">
+                        <div class="champion__image-wrapper">
+                            <div class="champion__type-badge">PRO</div>
+                            <div class="champion__image">
+                                <img src="../../src/assets/champions/IMG_2033.jpg" alt="Pro Men's Physique Champion 2025">
+                            </div>
+                            <div class="champion__badge">1st Place</div>
+                            <div class="champion__stats">
+                                <div class="champion__stat">
+                                    <div class="champion__stat-label">Division</div>
+                                    <div class="champion__stat-value">Pro Men's Physique</div>
+                                </div>
+                                <div class="champion__stat">
+                                    <div class="champion__stat-label">Year</div>
+                                    <div class="champion__stat-value">2025</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="champion__content">
+                            <h3 class="champion__name">Utah State Naturals</h3>
+                            <p class="champion__title">Pro Men's Physique Champion</p>
+                            <div class="champion__show">🏆 Utah State Naturals 2025</div>
+                            <blockquote class="champion__quote">
+                                "Natural bodybuilding taught me that true strength comes from within. Every rep, every meal, every choice matters when you're building something real."
+                            </blockquote>
+                        </div>
+                        <div class="champion__actions">
+                            <a href="../champions.html" class="champion__link">View All Champions</a>
+                            <div class="champion__social">
+                                <a href="#" class="champion__social-link" aria-label="Instagram">📷</a>
+                                <a href="#" class="champion__social-link" aria-label="Facebook">f</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Amateur Champions -->
+                    <article class="champion">
+                        <div class="champion__image-wrapper">
+                            <div class="champion__type-badge" data-type="amateur">AMATEUR</div>
+                            <div class="champion__image">
+                                <img src="../../src/assets/champions/IMG_1953-3.jpg" alt="Amateur Bikini Champion 2025">
+                            </div>
+                            <div class="champion__badge">1st Place</div>
+                            <div class="champion__stats">
+                                <div class="champion__stat">
+                                    <div class="champion__stat-label">Division</div>
+                                    <div class="champion__stat-value">Amateur Bikini</div>
+                                </div>
+                                <div class="champion__stat">
+                                    <div class="champion__stat-label">Year</div>
+                                    <div class="champion__stat-value">2025</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="champion__content">
+                            <h3 class="champion__name">Athlete Name</h3>
+                            <p class="champion__title">Amateur Bikini Winner</p>
+                            <div class="champion__show">🏆 Utah State Naturals 2025</div>
+                            <blockquote class="champion__quote">
+                                "Confidence isn't about being perfect, it's about embracing your journey and celebrating every small victory along the way."
+                            </blockquote>
+                        </div>
+                        <div class="champion__actions">
+                            <a href="../champions.html" class="champion__link">View All Champions</a>
+                            <div class="champion__social">
+                                <a href="#" class="champion__social-link" aria-label="Instagram">📷</a>
+                                <a href="#" class="champion__social-link" aria-label="Facebook">f</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="champion">
+                        <div class="champion__image-wrapper">
+                            <div class="champion__type-badge" data-type="amateur">AMATEUR</div>
+                            <div class="champion__image">
+                                <img src="../../src/assets/champions/IMG_1930.jpg" alt="Amateur Figure Champion 2025">
+                            </div>
+                            <div class="champion__badge">1st Place</div>
+                            <div class="champion__stats">
+                                <div class="champion__stat">
+                                    <div class="champion__stat-label">Division</div>
+                                    <div class="champion__stat-value">Amateur Figure</div>
+                                </div>
+                                <div class="champion__stat">
+                                    <div class="champion__stat-label">Year</div>
+                                    <div class="champion__stat-value">2025</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="champion__content">
+                            <h3 class="champion__name">Athlete Name</h3>
+                            <p class="champion__title">Amateur Figure Winner</p>
+                            <div class="champion__show">🏆 Utah State Naturals 2025</div>
+                            <blockquote class="champion__quote">
+                                "The journey to the stage taught me more about myself than any trophy ever could. Natural bodybuilding is about health and excellence."
+                            </blockquote>
+                        </div>
+                        <div class="champion__actions">
+                            <a href="../champions.html" class="champion__link">View All Champions</a>
+                            <div class="champion__social">
+                                <a href="#" class="champion__social-link" aria-label="Instagram">📷</a>
+                                <a href="#" class="champion__social-link" aria-label="Facebook">f</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="champion">
+                        <div class="champion__image-wrapper">
+                            <div class="champion__type-badge" data-type="amateur">AMATEUR</div>
+                            <div class="champion__image">
+                                <img src="../../src/assets/champions/IMG_0351-5.jpg" alt="Amateur Classic Physique Champion 2025">
+                            </div>
+                            <div class="champion__badge">1st Place</div>
+                            <div class="champion__stats">
+                                <div class="champion__stat">
+                                    <div class="champion__stat-label">Division</div>
+                                    <div class="champion__stat-value">Amateur Classic Physique</div>
+                                </div>
+                                <div class="champion__stat">
+                                    <div class="champion__stat-label">Year</div>
+                                    <div class="champion__stat-value">2025</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="champion__content">
+                            <h3 class="champion__name">Utah State Naturals</h3>
+                            <p class="champion__title">Amateur Classic Physique Champion</p>
+                            <div class="champion__show">🏆 Utah State Naturals 2025</div>
+                            <blockquote class="champion__quote">
+                                "The stage is where dreams become reality. But the real victory is in the discipline and dedication it takes to get there."
+                            </blockquote>
+                        </div>
+                        <div class="champion__actions">
+                            <a href="../champions.html" class="champion__link">View All Champions</a>
                             <div class="champion__social">
                                 <a href="#" class="champion__social-link" aria-label="Instagram">📷</a>
                                 <a href="#" class="champion__social-link" aria-label="Facebook">f</a>
@@ -344,7 +452,7 @@
             <div class="cta__container container">
                 <h2 class="cta__title">Ready to Compete?</h2>
                 <p class="cta__text">Join the premier natural bodybuilding competition in Utah. Registration opens soon for Utah State Naturals 2026.</p>
-                <a href="../contact.html#register" class="btn btn--primary btn--lg">Register Now</a>
+                <a href="https://naturalbodybuilding.com/" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">Register Now</a>
             </div>
         </section>
     </main>
@@ -364,6 +472,7 @@
                             <li class="footer__list-item"><a href="#shows" class="footer__link">Shows</a></li>
                             <li class="footer__list-item"><a href="../champions.html" class="footer__link">Champions</a></li>
                             <li class="footer__list-item"><a href="../results.html" class="footer__link">Results</a></li>
+                            <li class="footer__list-item"><a href="../shop.html" class="footer__link">Shop</a></li>
                         </ul>
                     </div>
                     <div class="footer__column">

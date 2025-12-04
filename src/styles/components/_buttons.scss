@@ -218,6 +218,7 @@
 .hero__actions {
   .btn {
     margin: 0 $spacing-sm $spacing-sm 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
     
     @include mobile {
       margin: 0 0 $spacing-sm 0;

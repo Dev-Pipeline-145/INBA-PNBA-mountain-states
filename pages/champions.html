@@ -20,7 +20,7 @@
     <nav class="nav">
         <div class="nav__brand">
             <a href="../index.html">
-                <img class="nav__logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='Montserrat' font-size='24' font-weight='900' fill='%2300FFFF'%3EINBA/PNBA%3C/text%3E%3Ctext x='10' y='55' font-family='Roboto' font-size='12' fill='%23b0b0b0'%3EMountain States%3C/text%3E%3C/svg%3E" alt="INBA/PNBA Mountain States">
+                <img class="nav__logo" src="../src/assets/images/00_INBA Globa Logo.png" alt="INBA Global">
             </a>
         </div>
         <button class="nav__toggle" aria-label="Toggle navigation" id="navToggle">
@@ -42,9 +42,10 @@
                 </li>
                 <li class="nav__item"><a href="champions.html" class="nav__link">Champions</a></li>
                 <li class="nav__item"><a href="results.html" class="nav__link">Results</a></li>
+                <li class="nav__item"><a href="shop.html" class="nav__link">Shop</a></li>
                 <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
                 <li class="nav__item nav__cta">
-                    <a href="contact.html#register" class="btn btn--primary">Register Now</a>
+                    <a href="https://naturalbodybuilding.com/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Register Now</a>
                 </li>
             </ul>
         </div>
@@ -80,10 +81,16 @@
                         <select id="division-filter" class="filter-select">
                             <option value="all">All Divisions</option>
                             <option value="mens-physique">Men's Physique</option>
-                            <option value="womens-bikini">Women's Bikini</option>
-                            <option value="classic-physique">Classic Physique</option>
-                            <option value="bodybuilding">Bodybuilding</option>
-                            <option value="wellness">Wellness</option>
+                            <option value="pro-mens-physique">Pro Men's Physique</option>
+                            <option value="amatuer-bikini-diva">Women's Bikini</option>
+                            <option value="amateur-bikini">Amateur Bikini</option>
+                            <option value="amateur-figure">Amateur Figure</option>
+                            <option value="amateur-classic-physique">Amateur Classic Physique</option>
+                            <option value="bikini-pro-division">Bikini Pro Division</option>
+                            <option value="wellness-pro-division">Wellness Pro Division</option>
+                            <option value="classic-physique-division">Classic Physique Division</option>
+                            <option value="bodybuilding-division">Bodybuilding Division</option>
+                            <option value="wellness-division">Wellness Division</option>
                         </select>
                     </a>
             </div>
@@ -91,9 +98,8 @@
                         <label for="year-filter" class="filter-label">Year:</label>
                         <select id="year-filter" class="filter-select">
                             <option value="all">All Years</option>
-                            <option value="2024">2024</option>
-                            <option value="2023">2023</option>
-                            <option value="2022">2022</option>
+                            <option value="2025">2025</option>
+
                         </select>
                     </a>
             </div>
@@ -111,225 +117,61 @@
         <section class="section" id="champions">
             <div class="container">
                 <div class="champion-grid">
-                    <!-- Champion 1 - Men's Physique 2024 -->
-                    <article class="champion" data-division="mens-physique" data-year="2024">
+                    <!-- 2025 PRO DIVISIONS - Displayed First -->
+                    
+                    <!-- Champion - Bikini Pro 2025 -->
+                    <article class="champion" data-division="bikini-pro-division" data-year="2025">
                         <div class="champion__image-wrapper">
-                            <div class="champion__image">🏆</a>
-            </div>
-                            <div class="champion__badge">1st Place</a>
-            </div>
+                            <div class="champion__image">
+                                <img src="../src/assets/champions/IMG_1264-3.jpg" alt="Bikini Pro Champion 2025">
+                            </div>
+                            <div class="champion__badge">1st Place</div>
                             <div class="champion__stats">
                                 <div class="champion__stat">
-                                    <div class="champion__stat-label">Division</a>
-            </div>
-                                    <div class="champion__stat-value">Men's Physique</a>
-            </div>
-                                </a>
-            </div>
+                                    <div class="champion__stat-value">Pro Bikini</div>
+                                </div>
                                 <div class="champion__stat">
-                                    <div class="champion__stat-label">Year</a>
-            </div>
-                                    <div class="champion__stat-value">2024</a>
-            </div>
-                                </a>
-            </div>
-                            </a>
-            </div>
-                        </a>
-            </div>
+                                    <div class="champion__stat-value">2025</div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="champion__content">
-                            <h3 class="champion__name">Marcus Rodriguez</h3>
-                            <p class="champion__title">Utah State Naturals Champion</p>
-                            <div class="champion__show">🏆 Utah State Naturals 2024</a>
-            </div>
+                            <h3 class="champion__name">Shar Hess</h3>
+                            <p class="champion__title">Pro Bikini Champion</p>
+                            <div class="champion__show">🏆 Utah State Naturals 2025</div>
                             <blockquote class="champion__quote">
-                                "Natural bodybuilding taught me that true strength comes from within. Every rep, every meal, every choice matters when you're building something real."
+                                "Competing naturally has been the most rewarding experience of my life. The support from the INBA/PNBA community is incredible."
                             </blockquote>
                             <div class="champion__actions">
                                 <a href="#" class="champion__link">View Profile</a>
                                 <div class="champion__social">
                                     <a href="#" class="champion__social-link">📱</a>
                                     <a href="#" class="champion__social-link">📧</a>
-                                </a>
-            </div>
-                            </a>
-            </div>
-                        </a>
-            </div>
+                                </div>
+                            </div>
+                        </div>
                     </article>
 
-                    <!-- Champion 2 - Women's Bikini 2024 -->
-                    <article class="champion" data-division="womens-bikini" data-year="2024">
+                    <!-- Champion - Wellness Pro 2025 -->
+                    <article class="champion" data-division="wellness-pro-division" data-year="2025">
                         <div class="champion__image-wrapper">
-                            <div class="champion__image">👑</a>
-            </div>
-                            <div class="champion__badge">1st Place</a>
-            </div>
+                            <div class="champion__image">
+                                <img src="../src/assets/champions/IMG_2006-3.jpg" alt="Wellness Pro Champion 2025">
+                            </div>
+                            <div class="champion__badge">1st Place</div>
                             <div class="champion__stats">
                                 <div class="champion__stat">
-                                    <div class="champion__stat-label">Division</a>
-            </div>
-                                    <div class="champion__stat-value">Women's Bikini</a>
-            </div>
-                                </a>
-            </div>
+                                    <div class="champion__stat-value">Pro Wellness</div>
+                                </div>
                                 <div class="champion__stat">
-                                    <div class="champion__stat-label">Year</a>
-            </div>
-                                    <div class="champion__stat-value">2024</a>
-            </div>
-                                </a>
-            </div>
-                            </a>
-            </div>
-                        </a>
-            </div>
+                                    <div class="champion__stat-value">2025</div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="champion__content">
-                            <h3 class="champion__name">Sarah Chen</h3>
-                            <p class="champion__title">Colorado Rapids Champion</p>
-                            <div class="champion__show">🏆 Colorado Rapids 2024</a>
-            </div>
-                            <blockquote class="champion__quote">
-                                "Confidence isn't about being perfect, it's about embracing your journey and celebrating every small victory along the way."
-                            </blockquote>
-                            <div class="champion__actions">
-                                <a href="#" class="champion__link">View Profile</a>
-                                <div class="champion__social">
-                                    <a href="#" class="champion__social-link">📱</a>
-                                    <a href="#" class="champion__social-link">📧</a>
-                                </a>
-            </div>
-                            </a>
-            </div>
-                        </a>
-            </div>
-                    </article>
-
-                    <!-- Champion 3 - Classic Physique 2023 -->
-                    <article class="champion" data-division="classic-physique" data-year="2023">
-                        <div class="champion__image-wrapper">
-                            <div class="champion__image">💪</a>
-            </div>
-                            <div class="champion__badge">1st Place</a>
-            </div>
-                            <div class="champion__stats">
-                                <div class="champion__stat">
-                                    <div class="champion__stat-label">Division</a>
-            </div>
-                                    <div class="champion__stat-value">Classic Physique</a>
-            </div>
-                                </a>
-            </div>
-                                <div class="champion__stat">
-                                    <div class="champion__stat-label">Year</a>
-            </div>
-                                    <div class="champion__stat-value">2023</a>
-            </div>
-                                </a>
-            </div>
-                            </a>
-            </div>
-                        </a>
-            </div>
-                        <div class="champion__content">
-                            <h3 class="champion__name">David Thompson</h3>
-                            <p class="champion__title">Red Rock Classic Champion</p>
-                            <div class="champion__show">🏆 Red Rock Classic 2023</a>
-            </div>
-                            <blockquote class="champion__quote">
-                                "The stage is where dreams become reality. But the real victory is in the discipline and dedication it takes to get there."
-                            </blockquote>
-                            <div class="champion__actions">
-                                <a href="#" class="champion__link">View Profile</a>
-                                <div class="champion__social">
-                                    <a href="#" class="champion__social-link">📱</a>
-                                    <a href="#" class="champion__social-link">📧</a>
-                                </a>
-            </div>
-                            </a>
-            </div>
-                        </a>
-            </div>
-                    </article>
-
-                    <!-- Champion 4 - Bodybuilding 2024 -->
-                    <article class="champion" data-division="bodybuilding" data-year="2024">
-                        <div class="champion__image-wrapper">
-                            <div class="champion__image">🏅</a>
-            </div>
-                            <div class="champion__badge">1st Place</a>
-            </div>
-                            <div class="champion__stats">
-                                <div class="champion__stat">
-                                    <div class="champion__stat-label">Division</a>
-            </div>
-                                    <div class="champion__stat-value">Bodybuilding</a>
-            </div>
-                                </a>
-            </div>
-                                <div class="champion__stat">
-                                    <div class="champion__stat-label">Year</a>
-            </div>
-                                    <div class="champion__stat-value">2024</a>
-            </div>
-                                </a>
-            </div>
-                            </a>
-            </div>
-                        </a>
-            </div>
-                        <div class="champion__content">
-                            <h3 class="champion__name">Alex Johnson</h3>
-                            <p class="champion__title">Night of Champions Winner</p>
-                            <div class="champion__show">🏆 Night of Champions 2024</a>
-            </div>
-                            <blockquote class="champion__quote">
-                                "Natural bodybuilding is about building character as much as muscle. Every challenge makes you stronger, both physically and mentally."
-                            </blockquote>
-                            <div class="champion__actions">
-                                <a href="#" class="champion__link">View Profile</a>
-                                <div class="champion__social">
-                                    <a href="#" class="champion__social-link">📱</a>
-                                    <a href="#" class="champion__social-link">📧</a>
-                                </a>
-            </div>
-                            </a>
-            </div>
-                        </a>
-            </div>
-                    </article>
-
-                    <!-- Champion 5 - Wellness 2023 -->
-                    <article class="champion" data-division="wellness" data-year="2023">
-                        <div class="champion__image-wrapper">
-                            <div class="champion__image">✨</a>
-            </div>
-                            <div class="champion__badge">1st Place</a>
-            </div>
-                            <div class="champion__stats">
-                                <div class="champion__stat">
-                                    <div class="champion__stat-label">Division</a>
-            </div>
-                                    <div class="champion__stat-value">Wellness</a>
-            </div>
-                                </a>
-            </div>
-                                <div class="champion__stat">
-                                    <div class="champion__stat-label">Year</a>
-            </div>
-                                    <div class="champion__stat-value">2023</a>
-            </div>
-                                </a>
-            </div>
-                            </a>
-            </div>
-                        </a>
-            </div>
-                        <div class="champion__content">
-                            <h3 class="champion__name">Jessica Martinez</h3>
-                            <p class="champion__title">Utah State Naturals Champion</p>
-                            <div class="champion__show">🏆 Utah State Naturals 2023</a>
-            </div>
+                            <h3 class="champion__name">Athlete Name</h3>
+                            <p class="champion__title">Wellness Pro Champion</p>
+                            <div class="champion__show">🏆 Utah State Naturals 2025</div>
                             <blockquote class="champion__quote">
                                 "Wellness is about balance - strength and grace, power and femininity, hard work and self-care. It's the complete package."
                             </blockquote>
@@ -338,60 +180,149 @@
                                 <div class="champion__social">
                                     <a href="#" class="champion__social-link">📱</a>
                                     <a href="#" class="champion__social-link">📧</a>
-                                </a>
-            </div>
-                            </a>
-            </div>
-                        </a>
-            </div>
+                                </div>
+                            </div>
+                        </div>
                     </article>
 
-                    <!-- Champion 6 - Men's Physique 2022 -->
-                    <article class="champion" data-division="mens-physique" data-year="2022">
+                    <!-- Champion - Pro Men's Physique 2025 -->
+                    <article class="champion" data-division="pro-mens-physique" data-year="2025">
                         <div class="champion__image-wrapper">
-                            <div class="champion__image">🥇</a>
-            </div>
-                            <div class="champion__badge">1st Place</a>
-            </div>
+                            <div class="champion__image">
+                                <img src="../src/assets/champions/IMG_2033.jpg" alt="Pro Men's Physique Champion 2025">
+                            </div>
+                            <div class="champion__badge">1st Place</div>
                             <div class="champion__stats">
                                 <div class="champion__stat">
-                                    <div class="champion__stat-label">Division</a>
-            </div>
-                                    <div class="champion__stat-value">Men's Physique</a>
-            </div>
-                                </a>
-            </div>
+                                    <div class="champion__stat-value">Pro Men's Physique</div>
+                                </div>
                                 <div class="champion__stat">
-                                    <div class="champion__stat-label">Year</a>
-            </div>
-                                    <div class="champion__stat-value">2022</a>
-            </div>
-                                </a>
-            </div>
-                            </a>
-            </div>
-                        </a>
-            </div>
+                                    <div class="champion__stat-value">2025</div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="champion__content">
-                            <h3 class="champion__name">Michael Davis</h3>
-                            <p class="champion__title">Colorado Rapids Champion</p>
-                            <div class="champion__show">🏆 Colorado Rapids 2022</a>
-            </div>
+                            <h3 class="champion__name">Utah State Naturals</h3>
+                            <p class="champion__title">Pro Men's Physique Champion</p>
+                            <div class="champion__show">🏆 Utah State Naturals 2025</div>
                             <blockquote class="champion__quote">
-                                "The journey to the stage is long, but every step teaches you something about yourself. That's the real prize."
+                                "Natural bodybuilding taught me that true strength comes from within. Every rep, every meal, every choice matters when you're building something real."
                             </blockquote>
                             <div class="champion__actions">
                                 <a href="#" class="champion__link">View Profile</a>
                                 <div class="champion__social">
                                     <a href="#" class="champion__social-link">📱</a>
                                     <a href="#" class="champion__social-link">📧</a>
-                                </a>
-            </div>
-                            </a>
-            </div>
-                        </a>
-            </div>
+                                </div>
+                            </div>
+                        </div>
                     </article>
+
+                    <!-- 2025 AMATEUR DIVISIONS -->
+                    
+                    <!-- Champion - Amateur Bikini 2025 -->
+                    <article class="champion" data-division="amateur-bikini" data-year="2025">
+                        <div class="champion__image-wrapper">
+                            <div class="champion__image">
+                                <img src="../src/assets/champions/IMG_1953-3.jpg" alt="Amateur Bikini Champion 2025">
+                            </div>
+                            <div class="champion__badge">1st Place</div>
+                            <div class="champion__stats">
+                                <div class="champion__stat">
+                                    <div class="champion__stat-value">Amateur Bikini</div>
+                                </div>
+                                <div class="champion__stat">
+                                    <div class="champion__stat-value">2025</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="champion__content">
+                            <h3 class="champion__name">Athlete Name</h3>
+                            <p class="champion__title">Amateur Bikini Winner</p>
+                            <div class="champion__show">🏆 Utah State Naturals 2025</div>
+                            <blockquote class="champion__quote">
+                                "Confidence isn't about being perfect, it's about embracing your journey and celebrating every small victory along the way."
+                            </blockquote>
+                            <div class="champion__actions">
+                                <a href="#" class="champion__link">View Profile</a>
+                                <div class="champion__social">
+                                    <a href="#" class="champion__social-link">📱</a>
+                                    <a href="#" class="champion__social-link">📧</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Champion - Amateur Figure 2025 -->
+                    <article class="champion" data-division="amateur-figure" data-year="2025">
+                        <div class="champion__image-wrapper">
+                            <div class="champion__image">
+                                <img src="../src/assets/champions/IMG_1930.jpg" alt="Amateur Figure Champion 2025">
+                            </div>
+                            <div class="champion__badge">1st Place</div>
+                            <div class="champion__stats">
+                                <div class="champion__stat">
+                                    <div class="champion__stat-value">Amateur Figure</div>
+                                </div>
+                                <div class="champion__stat">
+                                    <div class="champion__stat-value">2025</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="champion__content">
+                            <h3 class="champion__name">Athlete Name</h3>
+                            <p class="champion__title">Amateur Figure Winner</p>
+                            <div class="champion__show">🏆 Utah State Naturals 2025</div>
+                            <blockquote class="champion__quote">
+                                "The journey to the stage taught me more about myself than any trophy ever could. Natural bodybuilding is about health and excellence."
+                            </blockquote>
+                            <div class="champion__actions">
+                                <a href="#" class="champion__link">View Profile</a>
+                                <div class="champion__social">
+                                    <a href="#" class="champion__social-link">📱</a>
+                                    <a href="#" class="champion__social-link">📧</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Champion - Amateur Classic Physique 2025 -->
+                    <article class="champion" data-division="amateur-classic-physique" data-year="2025">
+                        <div class="champion__image-wrapper">
+                            <div class="champion__image">
+                                <img src="../src/assets/champions/IMG_0351-5.jpg" alt="Amateur Classic Physique Champion 2025">
+                            </div>
+                            <div class="champion__badge">1st Place</div>
+                            <div class="champion__stats">
+                                <div class="champion__stat">
+                                    <div class="champion__stat-value">Amateur Classic Physique</div>
+                                </div>
+                                <div class="champion__stat">
+                                    <div class="champion__stat-value">2025</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="champion__content">
+                            <h3 class="champion__name">Utah State Naturals</h3>
+                            <p class="champion__title">Amateur Classic Physique Champion</p>
+                            <div class="champion__show">🏆 Utah State Naturals 2025</div>
+                            <blockquote class="champion__quote">
+                                "The stage is where dreams become reality. But the real victory is in the discipline and dedication it takes to get there."
+                            </blockquote>
+                            <div class="champion__actions">
+                                <a href="#" class="champion__link">View Profile</a>
+                                <div class="champion__social">
+                                    <a href="#" class="champion__social-link">📱</a>
+                                    <a href="#" class="champion__social-link">📧</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PREVIOUS YEARS CHAMPIONS -->
+                    
+                    <!-- Champion 1 - Men's Physique 2024 -->
+                   
                 </a>
             </div>
             </a>
@@ -429,6 +360,7 @@
                             <li class="footer__list-item"><a href="shows.html" class="footer__link">Shows</a></li>
                             <li class="footer__list-item"><a href="../champions.html" class="footer__link">Champions</a></li>
                             <li class="footer__list-item"><a href="../results.html" class="footer__link">Results</a></li>
+                            <li class="footer__list-item"><a href="../shop.html" class="footer__link">Shop</a></li>
                         </ul>
                     </a>
             </div>

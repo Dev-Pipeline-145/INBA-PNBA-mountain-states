@@ -41,7 +41,7 @@
     margin-bottom: var(--spacing-md);
     font-size: 18px;
     font-weight: var(--weight-black);
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    text-shadow: 0 0 10px rgb(39, 116, 233);
 }
 
 .footer__list {
@@ -64,5 +64,5 @@
 .footer__link:hover {
     color: var(--primary-cyan);
     padding-left: 5px;
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    text-shadow: 0 0 10px rgba(65, 144, 206, 0.5);
 }

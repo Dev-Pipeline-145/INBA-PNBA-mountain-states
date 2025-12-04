@@ -17,7 +17,7 @@
 .feature-list__item:hover {
     border-color: var(--primary-cyan);
     transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0, 255, 255, 0.2), 0 0 40px rgba(0, 255, 255, 0.1);
+    box-shadow: 0 8px 24px rgba(65, 144, 206, 0.2), 0 0 40px rgba(65, 144, 206, 0.1);
 }
 
 .feature-list__item::before {
@@ -46,7 +46,7 @@
     justify-content: center;
     margin: 0 auto var(--spacing-md);
     font-size: 32px;
-    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3), 0 0 30px rgba(0, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(65, 144, 206, 0.3), 0 0 30px rgba(65, 144, 206, 0.2);
 }
 
 .feature-list__title {

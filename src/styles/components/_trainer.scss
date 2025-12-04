@@ -17,7 +17,7 @@
     width: 100%;
     height: 200px;
     background:
-        linear-gradient(135deg, rgba(0, 255, 255, 0.2) 0%, rgba(157, 78, 221, 0.2) 100%),
+        linear-gradient(135deg, rgba(65, 144, 206, 0.2) 0%, rgba(246, 158, 28, 0.2) 100%),
         url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=400&fit=crop') center/cover;
     position: relative;
 }
@@ -27,7 +27,7 @@
 }
 
 .trainer:hover {
-    box-shadow: 0 6px 25px rgba(0, 255, 255, 0.2), 0 0 40px rgba(0, 255, 255, 0.1);
+    box-shadow: 0 6px 25px rgba(65, 144, 206, 0.2), 0 0 40px rgba(65, 144, 206, 0.1);
     transform: translateY(-3px);
 }
 
@@ -35,7 +35,7 @@
     color: var(--primary-cyan);
     margin-bottom: var(--spacing-sm);
     font-weight: var(--weight-black);
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    text-shadow: 0 0 10px rgba(65, 144, 206, 0.3);
 }
 
 .trainer__specialty {

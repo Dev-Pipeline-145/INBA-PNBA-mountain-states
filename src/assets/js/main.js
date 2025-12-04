@@ -81,7 +81,6 @@ const getElement = (selector) => {
     try {
         return document.querySelector(selector);
     } catch (error) {
-        console.warn(`Element not found: ${selector}`, error);
         return null;
     }
 };
@@ -106,7 +105,6 @@ class Navigation {
      */
     init() {
         if (!this.navToggle || !this.navMenu) {
-            console.warn('Navigation elements not found');
             return;
         }
         
@@ -413,7 +411,6 @@ class AnimationController {
  * @param {string} context - Error context
  */
 const handleError = (error, context = 'Unknown') => {
-    console.error(`Error in ${context}:`, error);
     
     // In production, you might want to send errors to a logging service
     // Example: sendToLoggingService(error, context);
@@ -435,7 +432,6 @@ const initApp = () => {
         new FormHandler();
         new AnimationController();
         
-        console.log('INBA/PNBA Mountain States - Application initialized successfully');
     } catch (error) {
         handleError(error, 'App initialization');
     }
