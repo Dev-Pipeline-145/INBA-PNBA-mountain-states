@@ -170,3 +170,4 @@ If you encounter issues:
 3. Review Square's API documentation
 4. Contact Square support if needed
 
+

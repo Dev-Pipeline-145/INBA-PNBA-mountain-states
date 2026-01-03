@@ -109,7 +109,7 @@
 .results__table th {
     background: var(--bg-dark-elevated);
     color: var(--primary-cyan);
-    padding: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-lg);
     text-align: left;
     font-weight: var(--weight-bold);
     text-transform: uppercase;
@@ -117,11 +117,27 @@
     border-bottom: 2px solid var(--border-dark);
 }
 
+.results__table th:first-child {
+    padding-left: var(--spacing-lg);
+}
+
+.results__table th:last-child {
+    padding-right: var(--spacing-lg);
+}
+
 .results__table td {
-    padding: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-lg);
     color: var(--text-secondary);
     border-bottom: 1px solid var(--border-dark);
     transition: background-color 0.3s ease;
+}
+
+.results__table td:first-child {
+    padding-left: var(--spacing-lg);
+}
+
+.results__table td:last-child {
+    padding-right: var(--spacing-lg);
 }
 
 .results__table tbody tr:hover {
@@ -154,6 +170,11 @@
 .results__athlete-name {
     font-weight: var(--weight-bold);
     color: var(--text-primary);
+}
+
+.results-division-title {
+    margin-bottom: var(--spacing-sm);
+    // padding-bottom: var(--spacing-sm);
 }
 
 .results__division {

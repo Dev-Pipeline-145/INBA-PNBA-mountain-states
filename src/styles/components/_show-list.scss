@@ -7,11 +7,35 @@
 .show {
     border-left: 5px solid var(--primary-cyan);
     padding: 0;
+    padding-top: 80px;
     background-color: var(--bg-dark-card);
     transition: all 0.3s ease;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     position: relative;
     overflow: hidden;
+}
+
+.show__type-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary-cyan), var(--secondary-purple));
+    color: var(--bg-dark);
+    padding: 6px 0;
+    font-family: 'Birthstone', cursive;
+    font-weight: 400;
+    font-size: 24px;
+    text-transform: none;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 20px rgba(65, 144, 206, 0.6);
+    z-index: 100;
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
 }
 
 .show__image {

@@ -561,10 +561,34 @@ ul {
 .show {
     border-left: 5px solid var(--primary-cyan);
     padding: var(--spacing-lg);
+    padding-top: 80px;
     background-color: var(--bg-dark-card);
     transition: var(--transition);
     box-shadow: var(--shadow-sm);
     position: relative;
+}
+
+.show__type-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary-cyan), var(--secondary-purple));
+    color: var(--bg-dark);
+    padding: 6px 0;
+    font-family: 'Birthstone', cursive;
+    font-weight: 400;
+    font-size: 24px;
+    text-transform: none;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 20px rgba(65, 144, 206, 0.6);
+    z-index: 100;
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
 }
 
 .show::before {
@@ -672,11 +696,13 @@ ul {
     flex-direction: column;
     gap: var(--spacing-md);
     padding: var(--spacing-lg);
+    padding-top: 40px;
     background-color: var(--bg-dark-card);
     border-radius: 0;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    border-top: 4px solid var(--accent-gold);
     transition: all 0.3s ease;
+    position: relative;
+    overflow: visible;
 }
 
 .champion:hover {
@@ -715,7 +741,7 @@ ul {
     text-transform: none;
     letter-spacing: 1px;
     box-shadow: 0 4px 20px rgba(65, 144, 206, 0.6);
-    z-index: 100;
+    z-index: 200 !important;
     text-align: center;
     border-bottom: 2px solid rgba(255, 255, 255, 0.3);
     opacity: 1 !important;
@@ -1250,6 +1276,89 @@ ul {
     font-weight: var(--weight-bold);
 }
 
+/* Results Table Styles */
+.results__table-container {
+    background: var(--bg-dark-card);
+    border: 2px solid var(--border-dark);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: var(--spacing-xl);
+}
+
+.results__table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.results__table th {
+    background: var(--bg-dark-elevated);
+    color: var(--primary-cyan);
+    padding: var(--spacing-md) var(--spacing-lg);
+    text-align: left;
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--border-dark);
+}
+
+.results__table th:first-child {
+    padding-left: var(--spacing-lg);
+}
+
+.results__table th:last-child {
+    padding-right: var(--spacing-lg);
+}
+
+.results__table td {
+    padding: var(--spacing-md) var(--spacing-lg);
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-dark);
+    transition: background-color 0.3s ease;
+}
+
+.results__table td:first-child {
+    padding-left: var(--spacing-lg);
+}
+
+.results__table td:last-child {
+    padding-right: var(--spacing-lg);
+}
+
+.results__table tbody tr:hover {
+    background: rgba(65, 144, 206, 0.05);
+}
+
+.results__table tbody tr:hover td {
+    color: var(--text-primary);
+}
+
+.results__position {
+    font-weight: var(--weight-bold);
+    text-align: center;
+    width: 60px;
+}
+
+.results__position--1 {
+    color: var(--accent-gold);
+}
+
+.results__position--2 {
+    color: #C0C0C0;
+}
+
+.results__position--3 {
+    color: #CD7F32;
+}
+
+.results__athlete-name {
+    font-weight: var(--weight-bold);
+    color: var(--text-primary);
+}
+
+.results-division-title {
+    margin-bottom: var(--spacing-sm);
+}
+
 /* CTA Section */
 .cta {
     background: 
@@ -1491,7 +1600,6 @@ ul {
 .footer__logo {
     height: 65px;
     margin-bottom: var(--spacing-md);
-    filter: brightness(0) invert(1);
 }
 
 .footer__brand-text {
