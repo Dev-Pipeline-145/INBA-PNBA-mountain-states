@@ -73,19 +73,31 @@
                 <div class="show__quick-facts">
                     <div class="show__fact">
                         <h3>📍 Venue</h3>
-                        <p>Colorado Convention Center<br>Denver, Colorado</p>
+                        <ul>
+                            <li>Colorado Convention Center</li>
+                            <li>Denver, Colorado</li>
+                        </ul>
                     </div>
                     <div class="show__fact">
                         <h3>📅 Date</h3>
-                        <p>TBD 2026<br>Details coming soon</p>
+                        <ul>
+                            <li>TBD 2026</li>
+                            <li>Details coming soon</li>
+                        </ul>
                     </div>
                     <div class="show__fact">
                         <h3>⏰ Show Time</h3>
-                        <p>Prejudging: TBA<br>Finals: TBA</p>
+                        <ul>
+                            <li>Prejudging: TBA</li>
+                            <li>Finals: TBA</li>
+                        </ul>
                     </div>
                     <div class="show__fact">
                         <h3>📞 Contact</h3>
-                        <p>info@inba-pnba-mountainstates.com<br>(303) 555-0123</p>
+                        <ul>
+                            <li>info@inba-pnba-mountainstates.com</li>
+                            <li>(303) 555-0123</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -95,7 +107,7 @@
         <section class="section section--gray">
             <div class="container">
                 <div class="section__header">
-                    <h2 class="section__title">Venue & Past Highlights</h2>
+                    <h2 class="section__title">Past Highlights</h2>
                     <p class="section__subtitle">Experience the energy and excitement of Colorado Rapids</p>
                 </div>
                 <div class="show__gallery">
@@ -292,9 +304,9 @@
                     <div class="footer__column">
                         <h4 class="footer__column-title">Resources</h4>
                         <ul class="footer__list">
-                            <li class="footer__list-item"><a href="../../index.html#natural-bodybuilding" class="footer__link">Natural Bodybuilding</a></li>
-                            <li class="footer__list-item"><a href="../../index.html#trainers" class="footer__link">Find a Trainer</a></li>
-                            <li class="footer__list-item"><a href="../../index.html#sponsors" class="footer__link">Become a Sponsor</a></li>
+                            <li class="footer__list-item"><a href="https://www.naturalbodybuilding.com/" class="footer__link" target="_blank" rel="noopener noreferrer">Natural Bodybuilding</a></li>
+                            <li class="footer__list-item"><a href="javascript:void(0)" class="footer__link coming-soon-link" data-feature="Find a Trainer">Find a Trainer</a></li>
+                            <li class="footer__list-item"><a href="javascript:void(0)" class="footer__link coming-soon-link" data-feature="Become a Sponsor">Become a Sponsor</a></li>
                             <li class="footer__list-item"><a href="../contact.html" class="footer__link">Contact Us</a></li>
                         </ul>
                     </div>
@@ -316,6 +328,17 @@
             </div>
         </div>
     </footer>
+
+    <!-- Coming Soon Modal -->
+    <div class="coming-soon-modal" id="comingSoonModal">
+        <div class="coming-soon-modal__overlay"></div>
+        <div class="coming-soon-modal__content">
+            <div class="coming-soon-modal__icon">🚧</div>
+            <h2 class="coming-soon-modal__title">Coming Soon</h2>
+            <p class="coming-soon-modal__message" id="comingSoonMessage">This feature is coming soon!</p>
+            <button type="button" class="btn btn--primary" id="comingSoonClose">Got it</button>
+        </div>
+    </div>
 
     <script src="../../src/assets/js/main.js"></script>
 </body>

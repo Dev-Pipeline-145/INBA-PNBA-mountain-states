@@ -20,3 +20,7 @@ Thumbs.db
 # Build outputs
 dist/
 build/
+
+# SSL certificates (self-signed for local development)
+certs/
+*.pem

@@ -121,11 +121,33 @@ app.listen(3000, () => {
 
 ### For Development (Sandbox)
 
-The code currently uses Square's sandbox environment for testing. Use test card numbers:
-- **Card Number:** 4111 1111 1111 1111
+The code currently uses Square's sandbox environment for testing. Use these test card numbers:
+
+**Visa (Successful Payment):**
+- **Card Number:** `4111 1111 1111 1111`
 - **CVV:** Any 3 digits
 - **Expiry:** Any future date
 - **ZIP:** Any 5 digits
+
+**Mastercard (Successful Payment):**
+- **Card Number:** `5105 1051 0510 5100`
+- **CVV:** Any 3 digits
+- **Expiry:** Any future date
+- **ZIP:** Any 5 digits
+
+**Discover (Successful Payment):**
+- **Card Number:** `6011 0000 0000 0004`
+- **CVV:** Any 3 digits
+- **Expiry:** Any future date
+- **ZIP:** Any 5 digits
+
+**American Express (Successful Payment):**
+- **Card Number:** `3400 0000 0000 009`
+- **CVV:** Any 4 digits
+- **Expiry:** Any future date
+- **ZIP:** Any 5 digits
+
+**Note:** Square's test card numbers may change. For the most up-to-date test cards, visit: https://developer.squareup.com/docs/devtools/sandbox/payments
 
 ### For Production
 
@@ -144,8 +166,15 @@ The code currently uses Square's sandbox environment for testing. Use test card 
 1. Add items to cart
 2. Click "Checkout"
 3. Fill in shipping information
-4. Use test card: 4111 1111 1111 1111
+4. Use one of the test cards listed above (e.g., Visa: `4111 1111 1111 1111`)
 5. Complete payment
+
+**Important:** 
+- Test cards only work in the Sandbox environment
+- Use any future expiration date
+- Use any valid CVV (3 digits for most cards, 4 digits for Amex)
+- Use any 5-digit ZIP code
+- If test cards aren't working, verify you're using the Sandbox environment and check Square's latest documentation
 
 ## Security Notes
 
@@ -162,12 +191,36 @@ The code currently uses Square's sandbox environment for testing. Use test card 
 - [Square Payments API Documentation](https://developer.squareup.com/reference/square/payments-api)
 - [Square Developer Dashboard](https://developer.squareup.com/apps)
 
+## Troubleshooting Test Cards
+
+If test card numbers are not working:
+
+1. **Verify Sandbox Environment**: Ensure your Square client is configured for Sandbox:
+   ```javascript
+   environment: Environment.Sandbox
+   ```
+
+2. **Check Latest Test Cards**: Square may update test card numbers. Always check the official documentation:
+   - https://developer.squareup.com/docs/devtools/sandbox/payments
+
+3. **Verify HTTPS**: Square Web Payments SDK requires HTTPS. For local development:
+   - Use `https://localhost:3443` (after running `./generate-cert.sh`)
+   - Or use ngrok: `ngrok http 3000`
+
+4. **Check Browser Console**: Look for errors in the browser developer console
+
+5. **Verify Credentials**: Ensure your Square Application ID and Location ID are correct for the Sandbox environment
+
+6. **Check Backend Logs**: Review server logs for payment processing errors
+
 ## Support
 
 If you encounter issues:
 1. Check the browser console for errors
 2. Check your backend server logs
-3. Review Square's API documentation
+3. Review Square's API documentation: https://developer.squareup.com/docs/devtools/sandbox/payments
 4. Contact Square support if needed
+
+
 
 

@@ -8,10 +8,14 @@ try {
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const fs = require('fs');
+const https = require('https');
+const http = require('http');
 const { Client, Environment } = require('square');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const HTTPS_PORT = process.env.HTTPS_PORT || 3443;
 
 // Middleware
 app.use(cors());
@@ -124,8 +128,49 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Start server
-app.listen(PORT, () => {
-  // Server started
-});
+// Check if SSL certificates exist for HTTPS
+const certPath = path.join(__dirname, 'certs', 'cert.pem');
+const keyPath = path.join(__dirname, 'certs', 'key.pem');
+
+const hasCertificates = fs.existsSync(certPath) && fs.existsSync(keyPath);
+
+if (hasCertificates) {
+  // Start HTTPS server
+  const httpsOptions = {
+    key: fs.readFileSync(keyPath),
+    cert: fs.readFileSync(certPath)
+  };
+  
+  https.createServer(httpsOptions, app).listen(HTTPS_PORT, () => {
+    console.log(`\n✅ HTTPS Server running on https://localhost:${HTTPS_PORT}`);
+    console.log(`\n⚠️  Your browser will show a security warning for self-signed certificates.`);
+    console.log(`   This is normal for local development. Click 'Advanced' and 'Proceed to localhost' to continue.\n`);
+  });
+  
+  // Also start HTTP server that redirects to HTTPS (optional - won't fail if port is in use)
+  http.createServer((req, res) => {
+    res.writeHead(301, { "Location": `https://localhost:${HTTPS_PORT}${req.url}` });
+    res.end();
+  }).listen(PORT, () => {
+    console.log(`ℹ️  HTTP Server running on http://localhost:${PORT} (redirects to HTTPS)\n`);
+  }).on('error', (err) => {
+    if (err.code === 'EADDRINUSE') {
+      console.log(`⚠️  Port ${PORT} is already in use. Using HTTPS directly on port ${HTTPS_PORT}\n`);
+    } else {
+      console.error(`Error starting HTTP redirect server: ${err.message}\n`);
+    }
+  });
+} else {
+  // Start HTTP server only (no certificates found)
+  app.listen(PORT, () => {
+    console.log(`\n⚠️  HTTP Server running on http://localhost:${PORT}`);
+    console.log(`\n❌ HTTPS not available - Square Payments requires HTTPS!`);
+    console.log(`\nTo enable HTTPS for local development:`);
+    console.log(`  1. Run: chmod +x generate-cert.sh && ./generate-cert.sh`);
+    console.log(`  2. Restart the server`);
+    console.log(`\nOr use ngrok for quick HTTPS testing:`);
+    console.log(`  1. Install ngrok: https://ngrok.com/download`);
+    console.log(`  2. Run: ngrok http ${PORT}\n`);
+  });
+}
 

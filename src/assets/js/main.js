@@ -96,6 +96,7 @@ class Navigation {
         this.navToggle = getElement(CONFIG.selectors.navToggle);
         this.navMenu = getElement(CONFIG.selectors.navMenu);
         this.showsDropdown = getElement(CONFIG.selectors.showsDropdown);
+        this.dropdownTimeout = null;
         
         this.init();
     }
@@ -110,6 +111,15 @@ class Navigation {
         
         this.bindEvents();
         this.handleResize();
+        
+        // Setup desktop dropdown on initial load if already on desktop
+        if (this.showsDropdown && window.innerWidth >= CONFIG.breakpoints.tablet) {
+            const dropdownMenu = this.showsDropdown.querySelector('.nav__dropdown');
+            if (dropdownMenu) {
+                dropdownMenu.setAttribute('data-desktop-setup', 'true');
+                this.setupDesktopDropdown();
+            }
+        }
     }
     
     /**
@@ -137,6 +147,67 @@ class Navigation {
         document.addEventListener('click', (e) => {
             this.handleOutsideClick(e);
         });
+    }
+    
+    /**
+     * Setup desktop dropdown hover behavior
+     */
+    setupDesktopDropdown() {
+        const dropdownMenu = this.showsDropdown.querySelector('.nav__dropdown');
+        const showsLink = this.showsDropdown.querySelector('.nav__link');
+        if (!dropdownMenu) return;
+        
+        // Prevent navigation when clicking "Shows" link on desktop
+        if (showsLink && showsLink.getAttribute('href') === '#shows') {
+            showsLink.addEventListener('click', (e) => {
+                if (window.innerWidth >= CONFIG.breakpoints.tablet) {
+                    e.preventDefault();
+                }
+            });
+        }
+        
+        // Show dropdown on hover
+        this.showsDropdown.addEventListener('mouseenter', () => {
+            this.clearDropdownTimeout();
+            this.showsDropdown.classList.add('is-active');
+        });
+        
+        // Keep dropdown open when hovering over the menu
+        dropdownMenu.addEventListener('mouseenter', () => {
+            this.clearDropdownTimeout();
+            this.showsDropdown.classList.add('is-active');
+        });
+        
+        // Hide dropdown with delay when leaving
+        this.showsDropdown.addEventListener('mouseleave', () => {
+            this.hideDropdownWithDelay();
+        });
+        
+        dropdownMenu.addEventListener('mouseleave', () => {
+            this.hideDropdownWithDelay();
+        });
+    }
+    
+    /**
+     * Clear dropdown timeout
+     */
+    clearDropdownTimeout() {
+        if (this.dropdownTimeout) {
+            clearTimeout(this.dropdownTimeout);
+            this.dropdownTimeout = null;
+        }
+    }
+    
+    /**
+     * Hide dropdown with a delay to allow mouse movement
+     */
+    hideDropdownWithDelay() {
+        this.clearDropdownTimeout();
+        this.dropdownTimeout = setTimeout(() => {
+            if (this.showsDropdown) {
+                this.showsDropdown.classList.remove('is-active');
+            }
+        }, 200); // 200ms delay
     }
     
     /**
@@ -168,6 +239,16 @@ class Navigation {
         if (window.innerWidth >= CONFIG.breakpoints.tablet) {
             this.navMenu.classList.remove('nav__menu--active');
             if (this.showsDropdown) {
+                // Setup desktop dropdown if not already set up
+                const dropdownMenu = this.showsDropdown.querySelector('.nav__dropdown');
+                if (dropdownMenu && !dropdownMenu.hasAttribute('data-desktop-setup')) {
+                    dropdownMenu.setAttribute('data-desktop-setup', 'true');
+                    this.setupDesktopDropdown();
+                }
+            }
+        } else {
+            // Mobile: remove active state
+            if (this.showsDropdown) {
                 this.showsDropdown.classList.remove('is-active');
             }
         }
@@ -196,7 +277,8 @@ class Navigation {
 
 class FormHandler {
     constructor() {
-        this.forms = document.querySelectorAll('form');
+        // Exclude checkout form - it has its own handler
+        this.forms = document.querySelectorAll('form:not(#checkoutForm)');
         this.init();
     }
     
@@ -437,11 +519,76 @@ const initApp = () => {
     }
 };
 
+/**
+ * =============================================================================
+ * COMING SOON MODAL
+ * =============================================================================
+ */
+
+class ComingSoonModal {
+    constructor() {
+        this.modal = document.getElementById('comingSoonModal');
+        this.message = document.getElementById('comingSoonMessage');
+        this.closeBtn = document.getElementById('comingSoonClose');
+        this.overlay = this.modal?.querySelector('.coming-soon-modal__overlay');
+        this.links = document.querySelectorAll('.coming-soon-link');
+        
+        this.init();
+    }
+    
+    init() {
+        if (!this.modal || !this.message) return;
+        
+        // Add click handlers to all coming soon links
+        this.links.forEach(link => {
+            link.addEventListener('click', (e) => this.handleLinkClick(e, link));
+        });
+        
+        // Close button handler
+        if (this.closeBtn) {
+            this.closeBtn.addEventListener('click', () => this.close());
+        }
+        
+        // Overlay click handler
+        if (this.overlay) {
+            this.overlay.addEventListener('click', () => this.close());
+        }
+    }
+    
+    handleLinkClick(e, link) {
+        e.preventDefault();
+        const feature = link.getAttribute('data-feature') || 'This feature';
+        this.message.textContent = `${feature} is coming soon!`;
+        this.show();
+    }
+    
+    show() {
+        if (this.modal) {
+            this.modal.classList.add('coming-soon-modal--active');
+        }
+    }
+    
+    close() {
+        if (this.modal) {
+            this.modal.classList.remove('coming-soon-modal--active');
+        }
+    }
+}
+
 // Initialize when DOM is loaded
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initApp);
 } else {
     initApp();
+}
+
+// Initialize Coming Soon Modal
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+        new ComingSoonModal();
+    });
+} else {
+    new ComingSoonModal();
 }
 
 // Export for potential module usage

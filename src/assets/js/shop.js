@@ -285,6 +285,11 @@ class Checkout {
         this.checkoutTotal = document.getElementById('checkoutTotal');
         this.paymentContainer = document.getElementById('payment-container');
         
+        // Success modal elements
+        this.successModal = document.getElementById('successModal');
+        this.successClose = document.getElementById('successClose');
+        this.successMessage = document.getElementById('successMessage');
+        
         // Square configuration - will be set in initializeSquare()
         this.squareApplicationId = null;
         this.squareLocationId = null;
@@ -328,6 +333,19 @@ class Checkout {
             const overlay = this.checkoutModal.querySelector('.checkout-modal__overlay');
             if (overlay) {
                 overlay.addEventListener('click', () => this.close());
+            }
+        }
+        
+        // Success modal close button
+        if (this.successClose) {
+            this.successClose.addEventListener('click', () => this.closeSuccessModal());
+        }
+        
+        // Success modal overlay click to close
+        if (this.successModal) {
+            const successOverlay = this.successModal.querySelector('.success-modal__overlay');
+            if (successOverlay) {
+                successOverlay.addEventListener('click', () => this.closeSuccessModal());
             }
         }
     }
@@ -484,17 +502,16 @@ class Checkout {
             const result = await response.json();
             
             if (result.success) {
-                this.showSuccess('Payment successful! Thank you for your order.');
+                // Close checkout modal
+                this.close();
+                
                 // Clear cart
                 cart.items = [];
                 cart.saveCart();
                 cart.updateCartDisplay();
                 
-                setTimeout(() => {
-                    this.close();
-                    // Optionally redirect to confirmation page
-                    // window.location.href = '/pages/order-confirmation.html';
-                }, 2000);
+                // Show success modal
+                this.showSuccessModal('Payment successful! Thank you for your order.');
             } else {
                 throw new Error(result.error || 'Payment processing failed');
             }
@@ -544,6 +561,19 @@ class Checkout {
         setTimeout(() => {
             successDiv.classList.add('checkout-success--show');
         }, 10);
+    }
+    
+    showSuccessModal(message) {
+        if (this.successModal && this.successMessage) {
+            this.successMessage.textContent = message;
+            this.successModal.classList.add('success-modal--active');
+        }
+    }
+    
+    closeSuccessModal() {
+        if (this.successModal) {
+            this.successModal.classList.remove('success-modal--active');
+        }
     }
 }
 

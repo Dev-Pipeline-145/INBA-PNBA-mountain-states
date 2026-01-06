@@ -54,6 +54,23 @@
     margin-bottom: 0;
 }
 
+.show__fact ul {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.show__fact ul li {
+    margin-bottom: 4px;
+}
+
+.show__fact ul li:last-child {
+    margin-bottom: 0;
+}
+
 .show__poster {
     background: var(--bg-dark-card);
     border: 2px solid var(--border-dark);
@@ -94,6 +111,7 @@
     border-radius: 8px;
     background: var(--bg-dark);
     min-height: 600px;
+    display: block;
 }
 
 .show__gallery {

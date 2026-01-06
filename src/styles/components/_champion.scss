@@ -19,6 +19,7 @@
     position: relative;
     overflow: visible;
     cursor: pointer;
+    min-height: 0;
 }
 
 .champion::before {
@@ -190,16 +191,19 @@
 .champion__content {
     flex: 1;
     padding: var(--spacing-lg);
+    padding-bottom: 0;
     position: relative;
     z-index: 2;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
+    min-height: 0;
 }
 
 .champion__name {
     color: var(--primary-cyan);
+    margin-top: 10px;
     margin-bottom: var(--spacing-sm);
     font-weight: var(--weight-black);
     text-shadow: 0 0 10px rgba(65, 144, 206, 0.3);
@@ -254,22 +258,22 @@
 }
 
 .champion__actions {
-    padding: 0 var(--spacing-lg) var(--spacing-lg);
+    padding: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+    margin-top: auto;
+    margin-bottom: 0;
     display: flex;
     gap: var(--spacing-sm);
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all 0.4s ease;
-}
-
-.champion:hover .champion__actions {
     opacity: 1;
     transform: translateY(0);
+    transition: all 0.4s ease;
+    width: 100%;
 }
 
 .champion__link {
     flex: 1;
     padding: 12px 20px;
+    margin: 0;
     background: transparent;
     color: var(--primary-cyan);
     border: 2px solid var(--primary-cyan);
@@ -303,6 +307,11 @@
     justify-content: center;
     color: var(--text-secondary);
     transition: all 0.3s ease;
+    
+    svg {
+        width: 20px;
+        height: 20px;
+    }
 }
 
 .champion__social-link:hover {
