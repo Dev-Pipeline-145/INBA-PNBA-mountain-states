@@ -1378,12 +1378,46 @@ section[id] {
     font-weight: var(--weight-bold);
 }
 
+.results-sheet__header {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--border-dark);
+    flex-wrap: wrap;
+}
+
+.results-sheet__org {
+    color: var(--primary-cyan);
+    font-family: var(--font-heading);
+    font-weight: var(--weight-black);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: var(--spacing-xs);
+}
+
+.results-sheet__meta,
+.results-sheet__note {
+    color: var(--text-secondary);
+    margin-bottom: 0;
+}
+
+.results-sheet__note {
+    max-width: 360px;
+    font-size: 14px;
+    background: var(--bg-dark-elevated);
+    border-left: 4px solid var(--secondary-purple);
+    padding: var(--spacing-sm);
+}
+
 /* Results Table Styles */
 .results__table-container {
     background: var(--bg-dark-card);
     border: 2px solid var(--border-dark);
     border-radius: 8px;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
     margin-bottom: var(--spacing-xl);
 }
 
@@ -1434,6 +1468,32 @@ section[id] {
     color: var(--text-primary);
 }
 
+.results__table--score-sheet th,
+.results__table--score-sheet td {
+    border-right: 1px solid var(--border-dark);
+}
+
+.results__table--score-sheet {
+    min-width: 720px;
+}
+
+.results__table--score-sheet th:last-child,
+.results__table--score-sheet td:last-child {
+    border-right: 0;
+}
+
+.results__table--score-sheet th:first-child,
+.results__table--score-sheet td:first-child {
+    width: 110px;
+    text-align: center;
+}
+
+.results__table--score-sheet th:nth-child(3),
+.results__table--score-sheet td:nth-child(3) {
+    width: 90px;
+    text-align: center;
+}
+
 .results__position {
     font-weight: var(--weight-bold);
     text-align: center;
@@ -1455,6 +1515,11 @@ section[id] {
 .results__athlete-name {
     font-weight: var(--weight-bold);
     color: var(--text-primary);
+}
+
+.results__marker {
+    color: var(--success);
+    font-weight: var(--weight-bold);
 }
 
 .results-division-title {

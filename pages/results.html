@@ -70,30 +70,30 @@
         <section class="section" id="current-results">
             <div class="container">
                 <div class="section__header">
-                    <h2 class="section__title">Current Season Results</h2>
-                    <p class="section__subtitle">Latest competition results and rankings from our ongoing season</p>
+                    <h2 class="section__title">Official Score Sheets</h2>
+                    <p class="section__subtitle">Bodybuilding results are listed by class and placement. Lower place numbers rank higher; these are not point totals.</p>
                 </div>
                 
                 <div class="results-grid">
                     <div class="result-card">
                         <div class="result-card__header">
-                            <h3 class="result-card__title">Utah State Naturals 2025</h3>
-                            <span class="result-card__date">August 2025</span>
+                            <h3 class="result-card__title">Utah State Naturals 2026</h3>
+                            <span class="result-card__date">August 22, 2026</span>
                         </div>
                         <div class="result-card__content">
-                            <p class="result-card__description">Complete results from our premier Utah competition featuring all divisions and age groups.</p>
-                            <a href="#utah-state-naturals-2025" class="btn btn--primary">View Full Results</a>
+                            <p class="result-card__description">Official class-by-class placements, athlete numbers, pro qualification notes, and overall winners.</p>
+                            <a href="#utah-state-naturals-2026" class="btn btn--primary">View Score Sheet</a>
                         </div>
                     </div>
                     
                     <div class="result-card">
                         <div class="result-card__header">
-                            <h3 class="result-card__title">Night of Champions 2025</h3>
-                            <span class="result-card__date">May 2025</span>
+                            <h3 class="result-card__title">Night of Champions 2026</h3>
+                            <span class="result-card__date">November/December 2026</span>
                         </div>
                         <div class="result-card__content">
-                            <p class="result-card__description">Results from the spectacular Night of Champions competition featuring the best natural bodybuilders from across the region.</p>
-                            <a href="#night-of-champions-2025" class="btn btn--primary">View Full Results</a>
+                            <p class="result-card__description">Championship score sheets organized by division, class, competitor number, and final placing.</p>
+                            <a href="#night-of-champions-2026" class="btn btn--primary">View Score Sheet</a>
                         </div>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
                         <label for="year-filter" class="filter-label">Year:</label>
                         <select id="year-filter" class="filter-select">
                             <option value="all">All Years</option>
-                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
                         </select>
                     </div>
                     <div class="filter-group">
@@ -127,48 +127,77 @@
                         </select>
                     </div>
                     <div class="filter-group">
+                        <label for="division-filter" class="filter-label">Division:</label>
+                        <select id="division-filter" class="filter-select">
+                            <option value="all">All Divisions</option>
+                            <option value="mens-bodybuilding">Men's Bodybuilding</option>
+                            <option value="mens-physique">Men's Physique</option>
+                            <option value="classic-physique">Classic Physique</option>
+                            <option value="womens-bikini">Women's Bikini</option>
+                            <option value="womens-figure">Women's Figure</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
                         <button id="clear-filters" class="btn btn--secondary">Clear Filters</button>
                     </div>
                 </div>
                 
-                <!-- 2025 Results -->
-                <div class="results-year" data-year="2025">
-                    <h3 class="results-year-title">2025 Season Results</h3>
+                <!-- 2026 Results -->
+                <div class="results-year" data-year="2026">
+                    <h3 class="results-year-title">2026 Season Results</h3>
                     
-                    <!-- Utah State Naturals 2025 -->
-                    <div class="results-show" id="utah-state-naturals-2025" data-show="utah-state-naturals" data-year="2025">
-                        <h3 class="results-show-title">Utah State Naturals - August 22, 2025</h3>
+                    <!-- Utah State Naturals 2026 -->
+                    <div class="results-show" id="utah-state-naturals-2026" data-show="utah-state-naturals" data-year="2026">
+                        <div class="results-sheet__header">
+                            <div>
+                                <p class="results-sheet__org">INBA PNBA Mountain States</p>
+                                <h3 class="results-show-title">Utah State Naturals Results</h3>
+                                <p class="results-sheet__meta"><strong>Date:</strong> August 22, 2026</p>
+                            </div>
+                            <p class="results-sheet__note">Placings are final class placements. First place is the highest rank.</p>
+                        </div>
                         
                         <div class="results-division" data-division="mens-physique">
-                            <h4 class="results-division-title">Men's Physique</h4>
+                            <h4 class="results-division-title">Men's Physique - Open</h4>
                             <div class="results__table-container">
-                                <table class="results__table">
+                                <table class="results__table results__table--score-sheet">
                                     <thead>
                                         <tr>
-                                            <th>Place</th>
+                                            <th>Number</th>
                                             <th>Name</th>
-                                            <th>Location</th>
-                                            <th>Points</th>
+                                            <th>Place</th>
+                                            <th>Pro Qualified</th>
+                                            <th>Overall</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="results__position results__position--1">1st</td>
+                                            <td>28</td>
                                             <td class="results__athlete-name">Marcus Rodriguez</td>
-                                            <td>Salt Lake City, UT</td>
-                                            <td>95</td>
+                                            <td class="results__position results__position--1">1</td>
+                                            <td class="results__marker">Qualified</td>
+                                            <td class="results__marker">Overall Winner</td>
                                         </tr>
                                         <tr>
-                                            <td class="results__position results__position--2">2nd</td>
+                                            <td>34</td>
                                             <td class="results__athlete-name">James Wilson</td>
-                                            <td>Provo, UT</td>
-                                            <td>92</td>
+                                            <td class="results__position results__position--2">2</td>
+                                            <td></td>
+                                            <td></td>
                                         </tr>
                                         <tr>
-                                            <td class="results__position results__position--3">3rd</td>
+                                            <td>41</td>
                                             <td class="results__athlete-name">Ryan Chen</td>
-                                            <td>Ogden, UT</td>
-                                            <td>89</td>
+                                            <td class="results__position results__position--3">3</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>52</td>
+                                            <td class="results__athlete-name">Adrian Holt</td>
+                                            <td class="results__position">4</td>
+                                            <td></td>
+                                            <td></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -176,77 +205,39 @@
                         </div>
 
                         <div class="results-division" data-division="womens-bikini">
-                            <h4 class="results-division-title">Women's Bikini</h4>
+                            <h4 class="results-division-title">Women's Bikini - Open</h4>
                             <div class="results__table-container">
-                                <table class="results__table">
+                                <table class="results__table results__table--score-sheet">
                                     <thead>
                                         <tr>
-                                            <th>Place</th>
+                                            <th>Number</th>
                                             <th>Name</th>
-                                            <th>Location</th>
-                                            <th>Points</th>
+                                            <th>Place</th>
+                                            <th>Pro Qualified</th>
+                                            <th>Overall</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="results__position results__position--1">1st</td>
+                                            <td>17</td>
                                             <td class="results__athlete-name">Sarah Chen</td>
-                                            <td>Park City, UT</td>
-                                            <td>98</td>
+                                            <td class="results__position results__position--1">1</td>
+                                            <td class="results__marker">Qualified</td>
+                                            <td class="results__marker">Overall Winner</td>
                                         </tr>
                                         <tr>
-                                            <td class="results__position results__position--2">2nd</td>
+                                            <td>23</td>
                                             <td class="results__athlete-name">Emily Davis</td>
-                                            <td>St. George, UT</td>
-                                            <td>94</td>
+                                            <td class="results__position results__position--2">2</td>
+                                            <td></td>
+                                            <td></td>
                                         </tr>
                                         <tr>
-                                            <td class="results__position results__position--3">3rd</td>
+                                            <td>31</td>
                                             <td class="results__athlete-name">Lisa Thompson</td>
-                                            <td>Logan, UT</td>
-                                            <td>91</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </a>
-            </div>
-
-                    <!-- Colorado Rapids 2025 -->
-                    <div class="results-show" id="colorado-rapids-2025" data-show="colorado-rapids" data-year="2025">
-                        <h3 class="results-show-title">Colorado Rapids - TBD 2025</h3>
-                        
-                        <div class="results-division" data-division="classic-physique">
-                            <h4 class="results-division-title">Classic Physique</h4>
-                            <div class="results__table-container">
-                                <table class="results__table">
-                                    <thead>
-                                        <tr>
-                                            <th>Place</th>
-                                            <th>Name</th>
-                                            <th>Location</th>
-                                            <th>Points</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="results__position results__position--1">1st</td>
-                                            <td class="results__athlete-name">David Thompson</td>
-                                            <td>Denver, CO</td>
-                                            <td>96</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="results__position results__position--2">2nd</td>
-                                            <td class="results__athlete-name">Mike Johnson</td>
-                                            <td>Boulder, CO</td>
-                                            <td>93</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="results__position results__position--3">3rd</td>
-                                            <td class="results__athlete-name">Chris Martinez</td>
-                                            <td>Colorado Springs, CO</td>
-                                            <td>90</td>
+                                            <td class="results__position results__position--3">3</td>
+                                            <td></td>
+                                            <td></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -254,40 +245,103 @@
                         </div>
                     </div>
 
-                    <!-- Night of Champions 2025 -->
-                    <div class="results-show" id="night-of-champions-2025" data-show="night-of-champions" data-year="2025">
-                        <h3 class="results-show-title">Night of Champions - May 2025</h3>
+                    <!-- Colorado Rapids 2026 -->
+                    <div class="results-show" id="colorado-rapids-2026" data-show="colorado-rapids" data-year="2026">
+                        <div class="results-sheet__header">
+                            <div>
+                                <p class="results-sheet__org">INBA PNBA Mountain States</p>
+                                <h3 class="results-show-title">Colorado Rapids Results</h3>
+                                <p class="results-sheet__meta"><strong>Date:</strong> TBD 2026</p>
+                            </div>
+                            <p class="results-sheet__note">Final placements will be posted after judging is complete.</p>
+                        </div>
                         
-                        <div class="results-division" data-division="mens-bodybuilding">
-                            <h4 class="results-division-title">Men's Bodybuilding</h4>
+                        <div class="results-division" data-division="classic-physique">
+                            <h4 class="results-division-title">Classic Physique - Open</h4>
                             <div class="results__table-container">
-                                <table class="results__table">
+                                <table class="results__table results__table--score-sheet">
                                     <thead>
                                         <tr>
-                                            <th>Place</th>
+                                            <th>Number</th>
                                             <th>Name</th>
-                                            <th>Location</th>
-                                            <th>Points</th>
+                                            <th>Place</th>
+                                            <th>Pro Qualified</th>
+                                            <th>Overall</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="results__position results__position--1">1st</td>
+                                            <td>61</td>
+                                            <td class="results__athlete-name">David Thompson</td>
+                                            <td class="results__position results__position--1">1</td>
+                                            <td class="results__marker">Qualified</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>74</td>
+                                            <td class="results__athlete-name">Mike Johnson</td>
+                                            <td class="results__position results__position--2">2</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>82</td>
+                                            <td class="results__athlete-name">Chris Martinez</td>
+                                            <td class="results__position results__position--3">3</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Night of Champions 2026 -->
+                    <div class="results-show" id="night-of-champions-2026" data-show="night-of-champions" data-year="2026">
+                        <div class="results-sheet__header">
+                            <div>
+                                <p class="results-sheet__org">INBA PNBA Mountain States</p>
+                                <h3 class="results-show-title">Night of Champions Results</h3>
+                                <p class="results-sheet__meta"><strong>Date:</strong> November/December 2026</p>
+                            </div>
+                            <p class="results-sheet__note">Overall winners are selected from eligible class winners.</p>
+                        </div>
+                        
+                        <div class="results-division" data-division="mens-bodybuilding">
+                            <h4 class="results-division-title">Men's Bodybuilding - Open</h4>
+                            <div class="results__table-container">
+                                <table class="results__table results__table--score-sheet">
+                                    <thead>
+                                        <tr>
+                                            <th>Number</th>
+                                            <th>Name</th>
+                                            <th>Place</th>
+                                            <th>Pro Qualified</th>
+                                            <th>Overall</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>105</td>
                                             <td class="results__athlete-name">Robert Kim</td>
-                                            <td>Salt Lake City, UT</td>
-                                            <td>98</td>
+                                            <td class="results__position results__position--1">1</td>
+                                            <td class="results__marker">Qualified</td>
+                                            <td class="results__marker">Overall Winner</td>
                                         </tr>
                                         <tr>
-                                            <td class="results__position results__position--2">2nd</td>
+                                            <td>117</td>
                                             <td class="results__athlete-name">Michael Chen</td>
-                                            <td>Provo, UT</td>
-                                            <td>95</td>
+                                            <td class="results__position results__position--2">2</td>
+                                            <td></td>
+                                            <td></td>
                                         </tr>
                                         <tr>
-                                            <td class="results__position results__position--3">3rd</td>
+                                            <td>129</td>
                                             <td class="results__athlete-name">David Martinez</td>
-                                            <td>Ogden, UT</td>
-                                            <td>92</td>
+                                            <td class="results__position results__position--3">3</td>
+                                            <td></td>
+                                            <td></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -295,35 +349,39 @@
                         </div>
 
                         <div class="results-division" data-division="womens-figure">
-                            <h4 class="results-division-title">Women's Figure</h4>
+                            <h4 class="results-division-title">Women's Figure - Open</h4>
                             <div class="results__table-container">
-                                <table class="results__table">
+                                <table class="results__table results__table--score-sheet">
                                     <thead>
                                         <tr>
-                                            <th>Place</th>
+                                            <th>Number</th>
                                             <th>Name</th>
-                                            <th>Location</th>
-                                            <th>Points</th>
+                                            <th>Place</th>
+                                            <th>Pro Qualified</th>
+                                            <th>Overall</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="results__position results__position--1">1st</td>
+                                            <td>206</td>
                                             <td class="results__athlete-name">Michelle Rodriguez</td>
-                                            <td>Syracuse, UT</td>
-                                            <td>97</td>
+                                            <td class="results__position results__position--1">1</td>
+                                            <td class="results__marker">Qualified</td>
+                                            <td class="results__marker">Overall Winner</td>
                                         </tr>
                                         <tr>
-                                            <td class="results__position results__position--2">2nd</td>
+                                            <td>214</td>
                                             <td class="results__athlete-name">Sarah Johnson</td>
-                                            <td>Park City, UT</td>
-                                            <td>94</td>
+                                            <td class="results__position results__position--2">2</td>
+                                            <td></td>
+                                            <td></td>
                                         </tr>
                                         <tr>
-                                            <td class="results__position results__position--3">3rd</td>
+                                            <td>225</td>
                                             <td class="results__athlete-name">Emily Davis</td>
-                                            <td>St. George, UT</td>
-                                            <td>91</td>
+                                            <td class="results__position results__position--3">3</td>
+                                            <td></td>
+                                            <td></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -331,7 +389,7 @@
                         </div>
                     </div>
                 </div>
-
+            </div>
         </section>
 
         <!-- Call to Action Section -->
@@ -342,9 +400,7 @@
                 <div class="hero__actions">
                     <a href="https://naturalbodybuilding.com/" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">Register Now</a>
                     <a href="shows.html" class="btn btn--secondary btn--lg">View Upcoming Shows</a>
-                </a>
-            </div>
-            </a>
+                </div>
             </div>
         </section>
     </main>
