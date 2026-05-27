@@ -1,5 +1,5 @@
-# Deploy static site to GitHub Pages
-# https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow
+# Publish sh/updates to the gh-pages branch (works without "GitHub Actions" Pages source).
+# Repo admin: Settings → Pages → Deploy from branch → gh-pages → / (root)
 
 name: Deploy to GitHub Pages
 
@@ -9,9 +9,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: pages
@@ -19,24 +17,17 @@ concurrency:
 
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout sh/updates
         uses: actions/checkout@v4
         with:
           ref: sh/updates
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload site
-        uses: actions/upload-pages-artifact@v3
+      - name: Publish site to gh-pages branch
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          path: .
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          branch: gh-pages
+          folder: .
+          clean: true
+          single-commit: true

@@ -61,22 +61,19 @@ project-root/
 
 **Branch strategy:** `main` stays the stable default branch. The public preview is built from **`sh/updates`** only—merging to `main` does not change the live site until you change that setup.
 
-Publishing uses `.github/workflows/pages.yml` (GitHub Actions). Pushes to **`sh/updates`** trigger a deploy.
+Pushes to **`sh/updates`** run `.github/workflows/pages.yml`, which copies the site onto the **`gh-pages`** branch.
 
 #### One-time setup (repo admin)
 
-Choose **one** publishing source in [Settings → Pages](https://github.com/Dev-Pipeline-145/INBA-PNBA-mountain-states/settings/pages):
+In [Settings → Pages](https://github.com/Dev-Pipeline-145/INBA-PNBA-mountain-states/settings/pages):
 
-**Option A — GitHub Actions (recommended, matches this repo’s workflow)**
+1. **Source:** Deploy from a branch  
+2. **Branch:** `gh-pages` · **Folder:** `/ (root)`  
+3. Save  
 
-1. Set **Source** to **GitHub Actions**.
-2. Push to `sh/updates` or re-run the workflow from the Actions tab.
+Do **not** use `main` for Pages—`main` is older and missing assets (e.g. the INBA logo under `src/assets/images/`).
 
-**Option B — Deploy from a branch (if Actions is blocked)**
-
-1. Set **Source** to **Deploy from a branch**.
-2. **Branch:** `sh/updates` · **Folder:** `/ (root)`.
-3. Leave `main` unchanged; do not select `main` for Pages.
+After the first green workflow run, wait 1–2 minutes and hard-refresh the preview URL.
 
 #### Deploy updates
 
