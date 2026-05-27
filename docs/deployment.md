@@ -55,17 +55,33 @@ project-root/
 - Ensure proper file permissions
 - Configure web server for SPA routing
 
-### 4. GitHub Pages Deployment
-```bash
-# Push to main branch
-git add .
-git commit -m "Deploy to production"
-git push origin main
+### 4. GitHub Pages Deployment (staging / preview)
 
-# Enable GitHub Pages in repository settings
-# Set source to main branch
-# Site will be available at: https://username.github.io/repository-name
+**Live URL:** [https://dev-pipeline-145.github.io/INBA-PNBA-mountain-states/](https://dev-pipeline-145.github.io/INBA-PNBA-mountain-states/)
+
+This repo uses a GitHub Actions workflow (`.github/workflows/pages.yml`) to publish the static site. Pushes to `main` or `sh/updates` trigger a deploy.
+
+#### One-time setup (repo admin)
+
+1. Open [repository Settings → Pages](https://github.com/Dev-Pipeline-145/INBA-PNBA-mountain-states/settings/pages).
+2. Under **Build and deployment**, set **Source** to **GitHub Actions** (not “Deploy from a branch”).
+3. Push this repo (or merge your branch into `main`).
+
+#### Deploy updates
+
+```bash
+git add .
+git commit -m "Your message"
+git push origin main   # or sh/updates
 ```
+
+Check progress under the repo’s **Actions** tab. The site usually updates within 1–2 minutes after the workflow succeeds.
+
+#### Notes
+
+- `.nojekyll` at the project root tells GitHub not to run Jekyll (avoids issues with paths and assets).
+- Use **relative** links (`index.html`, `../index.html`), not root-absolute paths (`/`), so links work under the project subpath.
+- The shop’s `/api/process-payment` endpoint requires the Node server (`server.js`); checkout will not work on GitHub Pages alone.
 
 ### 5. Netlify Deployment
 1. Connect GitHub repository to Netlify

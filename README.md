@@ -15,6 +15,12 @@ cd INBA-PNBA-mountain-states
 open index.html
 ```
 
+## Preview site (GitHub Pages)
+
+Staging preview: **[https://dev-pipeline-145.github.io/INBA-PNBA-mountain-states/](https://dev-pipeline-145.github.io/INBA-PNBA-mountain-states/)**
+
+See [Deployment Guide](docs/deployment.md) for enabling Pages and publishing updates.
+
 ## Project Structure
 
 ```
