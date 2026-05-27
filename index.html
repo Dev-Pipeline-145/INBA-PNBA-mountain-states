@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="INBA/PNBA Mountain States - Natural bodybuilding competitions in Utah, Colorado, and surrounding areas. Register for shows, view results, and join our community.">
+    <meta name="keywords" content="natural bodybuilding, INBA, PNBA, Utah bodybuilding, Colorado bodybuilding, bodybuilding competition, drug-free bodybuilding">
+    <meta name="author" content="INBA/PNBA Mountain States">
+    <meta property="og:title" content="INBA/PNBA Mountain States - Natural Bodybuilding Excellence">
+    <meta property="og:description" content="Natural bodybuilding competitions across the Mountain States">
+    <meta property="og:type" content="website">
+    <title>INBA/PNBA Mountain States | Natural Bodybuilding Competitions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700&family=Birthstone&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/assets/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__brand">
+                <a href="index.html">
+                    <img class="nav__logo" src="src/assets/images/00_INBA Globa Logo.png" alt="INBA Global">
+                </a>
+            </div>
+            <button class="nav__toggle" aria-label="Toggle navigation" id="navToggle">
+                <span class="nav__toggle-line"></span>
+                <span class="nav__toggle-line"></span>
+                <span class="nav__toggle-line"></span>
+            </button>
+            <div class="nav__menu" id="navMenu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item nav__item--dropdown" id="showsDropdown">
+                        <a href="pages/shows.html" class="nav__link">Shows</a>
+                        <ul class="nav__dropdown">
+                            <li class="nav__dropdown-item"><a href="pages/shows/utah-state-naturals.html" class="nav__link">Utah State Naturals</a></li>
+                            <li class="nav__dropdown-item"><a href="pages/shows/colorado-rapids.html" class="nav__link">Colorado Rapids</a></li>
+                            <li class="nav__dropdown-item"><a href="pages/shows/red-rock.html" class="nav__link">Red Rock Classic</a></li>
+                            <li class="nav__dropdown-item"><a href="pages/shows/night-of-champions.html" class="nav__link">Night of Champions</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item"><a href="pages/champions.html" class="nav__link">Champions</a></li>
+                    <li class="nav__item"><a href="pages/results.html" class="nav__link">Results</a></li>
+                    <li class="nav__item"><a href="pages/shop.html" class="nav__link">Shop</a></li>
+                <li class="nav__item"><a href="pages/contact.html" class="nav__link">Contact</a></li>
+                <li class="nav__item nav__cta">
+                    <a href="https://naturalbodybuilding.com/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Register Now</a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Elevate Your Natural Bodybuilding Journey</h1>
+                    <div class="hero__actions">
+                        <a href="https://naturalbodybuilding.com/" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">Register for Shows</a>
+                        <a href="#shows" class="btn btn--secondary btn--lg">View Schedule</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Why Natural Bodybuilding?</h2>
+                    <p class="section__subtitle">Experience the integrity, fairness, and health-focused approach of drug-tested competitions</p>
+                </div>
+                <div class="feature-list">
+                    <div class="feature-list__item">
+                        <div class="feature-list__icon">✓</div>
+                        <h3 class="feature-list__title">Drug-Tested</h3>
+                        <p class="feature-list__description">Rigorous testing protocols ensure fair competition and maintain the integrity of natural bodybuilding</p>
+                    </div>
+                    <div class="feature-list__item">
+                        <div class="feature-list__icon">⚖️</div>
+                        <h3 class="feature-list__title">Fair Competition</h3>
+                        <p class="feature-list__description">Level playing field where dedication, training, and genetics determine success</p>
+                    </div>
+                    <div class="feature-list__item">
+                        <div class="feature-list__icon">❤️</div>
+                        <h3 class="feature-list__title">Health-Focused</h3>
+                        <p class="feature-list__description">Promote sustainable practices that prioritize long-term health and wellness</p>
+                    </div>
+                    <div class="feature-list__item">
+                        <div class="feature-list__icon">🤝</div>
+                        <h3 class="feature-list__title">Community</h3>
+                        <p class="feature-list__description">Join a supportive network of athletes, trainers, and fans committed to natural excellence</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--gray" id="shows">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Upcoming Bodybuilding Shows</h2>
+                    <p class="section__subtitle">Premier natural bodybuilding competitions across Utah, Colorado, and the Mountain States</p>
+                </div>
+                <div class="show-list">
+                    <article class="show">
+                        <div class="show__image">
+                            <!-- Show venue image placeholder -->
+                        </div>
+                        <div class="show__content">
+                            <div class="show__header">
+                                <div class="show__info">
+                                    <h3 class="show__title">Utah State Naturals</h3>
+                                    <p class="show__location">Springville High School Auditorium, Springville, Utah</p>
+                                    <p class="show__date">May 2026</p>
+                                </div>
+                                <span class="show__badge">Upcoming</span>
+                            </div>
+                            <p class="show__description">The premier natural bodybuilding competition in Utah. Featuring multiple divisions, professional judging, and the opportunity to earn your INBA/PNBA pro card.</p>
+                            <a href="pages/shows/utah-state-naturals.html" class="btn btn--primary">Learn More</a>
+                        </div>
+                    </article>
+
+                    <article class="show">
+                        <div class="show__image">
+                            <!-- Show venue image placeholder -->
+                        </div>
+                        <div class="show__content">
+                            <div class="show__header">
+                                <div class="show__info">
+                                    <h3 class="show__title">Colorado Rapids</h3>
+                                    <p class="show__location">Colorado</p>
+                                    <p class="show__date">Date TBD</p>
+                                </div>
+                                <span class="show__badge">Upcoming</span>
+                            </div>
+                            <p class="show__description">Colorado's premier natural bodybuilding competition. Join athletes from across the Mountain States in this exciting event.</p>
+                            <a href="pages/shows/colorado-rapids.html" class="btn btn--primary">Learn More</a>
+                        </div>
+                    </article>
+
+                    <article class="show">
+                        <div class="show__image">
+                            <!-- Show venue image placeholder -->
+                        </div>
+                        <div class="show__content">
+                            <div class="show__header">
+                                <div class="show__info">
+                                    <h3 class="show__title">Red Rock</h3>
+                                    <p class="show__location">Dixie Convention Center, St. George, Utah</p>
+                                    <p class="show__date">October 2026</p>
+                                </div>
+                                <span class="show__badge">Upcoming</span>
+                            </div>
+                            <p class="show__description">Experience natural bodybuilding in the beautiful red rock country of Southern Utah. A spectacular venue for a spectacular show.</p>
+                            <a href="pages/shows/red-rock.html" class="btn btn--primary">Learn More</a>
+                        </div>
+                    </article>
+
+                    <article class="show">
+                        <div class="show__image">
+                            <!-- Show venue image placeholder -->
+                        </div>
+                        <div class="show__content">
+                            <div class="show__header">
+                                <div class="show__info">
+                                    <h3 class="show__title">Utah's Night of Champions</h3>
+                                    <p class="show__location">Syracuse High School, Syracuse, Utah</p>
+                                    <p class="show__date">November/December 2026</p>
+                                </div>
+                                <span class="show__badge">Championship</span>
+                            </div>
+                            <p class="show__description">The year's championship event featuring the best natural bodybuilders from across the region. Qualify throughout the season for this prestigious competition.</p>
+                            <a href="pages/shows/night-of-champions.html" class="btn btn--primary">Learn More</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--video">
+            <div class="section__video-overlay"></div>
+            <div class="section__video-content container">
+                <div class="section__header">
+                    <h2 class="section__title">Recent Champions</h2>
+                    <p class="section__subtitle">Celebrating excellence in natural bodybuilding</p>
+                    <a href="pages/champions.html" class="btn btn--primary" style="margin-top: var(--spacing-md);">View All Champions</a>
+                </div>
+                <div class="champion-grid">
+                    <article class="champion">
+                        <div class="champion__image-wrapper">
+                            <div class="champion__type-badge">PRO</div>
+                            <div class="champion__image">
+                                <img src="src/assets/champions/IMG_1264-3.jpg" alt="Bikini Pro Champion 2025">
+                            </div>
+                        </div>
+                        <div class="champion__content">
+                            <h3 class="champion__name">Shar Hess</h3>
+                            <p class="champion__title">Bikini Pro Champion</p>
+                            <div class="champion__show">🏆 Utah State Naturals 2025</div>
+                            <blockquote class="champion__quote">
+                                "Competing naturally has been the most rewarding experience of my life. The support from the INBA/PNBA community is incredible."
+                            </blockquote>
+                            <div class="champion__actions">
+                                <a href="#" class="champion__link">Instagram Profile</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="champion">
+                        <div class="champion__image-wrapper">
+                            <div class="champion__type-badge">PRO</div>
+                            <div class="champion__image">
+                                <img src="src/assets/champions/IMG_2006-3.jpg" alt="Wellness Pro Champion 2025">
+                            </div>
+                        </div>
+                        <div class="champion__content">
+                            <h3 class="champion__name">Athlete Name</h3>
+                            <p class="champion__title">Wellness Pro Champion</p>
+                            <div class="champion__show">🏆 Utah State Naturals 2025</div>
+                            <blockquote class="champion__quote">
+                                "Wellness is about balance - strength and grace, power and femininity, hard work and self-care. It's the complete package."
+                            </blockquote>
+                            <div class="champion__actions">
+                                <a href="#" class="champion__link">Instagram Profile</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="champion">
+                        <div class="champion__image-wrapper">
+                            <div class="champion__type-badge">PRO</div>
+                            <div class="champion__image">
+                                <img src="src/assets/champions/IMG_2033.jpg" alt="Pro Men's Physique Champion 2025">
+                            </div>
+                        </div>
+                        <div class="champion__content">
+                            <h3 class="champion__name">Athlete Name</h3>
+                            <p class="champion__title">Pro Men's Physique Champion</p>
+                            <div class="champion__show">🏆 Utah State Naturals 2025</div>
+                            <blockquote class="champion__quote">
+                                "Natural bodybuilding taught me that true strength comes from within. Every rep, every meal, every choice matters when you're building something real."
+                            </blockquote>
+                            <div class="champion__actions">
+                                <a href="#" class="champion__link">Instagram Profile</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--gray">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Featured Local Trainers</h2>
+                    <p class="section__subtitle">Connect with experienced coaches who specialize in natural bodybuilding preparation</p>
+                </div>
+                <div class="trainer-list">
+                    <article class="trainer">
+                        <div class="trainer__image">
+                            <!-- Trainer photo placeholder -->
+                        </div>
+                        <div class="trainer__content">
+                            <h3 class="trainer__name">Coach David Reynolds</h3>
+                            <p class="trainer__specialty">Contest Prep & Nutrition Specialist</p>
+                            <p class="trainer__bio">With over 15 years of experience in natural bodybuilding, Coach Reynolds has helped dozens of athletes achieve their pro cards. His holistic approach focuses on sustainable training methods and evidence-based nutrition protocols.</p>
+                        </div>
+                    </article>
+
+                    <article class="trainer">
+                        <div class="trainer__image">
+                            <!-- Trainer photo placeholder -->
+                        </div>
+                        <div class="trainer__content">
+                            <h3 class="trainer__name">Amanda Chen</h3>
+                            <p class="trainer__specialty">Women's Physique & Figure Expert</p>
+                            <p class="trainer__bio">Former INBA pro athlete turned coach, Amanda specializes in helping women achieve their competitive goals while maintaining health and balance. Her programs emphasize proper posing, stage presence, and mental preparation.</p>
+                        </div>
+                    </article>
+
+                    <article class="trainer">
+                        <div class="trainer__image">
+                            <!-- Trainer photo placeholder -->
+                        </div>
+                        <div class="trainer__content">
+                            <h3 class="trainer__name">Marcus Williams</h3>
+                            <p class="trainer__specialty">Strength & Conditioning Coach</p>
+                            <p class="trainer__bio">Marcus brings his background in exercise science to natural bodybuilding preparation. His training philosophy centers on building a strong foundation through compound movements and progressive overload.</p>
+                        </div>
+                    </article>
+
+                    <article class="trainer">
+                        <div class="trainer__image">
+                            <!-- Trainer photo placeholder -->
+                        </div>
+                        <div class="trainer__content">
+                            <h3 class="trainer__name">Lisa Patel</h3>
+                            <p class="trainer__specialty">Online Coaching & Peak Week Specialist</p>
+                            <p class="trainer__bio">Offering remote coaching services across the Mountain States, Lisa has guided competitors to podium finishes at every major INBA/PNBA show in the region. Her peak week protocols are particularly renowned.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="cta__container container">
+                <h2 class="cta__title">Ready to Start Your Journey?</h2>
+                <p class="cta__text">Join the natural bodybuilding community and compete at your first show. Registration is now open for all upcoming competitions.</p>
+                <a href="https://naturalbodybuilding.com/" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">Register Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__main">
+                <div class="footer__brand">
+                    <img class="footer__logo" src="src/assets/images/00_INBA Globa Logo.png" alt="INBA Global">
+                    <p class="footer__brand-text">Promoting natural bodybuilding excellence across the Mountain States region. Drug-tested competitions, professional support, and a community dedicated to health and athletic achievement.</p>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h4 class="footer__column-title">Quick Links</h4>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="index.html" class="footer__link">Home</a></li>
+                            <li class="footer__list-item"><a href="#shows" class="footer__link">Shows</a></li>
+                            <li class="footer__list-item"><a href="pages/champions.html" class="footer__link">Champions</a></li>
+                            <li class="footer__list-item"><a href="pages/results.html" class="footer__link">Results</a></li>
+                            <li class="footer__list-item"><a href="pages/shop.html" class="footer__link">Shop</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h4 class="footer__column-title">Resources</h4>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="https://www.naturalbodybuilding.com/" class="footer__link" target="_blank" rel="noopener noreferrer">Natural Bodybuilding</a></li>
+                            <li class="footer__list-item"><a href="javascript:void(0)" class="footer__link coming-soon-link" data-feature="Find a Trainer">Find a Trainer</a></li>
+                            <li class="footer__list-item"><a href="javascript:void(0)" class="footer__link coming-soon-link" data-feature="Become a Sponsor">Become a Sponsor</a></li>
+                            <li class="footer__list-item"><a href="pages/contact.html" class="footer__link">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h4 class="footer__column-title">Follow Us</h4>
+                        <div class="footer__social">
+                            <a href="https://www.facebook.com/UtahStateNaturals" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">f</a>
+                            <a href="https://www.instagram.com/roy.critchfield/" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">📷</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2025 INBA/PNBA Mountain States. All rights reserved.</p>
+                <ul class="footer__legal">
+                    <li class="footer__legal-item"><a href="pages/privacy-policy.html" class="footer__link">Privacy Policy</a></li>
+                    <li class="footer__legal-item"><a href="pages/terms-conditions.html" class="footer__link">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Coming Soon Modal -->
+    <div class="coming-soon-modal" id="comingSoonModal">
+        <div class="coming-soon-modal__overlay"></div>
+        <div class="coming-soon-modal__content">
+            <div class="coming-soon-modal__icon">🚧</div>
+            <h2 class="coming-soon-modal__title">Coming Soon</h2>
+            <p class="coming-soon-modal__message" id="comingSoonMessage">This feature is coming soon!</p>
+            <button type="button" class="btn btn--primary" id="comingSoonClose">Got it</button>
+        </div>
+    </div>
+
+    <script src="src/assets/js/main.js"></script>
+</body>
+</html>

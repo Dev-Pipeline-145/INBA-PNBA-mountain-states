@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact INBA/PNBA Mountain States - Register for competitions, get coaching, or reach out with questions about natural bodybuilding.">
+    <meta name="keywords" content="INBA contact, PNBA contact, bodybuilding registration, competition registration, natural bodybuilding coaching">
+    <meta name="author" content="INBA/PNBA Mountain States">
+    <meta property="og:title" content="Contact Us - INBA/PNBA Mountain States">
+    <meta property="og:description" content="Register for competitions, get coaching, or reach out with questions about natural bodybuilding">
+    <meta property="og:type" content="website">
+    <title>Contact Us | INBA/PNBA Mountain States</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../src/assets/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__brand">
+                <a href="../index.html">
+                    <img class="nav__logo" src="../src/assets/images/00_INBA Globa Logo.png" alt="INBA Global">
+                </a>
+            </div>
+            <button class="nav__toggle" aria-label="Toggle navigation" id="navToggle">
+                <span class="nav__toggle-line"></span>
+                <span class="nav__toggle-line"></span>
+                <span class="nav__toggle-line"></span>
+            </button>
+            <div class="nav__menu" id="navMenu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item nav__item--dropdown" id="showsDropdown">
+                        <a href="shows.html" class="nav__link">Shows</a>
+                        <ul class="nav__dropdown">
+                            <li class="nav__dropdown-item"><a href="shows/utah-state-naturals.html" class="nav__link">Utah State Naturals</a></li>
+                            <li class="nav__dropdown-item"><a href="shows/colorado-rapids.html" class="nav__link">Colorado Rapids</a></li>
+                            <li class="nav__dropdown-item"><a href="shows/red-rock.html" class="nav__link">Red Rock Classic</a></li>
+                            <li class="nav__dropdown-item"><a href="shows/night-of-champions.html" class="nav__link">Night of Champions</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item"><a href="champions.html" class="nav__link">Champions</a></li>
+                    <li class="nav__item"><a href="results.html" class="nav__link">Results</a></li>
+                    <li class="nav__item"><a href="shop.html" class="nav__link">Shop</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                    <li class="nav__item nav__cta">
+                        <a href="https://naturalbodybuilding.com/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Register Now</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero hero--contact">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Contact Our Team</h1>
+                    <p class="hero__subtitle">Got questions about natural bodybuilding competitions or need help with registration? We're here to help. Connect with our friendly team and get registered in less than 5 minutes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section" id="register">
+            <div class="container">
+                <div class="contact-layout">
+                    <!-- Left Column: Contact Form -->
+                    <div class="contact-form-section">
+                        <form class="form" id="contactForm">
+                            <div class="form__row">
+                                <div class="form__group">
+                                    <label for="firstName" class="form__label">First name</label>
+                                    <input type="text" id="firstName" name="firstName" class="form__input" placeholder="First name" required>
+                                </div>
+                                <div class="form__group">
+                                    <label for="lastName" class="form__label">Last name</label>
+                                    <input type="text" id="lastName" name="lastName" class="form__input" placeholder="Last name" required>
+                                </div>
+                            </div>
+
+                            <div class="form__group">
+                                <label for="email" class="form__label">Email</label>
+                                <input type="email" id="email" name="email" class="form__input" placeholder="you@company.com" required>
+                            </div>
+
+                            <div class="form__group">
+                                <label for="phone" class="form__label">Phone Number</label>
+                                <div class="form__phone">
+                                    <select class="form__select" id="countryCode">
+                                        <option value="+1">US</option>
+                                        <option value="+1">CA</option>
+                                        <option value="+44">UK</option>
+                                        <option value="+61">AU</option>
+                                    </select>
+                                    <input type="tel" id="phone" name="phone" class="form__input" placeholder="+1 (555) 000-0000" required>
+                                </div>
+                            </div>
+
+                            <div class="form__group">
+                                <label for="message" class="form__label">Message</label>
+                                <textarea id="message" name="message" class="form__textarea" placeholder="Leave us a message..." rows="4" required></textarea>
+                            </div>
+
+                            <div class="form__group">
+                                <fieldset class="form__fieldset">
+                                    <legend class="form__legend">Services</legend>
+                                    <div class="form__checkboxes">
+                                        <div class="form__checkbox-group">
+                                            <input type="checkbox" id="competition-coaching" name="services" value="competition-coaching" class="form__checkbox">
+                                            <label for="competition-coaching" class="form__checkbox-label">Competition Coaching</label>
+                                        </div>
+                                        <div class="form__checkbox-group">
+                                            <input type="checkbox" id="nutrition-planning" name="services" value="nutrition-planning" class="form__checkbox">
+                                            <label for="nutrition-planning" class="form__checkbox-label">Nutrition Planning</label>
+                                        </div>
+                                        <div class="form__checkbox-group">
+                                            <input type="checkbox" id="training-program" name="services" value="training-program" class="form__checkbox">
+                                            <label for="training-program" class="form__checkbox-label">Training Program</label>
+                                        </div>
+                                        <div class="form__checkbox-group">
+                                            <input type="checkbox" id="show-registration" name="services" value="show-registration" class="form__checkbox">
+                                            <label for="show-registration" class="form__checkbox-label">Show Registration</label>
+                                        </div>
+                                        <div class="form__checkbox-group">
+                                            <input type="checkbox" id="sponsorship" name="services" value="sponsorship" class="form__checkbox">
+                                            <label for="sponsorship" class="form__checkbox-label">Sponsorship</label>
+                                        </div>
+                                        <div class="form__checkbox-group">
+                                            <input type="checkbox" id="other" name="services" value="other" class="form__checkbox">
+                                            <label for="other" class="form__checkbox-label">Other</label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+                            <button type="submit" class="btn btn--primary btn--lg form__submit">Send message</button>
+                        </form>
+                    </div>
+
+                    <!-- Right Column: Contact Methods -->
+                    <div class="contact-methods-section">
+                        <div class="contact-method">
+                            <h3 class="contact-method__title">Chat with us</h3>
+                            <p class="contact-method__description">Speak to our friendly team via live chat.</p>
+                            <div class="contact-method__actions">
+                                <a href="javascript:void(0)" class="contact-method__link coming-soon-link" data-feature="Live Chat">
+                                    <span class="contact-method__icon">💬</span>
+                                    Start a live chat
+                                </a>
+                                <a href="mailto:info@inba-pnba-mountainstates.com" class="contact-method__link">
+                                    <span class="contact-method__icon">✉️</span>
+                                    Shoot us an email
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <h3 class="contact-method__title">Call us</h3>
+                            <p class="contact-method__description">Call our team Mon-Fri from 8am to 5pm.</p>
+                            <a href="tel:+15551234567" class="contact-method__phone">
+                                <span class="contact-method__icon">📞</span>
+                                +1 (555) 123-4567
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section section--dark">
+            <div class="container">
+                <h2 class="section__title">Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3 class="faq-item__question">How do I register for a competition?</h3>
+                        <p class="faq-item__answer">Registration is simple! Fill out the contact form above, select "Show Registration" in the services section, and our team will guide you through the process.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-item__question">What are the drug testing requirements?</h3>
+                        <p class="faq-item__answer">All INBA/PNBA competitions are 100% natural. We conduct comprehensive drug testing to ensure fair competition for all athletes.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-item__question">Do you provide coaching services?</h3>
+                        <p class="faq-item__answer">Yes! We have certified coaches available for training, nutrition, and competition preparation. Select "Competition Coaching" in the form above.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-item__question">What's the cost to compete?</h3>
+                        <p class="faq-item__answer">Competition fees vary by show and division. Contact us for specific pricing and early bird discounts available for early registration.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__main">
+                <div class="footer__brand">
+                    <img class="footer__logo" src="../src/assets/images/00_INBA Globa Logo.png" alt="INBA Global">
+                    <p class="footer__brand-text">Promoting natural bodybuilding excellence across the Mountain States region. Drug-tested competitions, professional support, and a community dedicated to health and athletic achievement.</p>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h4 class="footer__column-title">Quick Links</h4>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="../index.html" class="footer__link">Home</a></li>
+                            <li class="footer__list-item"><a href="shows.html" class="footer__link">Shows</a></li>
+                            <li class="footer__list-item"><a href="champions.html" class="footer__link">Champions</a></li>
+                            <li class="footer__list-item"><a href="results.html" class="footer__link">Results</a></li>
+                            <li class="footer__list-item"><a href="shop.html" class="footer__link">Shop</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h4 class="footer__column-title">Resources</h4>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="https://www.naturalbodybuilding.com/" class="footer__link" target="_blank" rel="noopener noreferrer">Natural Bodybuilding</a></li>
+                            <li class="footer__list-item"><a href="javascript:void(0)" class="footer__link coming-soon-link" data-feature="Find a Trainer">Find a Trainer</a></li>
+                            <li class="footer__list-item"><a href="javascript:void(0)" class="footer__link coming-soon-link" data-feature="Become a Sponsor">Become a Sponsor</a></li>
+                            <li class="footer__list-item"><a href="contact.html" class="footer__link">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h4 class="footer__column-title">Follow Us</h4>
+                        <div class="footer__social">
+                            <a href="https://www.facebook.com/UtahStateNaturals" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">f</a>
+                            <a href="https://www.instagram.com/roy.critchfield/" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">📷</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2025 INBA/PNBA Mountain States. All rights reserved.</p>
+                <ul class="footer__legal">
+                    <li class="footer__legal-item"><a href="privacy-policy.html" class="footer__link">Privacy Policy</a></li>
+                    <li class="footer__legal-item"><a href="terms-conditions.html" class="footer__link">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Coming Soon Modal -->
+    <div class="coming-soon-modal" id="comingSoonModal">
+        <div class="coming-soon-modal__overlay"></div>
+        <div class="coming-soon-modal__content">
+            <div class="coming-soon-modal__icon">🚧</div>
+            <h2 class="coming-soon-modal__title">Coming Soon</h2>
+            <p class="coming-soon-modal__message" id="comingSoonMessage">This feature is coming soon!</p>
+            <button type="button" class="btn btn--primary" id="comingSoonClose">Got it</button>
+        </div>
+    </div>
+
+    <script src="../src/assets/js/main.js"></script>
+</body>
+</html>

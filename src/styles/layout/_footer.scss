@@ -1,0 +1,67 @@
+// Layout: Footer
+.footer {
+    background-color: var(--bg-dark-elevated);
+    color: var(--text-secondary);
+    padding: var(--spacing-xxl) 0 var(--spacing-lg);
+    border-top: 4px solid var(--primary-cyan);
+}
+
+.footer__main {
+    display: grid;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+.footer__brand {
+    margin-bottom: 0;
+}
+
+.footer__logo {
+    height: 65px;
+    margin-bottom: var(--spacing-md);
+}
+
+.footer__brand-text {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.footer__links {
+    display: grid;
+    gap: var(--spacing-lg);
+}
+
+.footer__column {
+    margin-bottom: 0;
+}
+
+.footer__column-title {
+    color: var(--primary-cyan);
+    margin-bottom: var(--spacing-md);
+    font-size: 18px;
+    font-weight: var(--weight-black);
+    text-shadow: 0 0 10px rgb(39, 116, 233);
+}
+
+.footer__list {
+    margin-bottom: 0;
+}
+
+.footer__list-item {
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer__list-item:last-child {
+    margin-bottom: 0;
+}
+
+.footer__link {
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+}
+
+.footer__link:hover {
+    color: var(--primary-cyan);
+    padding-left: 5px;
+    text-shadow: 0 0 10px rgba(65, 144, 206, 0.5);
+}

@@ -1,0 +1,37 @@
+// Components: Forms
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.form__label {
+    font-weight: var(--weight-medium);
+    color: var(--text-primary);
+}
+
+.form__input,
+.form__textarea,
+.form__select {
+    padding: var(--spacing-sm);
+    border: 2px solid var(--border-dark);
+    border-radius: 4px;
+    background: var(--bg-dark-card);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    transition: border-color 0.3s ease;
+}
+
+.form__input:focus,
+.form__textarea:focus,
+.form__select:focus {
+    outline: none;
+    border-color: var(--primary-cyan);
+    box-shadow: 0 0 0 3px rgba(65, 144, 206, 0.1);
+}

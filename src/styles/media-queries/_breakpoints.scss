@@ -1,0 +1,85 @@
+// Media Queries: Breakpoints
+@media (min-width: 768px) {
+    .nav__toggle {
+        display: none;
+    }
+
+    .nav__menu {
+        display: block;
+        position: static;
+        box-shadow: none;
+        padding: 0;
+        border-top: none;
+    }
+
+    .nav__list {
+        flex-direction: row;
+        gap: var(--spacing-lg);
+        align-items: center;
+    }
+
+    .nav__item {
+        padding: 0;
+        border-bottom: none;
+        position: relative;
+    }
+
+    .nav__item--dropdown:hover .nav__dropdown,
+    .nav__item--dropdown.is-active .nav__dropdown {
+        display: block;
+    }
+
+    .nav__dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--bg-dark-elevated);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(65, 144, 206, 0.1);
+        padding: var(--spacing-md);
+        min-width: 280px;
+        margin-top: var(--spacing-sm);
+        margin-left: 0;
+        border-top: 3px solid var(--primary-cyan);
+        z-index: 1000;
+    }
+
+    .nav__dropdown-item {
+        padding: var(--spacing-sm) 0;
+        border-bottom: 1px solid var(--border-dark);
+    }
+
+    .nav__dropdown-item:last-child {
+        border-bottom: none;
+    }
+
+    .nav__cta {
+        margin-top: 0;
+    }
+
+    .hero__title {
+        font-size: 56px;
+    }
+
+    .hero__subtitle {
+        font-size: 20px;
+    }
+
+    .hero__actions {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero__title {
+        font-size: 64px;
+    }
+
+    .footer__main {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .footer__links {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

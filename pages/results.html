@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="INBA/PNBA Mountain States Results - View competition results, rankings, and archives from all our natural bodybuilding competitions.">
+    <meta name="keywords" content="INBA results, PNBA results, bodybuilding competition results, mountain states results, competition rankings">
+    <meta name="author" content="INBA/PNBA Mountain States">
+    <meta property="og:title" content="Competition Results - INBA/PNBA Mountain States">
+    <meta property="og:description" content="View competition results and rankings from all our natural bodybuilding competitions">
+    <meta property="og:type" content="website">
+    <title>Results | INBA/PNBA Mountain States</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../src/assets/css/style.css">
+</head>
+<body>
+    <header class="header">
+    <nav class="nav">
+        <div class="nav__brand">
+            <a href="../index.html">
+                <img class="nav__logo" src="../src/assets/images/00_INBA Globa Logo.png" alt="INBA Global">
+            </a>
+        </div>
+        <button class="nav__toggle" aria-label="Toggle navigation" id="navToggle">
+            <span class="nav__toggle-line"></span>
+            <span class="nav__toggle-line"></span>
+            <span class="nav__toggle-line"></span>
+        </button>
+        <div class="nav__menu" id="navMenu">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
+                <li class="nav__item nav__item--dropdown" id="showsDropdown">
+                    <a href="shows.html" class="nav__link">Shows</a>
+                    <ul class="nav__dropdown">
+                        <li class="nav__dropdown-item"><a href="shows/utah-state-naturals.html" class="nav__link">Utah State Naturals</a></li>
+                        <li class="nav__dropdown-item"><a href="shows/colorado-rapids.html" class="nav__link">Colorado Rapids</a></li>
+                        <li class="nav__dropdown-item"><a href="shows/red-rock.html" class="nav__link">Red Rock Classic</a></li>
+                        <li class="nav__dropdown-item"><a href="shows/night-of-champions.html" class="nav__link">Night of Champions</a></li>
+                    </ul>
+                </li>
+                <li class="nav__item"><a href="champions.html" class="nav__link">Champions</a></li>
+                <li class="nav__item"><a href="results.html" class="nav__link">Results</a></li>
+                <li class="nav__item"><a href="shop.html" class="nav__link">Shop</a></li>
+                <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                <li class="nav__item nav__cta">
+                    <a href="https://naturalbodybuilding.com/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Register Now</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+    <main>
+        <section class="hero">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Competition Results & Archives</h1>
+                    <p class="hero__subtitle">View results from past competitions, track athlete progress, and explore our comprehensive competition archives across the Mountain States.</p>
+                    <div class="hero__actions">
+                        <a href="#current-results" class="btn btn--primary btn--lg">Current Results</a>
+                        <a href="#archives" class="btn btn--secondary btn--lg">View Archives</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current Results Section -->
+        <section class="section" id="current-results">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Official Score Sheets</h2>
+                    <p class="section__subtitle">Bodybuilding results are listed by class and placement. Lower place numbers rank higher; these are not point totals.</p>
+                </div>
+                
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-card__header">
+                            <h3 class="result-card__title">Utah State Naturals 2026</h3>
+                            <span class="result-card__date">August 22, 2026</span>
+                        </div>
+                        <div class="result-card__content">
+                            <p class="result-card__description">Official class-by-class placements, athlete numbers, pro qualification notes, and overall winners.</p>
+                            <a href="#utah-state-naturals-2026" class="btn btn--primary">View Score Sheet</a>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="result-card__header">
+                            <h3 class="result-card__title">Night of Champions 2026</h3>
+                            <span class="result-card__date">November/December 2026</span>
+                        </div>
+                        <div class="result-card__content">
+                            <p class="result-card__description">Championship score sheets organized by division, class, competitor number, and final placing.</p>
+                            <a href="#night-of-champions-2026" class="btn btn--primary">View Score Sheet</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Archived Results Section -->
+        <section class="section section--gray" id="archives">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Archived Results</h2>
+                    <p class="section__subtitle">Browse historical competition results by year and show</p>
+                </div>
+                
+                <div class="archive-filters">
+                    <div class="filter-group">
+                        <label for="year-filter" class="filter-label">Year:</label>
+                        <select id="year-filter" class="filter-select">
+                            <option value="all">All Years</option>
+                            <option value="2026">2026</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="show-filter" class="filter-label">Show:</label>
+                        <select id="show-filter" class="filter-select">
+                            <option value="all">All Shows</option>
+                            <option value="utah-state-naturals">Utah State Naturals</option>
+                            <option value="colorado-rapids">Colorado Rapids</option>
+                            <option value="red-rock-classic">Red Rock Classic</option>
+                            <option value="night-of-champions">Night of Champions</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="division-filter" class="filter-label">Division:</label>
+                        <select id="division-filter" class="filter-select">
+                            <option value="all">All Divisions</option>
+                            <option value="mens-bodybuilding">Men's Bodybuilding</option>
+                            <option value="mens-physique">Men's Physique</option>
+                            <option value="classic-physique">Classic Physique</option>
+                            <option value="womens-bikini">Women's Bikini</option>
+                            <option value="womens-figure">Women's Figure</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <button id="clear-filters" class="btn btn--secondary">Clear Filters</button>
+                    </div>
+                </div>
+                
+                <!-- 2026 Results -->
+                <div class="results-year" data-year="2026">
+                    <h3 class="results-year-title">2026 Season Results</h3>
+                    
+                    <!-- Utah State Naturals 2026 -->
+                    <div class="results-show" id="utah-state-naturals-2026" data-show="utah-state-naturals" data-year="2026">
+                        <div class="results-sheet__header">
+                            <div>
+                                <p class="results-sheet__org">INBA PNBA Mountain States</p>
+                                <h3 class="results-show-title">Utah State Naturals Results</h3>
+                                <p class="results-sheet__meta"><strong>Date:</strong> August 22, 2026</p>
+                            </div>
+                            <p class="results-sheet__note">Placings are final class placements. First place is the highest rank.</p>
+                        </div>
+                        
+                        <div class="results-division" data-division="mens-physique">
+                            <h4 class="results-division-title">Men's Physique - Open</h4>
+                            <div class="results__table-container">
+                                <table class="results__table results__table--score-sheet">
+                                    <thead>
+                                        <tr>
+                                            <th>Number</th>
+                                            <th>Name</th>
+                                            <th>Place</th>
+                                            <th>Pro Qualified</th>
+                                            <th>Overall</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>28</td>
+                                            <td class="results__athlete-name">Marcus Rodriguez</td>
+                                            <td class="results__position results__position--1">1</td>
+                                            <td class="results__marker">Qualified</td>
+                                            <td class="results__marker">Overall Winner</td>
+                                        </tr>
+                                        <tr>
+                                            <td>34</td>
+                                            <td class="results__athlete-name">James Wilson</td>
+                                            <td class="results__position results__position--2">2</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>41</td>
+                                            <td class="results__athlete-name">Ryan Chen</td>
+                                            <td class="results__position results__position--3">3</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>52</td>
+                                            <td class="results__athlete-name">Adrian Holt</td>
+                                            <td class="results__position">4</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="results-division" data-division="womens-bikini">
+                            <h4 class="results-division-title">Women's Bikini - Open</h4>
+                            <div class="results__table-container">
+                                <table class="results__table results__table--score-sheet">
+                                    <thead>
+                                        <tr>
+                                            <th>Number</th>
+                                            <th>Name</th>
+                                            <th>Place</th>
+                                            <th>Pro Qualified</th>
+                                            <th>Overall</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>17</td>
+                                            <td class="results__athlete-name">Sarah Chen</td>
+                                            <td class="results__position results__position--1">1</td>
+                                            <td class="results__marker">Qualified</td>
+                                            <td class="results__marker">Overall Winner</td>
+                                        </tr>
+                                        <tr>
+                                            <td>23</td>
+                                            <td class="results__athlete-name">Emily Davis</td>
+                                            <td class="results__position results__position--2">2</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>31</td>
+                                            <td class="results__athlete-name">Lisa Thompson</td>
+                                            <td class="results__position results__position--3">3</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Colorado Rapids 2026 -->
+                    <div class="results-show" id="colorado-rapids-2026" data-show="colorado-rapids" data-year="2026">
+                        <div class="results-sheet__header">
+                            <div>
+                                <p class="results-sheet__org">INBA PNBA Mountain States</p>
+                                <h3 class="results-show-title">Colorado Rapids Results</h3>
+                                <p class="results-sheet__meta"><strong>Date:</strong> TBD 2026</p>
+                            </div>
+                            <p class="results-sheet__note">Final placements will be posted after judging is complete.</p>
+                        </div>
+                        
+                        <div class="results-division" data-division="classic-physique">
+                            <h4 class="results-division-title">Classic Physique - Open</h4>
+                            <div class="results__table-container">
+                                <table class="results__table results__table--score-sheet">
+                                    <thead>
+                                        <tr>
+                                            <th>Number</th>
+                                            <th>Name</th>
+                                            <th>Place</th>
+                                            <th>Pro Qualified</th>
+                                            <th>Overall</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>61</td>
+                                            <td class="results__athlete-name">David Thompson</td>
+                                            <td class="results__position results__position--1">1</td>
+                                            <td class="results__marker">Qualified</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>74</td>
+                                            <td class="results__athlete-name">Mike Johnson</td>
+                                            <td class="results__position results__position--2">2</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>82</td>
+                                            <td class="results__athlete-name">Chris Martinez</td>
+                                            <td class="results__position results__position--3">3</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Night of Champions 2026 -->
+                    <div class="results-show" id="night-of-champions-2026" data-show="night-of-champions" data-year="2026">
+                        <div class="results-sheet__header">
+                            <div>
+                                <p class="results-sheet__org">INBA PNBA Mountain States</p>
+                                <h3 class="results-show-title">Night of Champions Results</h3>
+                                <p class="results-sheet__meta"><strong>Date:</strong> November/December 2026</p>
+                            </div>
+                            <p class="results-sheet__note">Overall winners are selected from eligible class winners.</p>
+                        </div>
+                        
+                        <div class="results-division" data-division="mens-bodybuilding">
+                            <h4 class="results-division-title">Men's Bodybuilding - Open</h4>
+                            <div class="results__table-container">
+                                <table class="results__table results__table--score-sheet">
+                                    <thead>
+                                        <tr>
+                                            <th>Number</th>
+                                            <th>Name</th>
+                                            <th>Place</th>
+                                            <th>Pro Qualified</th>
+                                            <th>Overall</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>105</td>
+                                            <td class="results__athlete-name">Robert Kim</td>
+                                            <td class="results__position results__position--1">1</td>
+                                            <td class="results__marker">Qualified</td>
+                                            <td class="results__marker">Overall Winner</td>
+                                        </tr>
+                                        <tr>
+                                            <td>117</td>
+                                            <td class="results__athlete-name">Michael Chen</td>
+                                            <td class="results__position results__position--2">2</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>129</td>
+                                            <td class="results__athlete-name">David Martinez</td>
+                                            <td class="results__position results__position--3">3</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="results-division" data-division="womens-figure">
+                            <h4 class="results-division-title">Women's Figure - Open</h4>
+                            <div class="results__table-container">
+                                <table class="results__table results__table--score-sheet">
+                                    <thead>
+                                        <tr>
+                                            <th>Number</th>
+                                            <th>Name</th>
+                                            <th>Place</th>
+                                            <th>Pro Qualified</th>
+                                            <th>Overall</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>206</td>
+                                            <td class="results__athlete-name">Michelle Rodriguez</td>
+                                            <td class="results__position results__position--1">1</td>
+                                            <td class="results__marker">Qualified</td>
+                                            <td class="results__marker">Overall Winner</td>
+                                        </tr>
+                                        <tr>
+                                            <td>214</td>
+                                            <td class="results__athlete-name">Sarah Johnson</td>
+                                            <td class="results__position results__position--2">2</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>225</td>
+                                            <td class="results__athlete-name">Emily Davis</td>
+                                            <td class="results__position results__position--3">3</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta">
+            <div class="cta__container container">
+                <h2 class="cta__title">Ready to Compete?</h2>
+                <p class="cta__text">Join our next competition and see your name in the results. Register now for upcoming shows.</p>
+                <div class="hero__actions">
+                    <a href="https://naturalbodybuilding.com/" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">Register Now</a>
+                    <a href="shows.html" class="btn btn--secondary btn--lg">View Upcoming Shows</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__main">
+                <div class="footer__brand">
+                    <img class="footer__logo" src="../src/assets/images/00_INBA Globa Logo.png" alt="INBA Global">
+                    <p class="footer__brand-text">Promoting natural bodybuilding excellence across the Mountain States region. Drug-tested competitions, professional support, and a community dedicated to health and athletic achievement.</p>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h4 class="footer__column-title">Quick Links</h4>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="../index.html" class="footer__link">Home</a></li>
+                            <li class="footer__list-item"><a href="shows.html" class="footer__link">Shows</a></li>
+                            <li class="footer__list-item"><a href="champions.html" class="footer__link">Champions</a></li>
+                            <li class="footer__list-item"><a href="results.html" class="footer__link">Results</a></li>
+                            <li class="footer__list-item"><a href="shop.html" class="footer__link">Shop</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h4 class="footer__column-title">Resources</h4>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="https://www.naturalbodybuilding.com/" class="footer__link" target="_blank" rel="noopener noreferrer">Natural Bodybuilding</a></li>
+                            <li class="footer__list-item"><a href="javascript:void(0)" class="footer__link coming-soon-link" data-feature="Find a Trainer">Find a Trainer</a></li>
+                            <li class="footer__list-item"><a href="javascript:void(0)" class="footer__link coming-soon-link" data-feature="Become a Sponsor">Become a Sponsor</a></li>
+                            <li class="footer__list-item"><a href="contact.html" class="footer__link">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h4 class="footer__column-title">Follow Us</h4>
+                        <div class="footer__social">
+                            <a href="https://www.facebook.com/UtahStateNaturals" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">f</a>
+                            <a href="https://www.instagram.com/roy.critchfield/" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">📷</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2025 INBA/PNBA Mountain States. All rights reserved.</p>
+                <ul class="footer__legal">
+                    <li class="footer__legal-item"><a href="privacy-policy.html" class="footer__link">Privacy Policy</a></li>
+                    <li class="footer__legal-item"><a href="terms-conditions.html" class="footer__link">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../src/assets/js/main.js"></script>
+    <script>
+        // Results filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const showFilter = document.getElementById('show-filter');
+            const divisionFilter = document.getElementById('division-filter');
+            const yearFilter = document.getElementById('year-filter');
+            const clearFilters = document.getElementById('clear-filters');
+            const resultsShows = document.querySelectorAll('.results-show');
+            const resultsDivisions = document.querySelectorAll('.results-division');
+
+            // Check if elements exist before using them
+            if (!showFilter || !yearFilter || !clearFilters) {
+                return;
+            }
+
+            function filterResults() {
+                const selectedShow = showFilter.value;
+                const selectedDivision = divisionFilter ? divisionFilter.value : 'all';
+                const selectedYear = yearFilter.value;
+
+                resultsShows.forEach(show => {
+                    const showName = show.dataset.show;
+                    const showYear = show.dataset.year;
+
+                    const showMatch = selectedShow === 'all' || showName === selectedShow;
+                    const yearMatch = selectedYear === 'all' || showYear === selectedYear;
+
+                    if (showMatch && yearMatch) {
+                        show.style.display = 'block';
+                        show.classList.add('fade-in');
+                    } else {
+                        show.style.display = 'none';
+                        show.classList.remove('fade-in');
+                    }
+                });
+
+                resultsDivisions.forEach(division => {
+                    const divisionName = division.dataset.division;
+                    const divisionMatch = selectedDivision === 'all' || divisionName === selectedDivision;
+
+                    if (divisionMatch) {
+                        division.style.display = 'block';
+                    } else {
+                        division.style.display = 'none';
+                    }
+                });
+            }
+
+            showFilter.addEventListener('change', filterResults);
+            if (divisionFilter) {
+                divisionFilter.addEventListener('change', filterResults);
+            }
+            yearFilter.addEventListener('change', filterResults);
+
+            clearFilters.addEventListener('click', function() {
+                showFilter.value = 'all';
+                if (divisionFilter) {
+                    divisionFilter.value = 'all';
+                }
+                yearFilter.value = 'all';
+                filterResults();
+            });
+
+            // Initial filter
+            filterResults();
+        });
+    </script>
+
+    <!-- Coming Soon Modal -->
+    <div class="coming-soon-modal" id="comingSoonModal">
+        <div class="coming-soon-modal__overlay"></div>
+        <div class="coming-soon-modal__content">
+            <div class="coming-soon-modal__icon">🚧</div>
+            <h2 class="coming-soon-modal__title">Coming Soon</h2>
+            <p class="coming-soon-modal__message" id="comingSoonMessage">This feature is coming soon!</p>
+            <button type="button" class="btn btn--primary" id="comingSoonClose">Got it</button>
+        </div>
+    </div>
+</body>
+</html>

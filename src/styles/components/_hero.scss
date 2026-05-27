@@ -1,0 +1,45 @@
+// Components: Hero
+.hero {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.6) 100%),
+                url('../images/IMG_0138-5.jpg') center/cover;
+    color: var(--text-primary);
+    padding: var(--spacing-xxl) 0 80px 0;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid var(--primary-cyan);
+}
+
+.hero__container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero__content {
+    text-align: center;
+}
+
+.hero__title {
+    font-size: 42px;
+    font-weight: var(--weight-black);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.1;
+    text-shadow: 0 0 20px rgba(65, 144, 206, 0.5), 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero__subtitle {
+    font-size: 18px;
+    margin-bottom: var(--spacing-xl);
+    color: #ffffff;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: var(--weight-regular);
+}
+
+.hero__actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    align-items: center;
+}

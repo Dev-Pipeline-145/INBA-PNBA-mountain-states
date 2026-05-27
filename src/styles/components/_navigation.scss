@@ -1,0 +1,110 @@
+// Components: Navigation
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-sm) var(--spacing-sm);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav__brand {
+    display: flex;
+    align-items: center;
+    padding-left: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+}
+
+.nav__logo {
+    height: 65px;
+    width: auto;
+}
+
+.nav__toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--spacing-xs);
+}
+
+.nav__toggle-line {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: var(--primary-cyan);
+    transition: all 0.3s ease;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(65, 144, 206, 0.5);
+}
+
+.nav__menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-dark-elevated);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    padding: var(--spacing-md);
+    border-top: 1px solid var(--border-dark);
+}
+
+.nav__menu--active {
+    display: block;
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.nav__item {
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--border-dark);
+}
+
+.nav__item:last-child {
+    border-bottom: none;
+}
+
+.nav__link {
+    font-family: var(--font-heading);
+    font-weight: var(--weight-bold);
+    font-size: 15px;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.nav__link:hover {
+    color: var(--primary-cyan);
+    text-shadow: 0 0 10px rgba(65, 144, 206, 0.5);
+}
+
+.nav__item--dropdown {
+    position: relative;
+}
+
+.nav__dropdown {
+    display: none;
+    padding-left: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+}
+
+.nav__item--dropdown.is-active .nav__dropdown {
+    display: block;
+}
+
+.nav__dropdown-item {
+    padding: var(--spacing-xs) 0;
+    border: none;
+}
+
+.nav__cta {
+    margin-top: var(--spacing-md);
+}

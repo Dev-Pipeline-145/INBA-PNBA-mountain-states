@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="INBA/PNBA Mountain States Champions - Meet our elite natural bodybuilding champions and their inspiring stories of dedication and excellence.">
+    <meta name="keywords" content="INBA champions, PNBA champions, natural bodybuilding champions, mountain states champions, bodybuilding winners">
+    <meta name="author" content="INBA/PNBA Mountain States">
+    <meta property="og:title" content="Champions - INBA/PNBA Mountain States">
+    <meta property="og:description" content="Meet our elite natural bodybuilding champions and their inspiring stories">
+    <meta property="og:type" content="website">
+    <title>Champions | INBA/PNBA Mountain States</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700&family=Birthstone&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../src/assets/css/style.css">
+</head>
+<body>
+    <header class="header">
+    <nav class="nav">
+        <div class="nav__brand">
+            <a href="../index.html">
+                <img class="nav__logo" src="../src/assets/images/00_INBA Globa Logo.png" alt="INBA Global">
+            </a>
+        </div>
+        <button class="nav__toggle" aria-label="Toggle navigation" id="navToggle">
+            <span class="nav__toggle-line"></span>
+            <span class="nav__toggle-line"></span>
+            <span class="nav__toggle-line"></span>
+        </button>
+        <div class="nav__menu" id="navMenu">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
+                <li class="nav__item nav__item--dropdown" id="showsDropdown">
+                    <a href="shows.html" class="nav__link">Shows</a>
+                    <ul class="nav__dropdown">
+                        <li class="nav__dropdown-item"><a href="shows/utah-state-naturals.html" class="nav__link">Utah State Naturals</a></li>
+                        <li class="nav__dropdown-item"><a href="shows/colorado-rapids.html" class="nav__link">Colorado Rapids</a></li>
+                        <li class="nav__dropdown-item"><a href="shows/red-rock.html" class="nav__link">Red Rock Classic</a></li>
+                        <li class="nav__dropdown-item"><a href="shows/night-of-champions.html" class="nav__link">Night of Champions</a></li>
+                    </ul>
+                </li>
+                <li class="nav__item"><a href="champions.html" class="nav__link">Champions</a></li>
+                <li class="nav__item"><a href="results.html" class="nav__link">Results</a></li>
+                <li class="nav__item"><a href="shop.html" class="nav__link">Shop</a></li>
+                <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                <li class="nav__item nav__cta">
+                    <a href="https://naturalbodybuilding.com/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Register Now</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+    <main>
+        <section class="hero">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Celebrating Natural Bodybuilding Excellence</h1>
+                    <p class="hero__subtitle">Meet our elite champions and their inspiring stories of dedication, discipline, and natural athletic achievement across the Mountain States.</p>
+                    <div class="hero__actions">
+                        <a href="#champions" class="btn btn--primary btn--lg">View Champions</a>
+                        <a href="https://naturalbodybuilding.com/" class="btn btn--secondary btn--lg" target="_blank" rel="noopener noreferrer">Join Competition</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="section section--gray">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Champion Gallery</h2>
+                    <p class="section__subtitle">Filter by division or year to discover our champions</p>
+                </a>
+            </div>
+                
+                <div class="champion-filters">
+                    <div class="filter-group">
+                        <label for="division-filter" class="filter-label">Division:</label>
+                        <select id="division-filter" class="filter-select">
+                            <option value="all">All Divisions</option>
+                            <option value="mens-physique">Men's Physique</option>
+                            <option value="pro-mens-physique">Pro Men's Physique</option>
+                            <option value="amatuer-bikini-diva">Women's Bikini</option>
+                            <option value="amateur-bikini">Amateur Bikini</option>
+                            <option value="amateur-figure">Amateur Figure</option>
+                            <option value="amateur-classic-physique">Amateur Classic Physique</option>
+                            <option value="bikini-pro-division">Bikini Pro Division</option>
+                            <option value="wellness-pro-division">Wellness Pro Division</option>
+                            <option value="classic-physique-division">Classic Physique Division</option>
+                            <option value="bodybuilding-division">Bodybuilding Division</option>
+                            <option value="wellness-division">Wellness Division</option>
+                        </select>
+                    </a>
+            </div>
+                    <div class="filter-group">
+                        <label for="year-filter" class="filter-label">Year:</label>
+                        <select id="year-filter" class="filter-select">
+                            <option value="all">All Years</option>
+                            <option value="2025">2025</option>
+
+                        </select>
+                    </a>
+            </div>
+                    <div class="filter-group">
+                        <button id="clear-filters" class="btn btn--secondary">Clear Filters</button>
+                    </a>
+            </div>
+                </a>
+            </div>
+            </a>
+            </div>
+        </section>
+
+        <!-- Champions Grid Section -->
+        <section class="section" id="champions">
+            <div class="container">
+                <div class="champion-grid">
+                    <!-- 2025 PRO DIVISIONS - Displayed First -->
+                    
+                    <!-- Champion - Bikini Pro 2025 -->
+                    <article class="champion" data-division="bikini-pro-division" data-year="2025">
+                        <div class="champion__image-wrapper">
+                            <div class="champion__type-badge">PRO</div>
+                            <div class="champion__image">
+                                <img src="../src/assets/champions/IMG_1264-3.jpg" alt="Bikini Pro Champion 2025">
+                            </div>
+                        </div>
+                        <div class="champion__content">
+                            <h3 class="champion__name">Shar Hess</h3>
+                            <p class="champion__title">Pro Bikini Champion</p>
+                            <div class="champion__show">🏆 Utah State Naturals 2025</div>
+                            <blockquote class="champion__quote">
+                                "Competing naturally has been the most rewarding experience of my life. The support from the INBA/PNBA community is incredible."
+                            </blockquote>
+                            <div class="champion__actions">
+                                <a href="#" class="champion__link">Instagram Profile</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Champion - Wellness Pro 2025 -->
+                    <article class="champion" data-division="wellness-pro-division" data-year="2025">
+                        <div class="champion__image-wrapper">
+                            <div class="champion__type-badge">PRO</div>
+                            <div class="champion__image">
+                                <img src="../src/assets/champions/IMG_2006-3.jpg" alt="Wellness Pro Champion 2025">
+                            </div>
+                        </div>
+                        <div class="champion__content">
+                            <h3 class="champion__name">Athlete Name</h3>
+                            <p class="champion__title">Wellness Pro Champion</p>
+                            <div class="champion__show">🏆 Utah State Naturals 2025</div>
+                            <blockquote class="champion__quote">
+                                "Wellness is about balance - strength and grace, power and femininity, hard work and self-care. It's the complete package."
+                            </blockquote>
+                            <div class="champion__actions">
+                                <a href="#" class="champion__link">Instagram Profile</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Champion - Pro Men's Physique 2025 -->
+                    <article class="champion" data-division="pro-mens-physique" data-year="2025">
+                        <div class="champion__image-wrapper">
+                            <div class="champion__type-badge">PRO</div>
+                            <div class="champion__image">
+                                <img src="../src/assets/champions/IMG_2033.jpg" alt="Pro Men's Physique Champion 2025">
+                            </div>
+                        </div>
+                        <div class="champion__content">
+                            <h3 class="champion__name">Athlete Name</h3>
+                            <p class="champion__title">Pro Men's Physique Champion</p>
+                            <div class="champion__show">🏆 Utah State Naturals 2025</div>
+                            <blockquote class="champion__quote">
+                                "Natural bodybuilding taught me that true strength comes from within. Every rep, every meal, every choice matters when you're building something real."
+                            </blockquote>
+                            <div class="champion__actions">
+                                <a href="#" class="champion__link">Instagram Profile</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 2025 AMATEUR DIVISIONS -->
+                    
+                    <!-- Champion - Amateur Bikini 2025 -->
+                    <article class="champion" data-division="amateur-bikini" data-year="2025">
+                        <div class="champion__image-wrapper">
+                            <div class="champion__type-badge" data-type="amateur">AMATEUR</div>
+                            <div class="champion__image">
+                                <img src="../src/assets/champions/IMG_1953-3.jpg" alt="Amateur Bikini Champion 2025">
+                            </div>
+                        </div>
+                        <div class="champion__content">
+                            <h3 class="champion__name">Athlete Name</h3>
+                            <p class="champion__title">Amateur Bikini Winner</p>
+                            <div class="champion__show">🏆 Utah State Naturals 2025</div>
+                            <blockquote class="champion__quote">
+                                "Confidence isn't about being perfect, it's about embracing your journey and celebrating every small victory along the way."
+                            </blockquote>
+                            <div class="champion__actions">
+                                <a href="#" class="champion__link">Instagram Profile</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Champion - Amateur Figure 2025 -->
+                    <article class="champion" data-division="amateur-figure" data-year="2025">
+                        <div class="champion__image-wrapper">
+                            <div class="champion__type-badge" data-type="amateur">AMATEUR</div>
+                            <div class="champion__image">
+                                <img src="../src/assets/champions/IMG_1930.jpg" alt="Amateur Figure Champion 2025">
+                            </div>
+                        </div>
+                        <div class="champion__content">
+                            <h3 class="champion__name">Athlete Name</h3>
+                            <p class="champion__title">Amateur Figure Winner</p>
+                            <div class="champion__show">🏆 Utah State Naturals 2025</div>
+                            <blockquote class="champion__quote">
+                                "The journey to the stage taught me more about myself than any trophy ever could. Natural bodybuilding is about health and excellence."
+                            </blockquote>
+                            <div class="champion__actions">
+                                <a href="#" class="champion__link">Instagram Profile</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Champion - Amateur Classic Physique 2025 -->
+                    <article class="champion" data-division="amateur-classic-physique" data-year="2025">
+                        <div class="champion__image-wrapper">
+                            <div class="champion__type-badge" data-type="amateur">AMATEUR</div>
+                            <div class="champion__image">
+                                <img src="../src/assets/champions/IMG_0351-5.jpg" alt="Amateur Classic Physique Champion 2025">
+                            </div>
+                        </div>
+                        <div class="champion__content">
+                            <h3 class="champion__name">Athlete Name</h3>
+                            <p class="champion__title">Amateur Classic Physique Champion</p>
+                            <div class="champion__show">🏆 Utah State Naturals 2025</div>
+                            <blockquote class="champion__quote">
+                                "The stage is where dreams become reality. But the real victory is in the discipline and dedication it takes to get there."
+                            </blockquote>
+                            <div class="champion__actions">
+                                <a href="#" class="champion__link">Instagram Profile</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PREVIOUS YEARS CHAMPIONS -->
+                    
+                    <!-- Champion 1 - Men's Physique 2024 -->
+                   
+                </a>
+            </div>
+            </a>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta">
+            <div class="cta__container container">
+                <h2 class="cta__title">Ready to Become a Champion?</h2>
+                <p class="cta__text">Join our elite community of natural bodybuilders and start your journey to the stage.</p>
+                <div class="hero__actions">
+                    <a href="https://naturalbodybuilding.com/" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">Register for Competition</a>
+                    <a href="contact.html" class="btn btn--secondary btn--lg">Get Coaching</a>
+                </a>
+            </div>
+            </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__main">
+                <div class="footer__brand">
+                    <img class="footer__logo" src="../src/assets/images/00_INBA Globa Logo.png" alt="INBA Global">
+                    <p class="footer__brand-text">Promoting natural bodybuilding excellence across the Mountain States region. Drug-tested competitions, professional support, and a community dedicated to health and athletic achievement.</p>
+                </a>
+            </div>
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h4 class="footer__column-title">Quick Links</h4>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="../index.html" class="footer__link">Home</a></li>
+                            <li class="footer__list-item"><a href="shows.html" class="footer__link">Shows</a></li>
+                            <li class="footer__list-item"><a href="../champions.html" class="footer__link">Champions</a></li>
+                            <li class="footer__list-item"><a href="../results.html" class="footer__link">Results</a></li>
+                            <li class="footer__list-item"><a href="../shop.html" class="footer__link">Shop</a></li>
+                        </ul>
+                    </a>
+            </div>
+                    <div class="footer__column">
+                        <h4 class="footer__column-title">Resources</h4>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="https://www.naturalbodybuilding.com/" class="footer__link" target="_blank" rel="noopener noreferrer">Natural Bodybuilding</a></li>
+                            <li class="footer__list-item"><a href="javascript:void(0)" class="footer__link coming-soon-link" data-feature="Find a Trainer">Find a Trainer</a></li>
+                            <li class="footer__list-item"><a href="javascript:void(0)" class="footer__link coming-soon-link" data-feature="Become a Sponsor">Become a Sponsor</a></li>
+                            <li class="footer__list-item"><a href="contact.html" class="footer__link">Contact Us</a></li>
+                        </ul>
+                    </a>
+            </div>
+                    <div class="footer__column">
+                        <h4 class="footer__column-title">Follow Us</h4>
+                        <div class="footer__social">
+                            <a href="https://www.facebook.com/UtahStateNaturals" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">f</a>
+                            <a href="https://www.instagram.com/roy.critchfield/" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">📷</a>
+                        </div>
+            </div>
+                    </a>
+            </div>
+                </a>
+            </div>
+            </a>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2025 INBA/PNBA Mountain States. All rights reserved.</p>
+                <ul class="footer__legal">
+                    <li class="footer__legal-item"><a href="privacy-policy.html" class="footer__link">Privacy Policy</a></li>
+                    <li class="footer__legal-item"><a href="terms-conditions.html" class="footer__link">Terms & Conditions</a></li>
+                </ul>
+            </a>
+            </div>
+        </a>
+            </div>
+    </footer>
+
+    <script src="../src/assets/js/main.js"></script>
+    <script>
+        // Champion filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const divisionFilter = document.getElementById('division-filter');
+            const yearFilter = document.getElementById('year-filter');
+            const clearFilters = document.getElementById('clear-filters');
+            const champions = document.querySelectorAll('.champion');
+
+            function filterChampions() {
+                const selectedDivision = divisionFilter.value;
+                const selectedYear = yearFilter.value;
+
+                champions.forEach(champion => {
+                    const championDivision = champion.dataset.division;
+                    const championYear = champion.dataset.year;
+
+                    const divisionMatch = selectedDivision === 'all' || championDivision === selectedDivision;
+                    const yearMatch = selectedYear === 'all' || championYear === selectedYear;
+
+                    if (divisionMatch && yearMatch) {
+                        champion.style.display = 'block';
+                        champion.classList.add('fade-in');
+                    } else {
+                        champion.style.display = 'none';
+                        champion.classList.remove('fade-in');
+                    }
+                });
+            }
+
+            divisionFilter.addEventListener('change', filterChampions);
+            yearFilter.addEventListener('change', filterChampions);
+
+            clearFilters.addEventListener('click', function() {
+                divisionFilter.value = 'all';
+                yearFilter.value = 'all';
+                filterChampions();
+            });
+
+            // Initial filter
+            filterChampions();
+        });
+    </script>
+
+    <!-- Coming Soon Modal -->
+    <div class="coming-soon-modal" id="comingSoonModal">
+        <div class="coming-soon-modal__overlay"></div>
+        <div class="coming-soon-modal__content">
+            <div class="coming-soon-modal__icon">🚧</div>
+            <h2 class="coming-soon-modal__title">Coming Soon</h2>
+            <p class="coming-soon-modal__message" id="comingSoonMessage">This feature is coming soon!</p>
+            <button type="button" class="btn btn--primary" id="comingSoonClose">Got it</button>
+        </div>
+    </div>
+</body>
+</html>
