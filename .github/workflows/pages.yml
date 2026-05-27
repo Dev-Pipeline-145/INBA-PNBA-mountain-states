@@ -5,7 +5,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main, sh/updates]
+    branches: [sh/updates]
   workflow_dispatch:
 
 permissions:
@@ -26,6 +26,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: sh/updates
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

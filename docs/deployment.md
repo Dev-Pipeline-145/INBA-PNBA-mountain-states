@@ -59,20 +59,32 @@ project-root/
 
 **Live URL:** [https://dev-pipeline-145.github.io/INBA-PNBA-mountain-states/](https://dev-pipeline-145.github.io/INBA-PNBA-mountain-states/)
 
-This repo uses a GitHub Actions workflow (`.github/workflows/pages.yml`) to publish the static site. Pushes to `main` or `sh/updates` trigger a deploy.
+**Branch strategy:** `main` stays the stable default branch. The public preview is built from **`sh/updates`** only—merging to `main` does not change the live site until you change that setup.
+
+Publishing uses `.github/workflows/pages.yml` (GitHub Actions). Pushes to **`sh/updates`** trigger a deploy.
 
 #### One-time setup (repo admin)
 
-1. Open [repository Settings → Pages](https://github.com/Dev-Pipeline-145/INBA-PNBA-mountain-states/settings/pages).
-2. Under **Build and deployment**, set **Source** to **GitHub Actions** (not “Deploy from a branch”).
-3. Push this repo (or merge your branch into `main`).
+Choose **one** publishing source in [Settings → Pages](https://github.com/Dev-Pipeline-145/INBA-PNBA-mountain-states/settings/pages):
+
+**Option A — GitHub Actions (recommended, matches this repo’s workflow)**
+
+1. Set **Source** to **GitHub Actions**.
+2. Push to `sh/updates` or re-run the workflow from the Actions tab.
+
+**Option B — Deploy from a branch (if Actions is blocked)**
+
+1. Set **Source** to **Deploy from a branch**.
+2. **Branch:** `sh/updates` · **Folder:** `/ (root)`.
+3. Leave `main` unchanged; do not select `main` for Pages.
 
 #### Deploy updates
 
 ```bash
+git checkout sh/updates
 git add .
 git commit -m "Your message"
-git push origin main   # or sh/updates
+git push origin sh/updates
 ```
 
 Check progress under the repo’s **Actions** tab. The site usually updates within 1–2 minutes after the workflow succeeds.

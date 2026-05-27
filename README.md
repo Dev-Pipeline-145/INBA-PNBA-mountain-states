@@ -19,7 +19,7 @@ open index.html
 
 Staging preview: **[https://dev-pipeline-145.github.io/INBA-PNBA-mountain-states/](https://dev-pipeline-145.github.io/INBA-PNBA-mountain-states/)**
 
-See [Deployment Guide](docs/deployment.md) for enabling Pages and publishing updates.
+The preview deploys from the **`sh/updates`** branch only (`main` is unchanged). See [Deployment Guide](docs/deployment.md) for setup.
 
 ## Project Structure
 
