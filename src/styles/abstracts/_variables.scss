@@ -2,9 +2,9 @@
 // Color palette and design tokens
 
 // Colors
-$primary-cyan: #00FFFF;
-$primary-purple: #8A2BE2;
-$accent-gold: #FFD700;
+$primary-cyan: #4190ce;
+$primary-purple: #f69e1c;
+$accent-gold: #f69e1c;
 $dark-bg: #0A0A0A;
 $dark-surface: #1A1A1A;
 $dark-border: #333333;
@@ -62,7 +62,7 @@ $radius-lg: 12px;
 $shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
 $shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
 $shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
-$shadow-glow: 0 0 20px rgba(0, 255, 255, 0.3);
+$shadow-glow: 0 0 20px rgba(65, 144, 206, 0.3);
 
 // Transitions
 $transition-fast: 0.15s ease;

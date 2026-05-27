@@ -1,0 +1,176 @@
+// Load environment variables from .env file if it exists
+try {
+  require('dotenv').config();
+} catch (e) {
+  // dotenv not installed, that's okay - use command line env vars instead
+}
+
+const express = require('express');
+const cors = require('cors');
+const path = require('path');
+const fs = require('fs');
+const https = require('https');
+const http = require('http');
+const { Client, Environment } = require('square');
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+const HTTPS_PORT = process.env.HTTPS_PORT || 3443;
+
+// Middleware
+app.use(cors());
+app.use(express.json());
+app.use(express.static(path.join(__dirname)));
+
+// Initialize Square client
+// IMPORTANT: Set your Square Access Token as an environment variable
+// For sandbox: Get from https://developer.squareup.com/apps -> Your App -> Sandbox -> Access Token
+// For production: Get from https://developer.squareup.com/apps -> Your App -> Production -> Access Token
+const squareClient = new Client({
+  accessToken: process.env.SQUARE_ACCESS_TOKEN || 'YOUR_SQUARE_ACCESS_TOKEN',
+  environment: process.env.NODE_ENV === 'production' ? Environment.Production : Environment.Sandbox
+});
+
+// Payment processing endpoint
+app.post('/api/process-payment', async (req, res) => {
+  try {
+    // Check if Square Access Token is configured
+    const accessToken = process.env.SQUARE_ACCESS_TOKEN;
+    if (!accessToken || accessToken === 'YOUR_SQUARE_ACCESS_TOKEN') {
+      return res.status(500).json({
+        success: false,
+        error: 'Square Access Token not configured. Please set SQUARE_ACCESS_TOKEN environment variable.'
+      });
+    }
+
+    const { sourceId, amount, items, shipping } = req.body;
+
+    if (!sourceId || !amount) {
+      return res.status(400).json({
+        success: false,
+        error: 'Missing required payment information'
+      });
+    }
+
+    // Generate a unique idempotency key to prevent duplicate charges
+    const idempotencyKey = require('crypto').randomUUID();
+
+    // Create payment request
+    const requestBody = {
+      sourceId: sourceId,
+      amountMoney: {
+        amount: amount, // Amount in cents
+        currency: 'USD'
+      },
+      idempotencyKey: idempotencyKey,
+      note: `Order from ${shipping?.name || 'Customer'}`,
+      buyerEmailAddress: shipping?.email
+    };
+
+    // Process payment using Square Payments API
+    const { result } = await squareClient.paymentsApi.createPayment(requestBody);
+
+    if (result.payment) {
+      const payment = result.payment;
+      
+      // Payment successful
+      // Here you would typically:
+      // 1. Save order to database
+      // 2. Send confirmation email
+      // 3. Update inventory
+      // 4. Log the transaction
+      
+      // Convert BigInt to Number for JSON serialization
+      const amount = payment.amountMoney?.amount 
+        ? Number(payment.amountMoney.amount) 
+        : null;
+
+      res.json({
+        success: true,
+        paymentId: payment.id,
+        status: payment.status,
+        amount: amount
+      });
+    } else {
+      // Payment failed
+      const errors = result.errors || [];
+      
+      res.status(400).json({
+        success: false,
+        error: errors[0]?.detail || 'Payment failed',
+        errors: errors
+      });
+    }
+  } catch (error) {
+    // Handle Square API errors
+    if (error.errors && Array.isArray(error.errors)) {
+      return res.status(400).json({
+        success: false,
+        error: error.errors[0]?.detail || 'Payment processing failed',
+        errors: error.errors
+      });
+    }
+    
+    res.status(500).json({
+      success: false,
+      error: error.message || 'Payment processing failed'
+    });
+  }
+});
+
+// Health check endpoint
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'ok', timestamp: new Date().toISOString() });
+});
+
+// Serve the main pages
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+// Check if SSL certificates exist for HTTPS
+const certPath = path.join(__dirname, 'certs', 'cert.pem');
+const keyPath = path.join(__dirname, 'certs', 'key.pem');
+
+const hasCertificates = fs.existsSync(certPath) && fs.existsSync(keyPath);
+
+if (hasCertificates) {
+  // Start HTTPS server
+  const httpsOptions = {
+    key: fs.readFileSync(keyPath),
+    cert: fs.readFileSync(certPath)
+  };
+  
+  https.createServer(httpsOptions, app).listen(HTTPS_PORT, () => {
+    console.log(`\n✅ HTTPS Server running on https://localhost:${HTTPS_PORT}`);
+    console.log(`\n⚠️  Your browser will show a security warning for self-signed certificates.`);
+    console.log(`   This is normal for local development. Click 'Advanced' and 'Proceed to localhost' to continue.\n`);
+  });
+  
+  // Also start HTTP server that redirects to HTTPS (optional - won't fail if port is in use)
+  http.createServer((req, res) => {
+    res.writeHead(301, { "Location": `https://localhost:${HTTPS_PORT}${req.url}` });
+    res.end();
+  }).listen(PORT, () => {
+    console.log(`ℹ️  HTTP Server running on http://localhost:${PORT} (redirects to HTTPS)\n`);
+  }).on('error', (err) => {
+    if (err.code === 'EADDRINUSE') {
+      console.log(`⚠️  Port ${PORT} is already in use. Using HTTPS directly on port ${HTTPS_PORT}\n`);
+    } else {
+      console.error(`Error starting HTTP redirect server: ${err.message}\n`);
+    }
+  });
+} else {
+  // Start HTTP server only (no certificates found)
+  app.listen(PORT, () => {
+    console.log(`\n⚠️  HTTP Server running on http://localhost:${PORT}`);
+    console.log(`\n❌ HTTPS not available - Square Payments requires HTTPS!`);
+    console.log(`\nTo enable HTTPS for local development:`);
+    console.log(`  1. Run: chmod +x generate-cert.sh && ./generate-cert.sh`);
+    console.log(`  2. Restart the server`);
+    console.log(`\nOr use ngrok for quick HTTPS testing:`);
+    console.log(`  1. Install ngrok: https://ngrok.com/download`);
+    console.log(`  2. Run: ngrok http ${PORT}\n`);
+  });
+}
+

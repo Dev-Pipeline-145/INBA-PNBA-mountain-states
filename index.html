@@ -12,14 +12,16 @@
     <title>INBA/PNBA Mountain States | Natural Bodybuilding Competitions</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700&family=Birthstone&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/assets/css/style.css">
 </head>
 <body>
     <header class="header">
         <nav class="nav">
             <div class="nav__brand">
-                <img class="nav__logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='Montserrat' font-size='24' font-weight='900' fill='%2300FFFF'%3EINBA/PNBA%3C/text%3E%3Ctext x='10' y='55' font-family='Roboto' font-size='12' fill='%23b0b0b0'%3EMountain States%3C/text%3E%3C/svg%3E" alt="INBA/PNBA Mountain States">
+                <a href="index.html">
+                    <img class="nav__logo" src="src/assets/images/00_INBA Globa Logo.png" alt="INBA Global">
+                </a>
             </div>
             <button class="nav__toggle" aria-label="Toggle navigation" id="navToggle">
                 <span class="nav__toggle-line"></span>
@@ -28,7 +30,7 @@
             </button>
             <div class="nav__menu" id="navMenu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="/" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
                     <li class="nav__item nav__item--dropdown" id="showsDropdown">
                         <a href="pages/shows.html" class="nav__link">Shows</a>
                         <ul class="nav__dropdown">
@@ -40,9 +42,10 @@
                     </li>
                     <li class="nav__item"><a href="pages/champions.html" class="nav__link">Champions</a></li>
                     <li class="nav__item"><a href="pages/results.html" class="nav__link">Results</a></li>
+                    <li class="nav__item"><a href="pages/shop.html" class="nav__link">Shop</a></li>
                 <li class="nav__item"><a href="pages/contact.html" class="nav__link">Contact</a></li>
                 <li class="nav__item nav__cta">
-                    <a href="pages/contact.html#register" class="btn btn--primary">Register Now</a>
+                    <a href="https://naturalbodybuilding.com/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Register Now</a>
                 </li>
                 </ul>
             </div>
@@ -54,9 +57,8 @@
             <div class="hero__container container">
                 <div class="hero__content">
                     <h1 class="hero__title">Elevate Your Natural Bodybuilding Journey</h1>
-                    <p class="hero__subtitle">Join the Mountain States' premier natural bodybuilding organization. Compete at the highest level, connect with top trainers, and achieve your championship dreams.</p>
                     <div class="hero__actions">
-                        <a href="src/components/pages/contact.html#register" class="btn btn--primary btn--lg">Register for Shows</a>
+                        <a href="https://naturalbodybuilding.com/" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">Register for Shows</a>
                         <a href="#shows" class="btn btn--secondary btn--lg">View Schedule</a>
                     </div>
                 </div>
@@ -115,7 +117,7 @@
                                 <span class="show__badge">Upcoming</span>
                             </div>
                             <p class="show__description">The premier natural bodybuilding competition in Utah. Featuring multiple divisions, professional judging, and the opportunity to earn your INBA/PNBA pro card.</p>
-                            <a href="src/components/pages/shows.html#utah-state-naturals" class="btn btn--primary">Learn More & Register</a>
+                            <a href="pages/shows/utah-state-naturals.html" class="btn btn--primary">Learn More</a>
                         </div>
                     </article>
 
@@ -133,7 +135,7 @@
                                 <span class="show__badge">Upcoming</span>
                             </div>
                             <p class="show__description">Colorado's premier natural bodybuilding competition. Join athletes from across the Mountain States in this exciting event.</p>
-                            <a href="src/components/pages/shows.html#colorado-rapids" class="btn btn--primary">Learn More & Register</a>
+                            <a href="pages/shows/colorado-rapids.html" class="btn btn--primary">Learn More</a>
                         </div>
                     </article>
 
@@ -151,7 +153,7 @@
                                 <span class="show__badge">Upcoming</span>
                             </div>
                             <p class="show__description">Experience natural bodybuilding in the beautiful red rock country of Southern Utah. A spectacular venue for a spectacular show.</p>
-                            <a href="src/components/pages/shows.html#red-rock-classic" class="btn btn--primary">Learn More & Register</a>
+                            <a href="pages/shows/red-rock.html" class="btn btn--primary">Learn More</a>
                         </div>
                     </article>
 
@@ -169,7 +171,7 @@
                                 <span class="show__badge">Championship</span>
                             </div>
                             <p class="show__description">The year's championship event featuring the best natural bodybuilders from across the region. Qualify throughout the season for this prestigious competition.</p>
-                            <a href="src/components/pages/shows.html#night-of-champions" class="btn btn--primary">Learn More & Register</a>
+                            <a href="pages/shows/night-of-champions.html" class="btn btn--primary">Learn More</a>
                         </div>
                     </article>
                 </div>
@@ -177,115 +179,70 @@
         </section>
 
         <section class="section section--video">
-            <video class="section__video-bg" autoplay muted loop playsinline>
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-athlete-working-out-in-a-gym-29926-large.mp4" type="video/mp4">
-                <!-- Video placeholder: Gym training montage -->
-            </video>
             <div class="section__video-overlay"></div>
             <div class="section__video-content container">
                 <div class="section__header">
                     <h2 class="section__title">Recent Champions</h2>
                     <p class="section__subtitle">Celebrating excellence in natural bodybuilding</p>
+                    <a href="pages/champions.html" class="btn btn--primary" style="margin-top: var(--spacing-md);">View All Champions</a>
                 </div>
                 <div class="champion-grid">
                     <article class="champion">
                         <div class="champion__image-wrapper">
+                            <div class="champion__type-badge">PRO</div>
                             <div class="champion__image">
-                                <!-- Champion photo placeholder -->
-                            </div>
-                            <span class="champion__badge">Champion</span>
-                            <div class="champion__stats">
-                                <div class="champion__stat">
-                                    <div class="champion__stat-label">Division</div>
-                                    <div class="champion__stat-value">Figure</div>
-                                </div>
-                                <div class="champion__stat">
-                                    <div class="champion__stat-label">Year</div>
-                                    <div class="champion__stat-value">2025</div>
-                                </div>
+                                <img src="src/assets/champions/IMG_1264-3.jpg" alt="Bikini Pro Champion 2025">
                             </div>
                         </div>
                         <div class="champion__content">
-                            <h3 class="champion__name">Sarah Johnson</h3>
-                            <p class="champion__title">Overall Women's Figure Champion</p>
-                            <p class="champion__show">Utah State Naturals</p>
+                            <h3 class="champion__name">Shar Hess</h3>
+                            <p class="champion__title">Bikini Pro Champion</p>
+                            <div class="champion__show">🏆 Utah State Naturals 2025</div>
                             <blockquote class="champion__quote">
                                 "Competing naturally has been the most rewarding experience of my life. The support from the INBA/PNBA community is incredible."
                             </blockquote>
-                        </div>
-                        <div class="champion__actions">
-                            <a href="#profile" class="champion__link">View Profile</a>
-                            <div class="champion__social">
-                                <a href="#" class="champion__social-link" aria-label="Instagram">📷</a>
-                                <a href="#" class="champion__social-link" aria-label="Facebook">f</a>
+                            <div class="champion__actions">
+                                <a href="#" class="champion__link">Instagram Profile</a>
                             </div>
                         </div>
                     </article>
 
                     <article class="champion">
                         <div class="champion__image-wrapper">
+                            <div class="champion__type-badge">PRO</div>
                             <div class="champion__image">
-                                <!-- Champion photo placeholder -->
-                            </div>
-                            <span class="champion__badge">Champion</span>
-                            <div class="champion__stats">
-                                <div class="champion__stat">
-                                    <div class="champion__stat-label">Division</div>
-                                    <div class="champion__stat-value">Men's BB</div>
-                                </div>
-                                <div class="champion__stat">
-                                    <div class="champion__stat-label">Year</div>
-                                    <div class="champion__stat-value">2025</div>
-                                </div>
+                                <img src="src/assets/champions/IMG_2006-3.jpg" alt="Wellness Pro Champion 2025">
                             </div>
                         </div>
                         <div class="champion__content">
-                            <h3 class="champion__name">Mike Thompson</h3>
-                            <p class="champion__title">Overall Men's Bodybuilding Champion</p>
-                            <p class="champion__show">Red Rock Championship</p>
+                            <h3 class="champion__name">Athlete Name</h3>
+                            <p class="champion__title">Wellness Pro Champion</p>
+                            <div class="champion__show">🏆 Utah State Naturals 2025</div>
                             <blockquote class="champion__quote">
-                                "Natural bodybuilding represents true dedication to the sport. Every ounce of muscle is earned through hard work and discipline."
+                                "Wellness is about balance - strength and grace, power and femininity, hard work and self-care. It's the complete package."
                             </blockquote>
-                        </div>
-                        <div class="champion__actions">
-                            <a href="#profile" class="champion__link">View Profile</a>
-                            <div class="champion__social">
-                                <a href="#" class="champion__social-link" aria-label="Instagram">📷</a>
-                                <a href="#" class="champion__social-link" aria-label="Facebook">f</a>
+                            <div class="champion__actions">
+                                <a href="#" class="champion__link">Instagram Profile</a>
                             </div>
                         </div>
                     </article>
 
                     <article class="champion">
                         <div class="champion__image-wrapper">
+                            <div class="champion__type-badge">PRO</div>
                             <div class="champion__image">
-                                <!-- Champion photo placeholder -->
-                            </div>
-                            <span class="champion__badge">Champion</span>
-                            <div class="champion__stats">
-                                <div class="champion__stat">
-                                    <div class="champion__stat-label">Division</div>
-                                    <div class="champion__stat-value">Bikini</div>
-                                </div>
-                                <div class="champion__stat">
-                                    <div class="champion__stat-label">Year</div>
-                                    <div class="champion__stat-value">2025</div>
-                                </div>
+                                <img src="src/assets/champions/IMG_2033.jpg" alt="Pro Men's Physique Champion 2025">
                             </div>
                         </div>
                         <div class="champion__content">
-                            <h3 class="champion__name">Jessica Martinez</h3>
-                            <p class="champion__title">Overall Women's Bikini Champion</p>
-                            <p class="champion__show">Night of Champions</p>
+                            <h3 class="champion__name">Athlete Name</h3>
+                            <p class="champion__title">Pro Men's Physique Champion</p>
+                            <div class="champion__show">🏆 Utah State Naturals 2025</div>
                             <blockquote class="champion__quote">
-                                "The journey to the stage taught me more about myself than any trophy ever could. Natural bodybuilding is about health and excellence."
+                                "Natural bodybuilding taught me that true strength comes from within. Every rep, every meal, every choice matters when you're building something real."
                             </blockquote>
-                        </div>
-                        <div class="champion__actions">
-                            <a href="#profile" class="champion__link">View Profile</a>
-                            <div class="champion__social">
-                                <a href="#" class="champion__social-link" aria-label="Instagram">📷</a>
-                                <a href="#" class="champion__social-link" aria-label="Facebook">f</a>
+                            <div class="champion__actions">
+                                <a href="#" class="champion__link">Instagram Profile</a>
                             </div>
                         </div>
                     </article>
@@ -351,7 +308,7 @@
             <div class="cta__container container">
                 <h2 class="cta__title">Ready to Start Your Journey?</h2>
                 <p class="cta__text">Join the natural bodybuilding community and compete at your first show. Registration is now open for all upcoming competitions.</p>
-                <a href="src/components/pages/contact.html#register" class="btn btn--primary btn--lg">Register Now</a>
+                <a href="https://naturalbodybuilding.com/" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">Register Now</a>
             </div>
         </section>
     </main>
@@ -360,35 +317,34 @@
         <div class="container">
             <div class="footer__main">
                 <div class="footer__brand">
-                    <img class="footer__logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='Montserrat' font-size='24' font-weight='900' fill='%2300FFFF'%3EINBA/PNBA%3C/text%3E%3Ctext x='10' y='55' font-family='Roboto' font-size='12' fill='%23b0b0b0'%3EMountain States%3C/text%3E%3C/svg%3E" alt="INBA/PNBA Mountain States">
+                    <img class="footer__logo" src="src/assets/images/00_INBA Globa Logo.png" alt="INBA Global">
                     <p class="footer__brand-text">Promoting natural bodybuilding excellence across the Mountain States region. Drug-tested competitions, professional support, and a community dedicated to health and athletic achievement.</p>
                 </div>
                 <div class="footer__links">
                     <div class="footer__column">
                         <h4 class="footer__column-title">Quick Links</h4>
                         <ul class="footer__list">
-                            <li class="footer__list-item"><a href="/" class="footer__link">Home</a></li>
+                            <li class="footer__list-item"><a href="index.html" class="footer__link">Home</a></li>
                             <li class="footer__list-item"><a href="#shows" class="footer__link">Shows</a></li>
-                            <li class="footer__list-item"><a href="src/components/pages/champions.html" class="footer__link">Champions</a></li>
-                            <li class="footer__list-item"><a href="src/components/pages/results.html" class="footer__link">Results</a></li>
+                            <li class="footer__list-item"><a href="pages/champions.html" class="footer__link">Champions</a></li>
+                            <li class="footer__list-item"><a href="pages/results.html" class="footer__link">Results</a></li>
+                            <li class="footer__list-item"><a href="pages/shop.html" class="footer__link">Shop</a></li>
                         </ul>
                     </div>
                     <div class="footer__column">
                         <h4 class="footer__column-title">Resources</h4>
                         <ul class="footer__list">
-                            <li class="footer__list-item"><a href="#natural-bodybuilding" class="footer__link">Natural Bodybuilding</a></li>
-                            <li class="footer__list-item"><a href="#trainers" class="footer__link">Find a Trainer</a></li>
-                            <li class="footer__list-item"><a href="#sponsors" class="footer__link">Become a Sponsor</a></li>
-                            <li class="footer__list-item"><a href="src/components/pages/contact.html" class="footer__link">Contact Us</a></li>
+                            <li class="footer__list-item"><a href="https://www.naturalbodybuilding.com/" class="footer__link" target="_blank" rel="noopener noreferrer">Natural Bodybuilding</a></li>
+                            <li class="footer__list-item"><a href="javascript:void(0)" class="footer__link coming-soon-link" data-feature="Find a Trainer">Find a Trainer</a></li>
+                            <li class="footer__list-item"><a href="javascript:void(0)" class="footer__link coming-soon-link" data-feature="Become a Sponsor">Become a Sponsor</a></li>
+                            <li class="footer__list-item"><a href="pages/contact.html" class="footer__link">Contact Us</a></li>
                         </ul>
                     </div>
                     <div class="footer__column">
                         <h4 class="footer__column-title">Follow Us</h4>
                         <div class="footer__social">
-                            <a href="#facebook" class="footer__social-link" aria-label="Facebook">f</a>
-                            <a href="#instagram" class="footer__social-link" aria-label="Instagram">📷</a>
-                            <a href="#twitter" class="footer__social-link" aria-label="Twitter">𝕏</a>
-                            <a href="#youtube" class="footer__social-link" aria-label="YouTube">▶</a>
+                            <a href="https://www.facebook.com/UtahStateNaturals" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">f</a>
+                            <a href="https://www.instagram.com/roy.critchfield/" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">📷</a>
                         </div>
                     </div>
                 </div>
@@ -396,12 +352,23 @@
             <div class="footer__bottom">
                 <p class="footer__copyright">&copy; 2025 INBA/PNBA Mountain States. All rights reserved.</p>
                 <ul class="footer__legal">
-                    <li class="footer__legal-item"><a href="#privacy" class="footer__link">Privacy Policy</a></li>
-                    <li class="footer__legal-item"><a href="#terms" class="footer__link">Terms & Conditions</a></li>
+                    <li class="footer__legal-item"><a href="pages/privacy-policy.html" class="footer__link">Privacy Policy</a></li>
+                    <li class="footer__legal-item"><a href="pages/terms-conditions.html" class="footer__link">Terms & Conditions</a></li>
                 </ul>
             </div>
         </div>
     </footer>
+
+    <!-- Coming Soon Modal -->
+    <div class="coming-soon-modal" id="comingSoonModal">
+        <div class="coming-soon-modal__overlay"></div>
+        <div class="coming-soon-modal__content">
+            <div class="coming-soon-modal__icon">🚧</div>
+            <h2 class="coming-soon-modal__title">Coming Soon</h2>
+            <p class="coming-soon-modal__message" id="comingSoonMessage">This feature is coming soon!</p>
+            <button type="button" class="btn btn--primary" id="comingSoonClose">Got it</button>
+        </div>
+    </div>
 
     <script src="src/assets/js/main.js"></script>
 </body>

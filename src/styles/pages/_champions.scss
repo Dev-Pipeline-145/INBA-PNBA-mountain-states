@@ -1,7 +1,7 @@
 // Pages: Champions Page
 .champions__hero {
     background:
-        linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 184, 184, 0.3) 50%, rgba(157, 78, 221, 0.3) 100%),
+        linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 184, 184, 0.3) 50%, rgba(246, 158, 28, 0.3) 100%),
         url('https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=1920&h=600&fit=crop') center/cover;
     color: var(--text-primary);
     padding: var(--spacing-xxl) 0 80px 0;
@@ -41,7 +41,7 @@
 .champions__filter-btn--active {
     border-color: var(--primary-cyan);
     color: var(--primary-cyan);
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    box-shadow: 0 0 15px rgba(65, 144, 206, 0.3);
 }
 
 .champions__stats {
@@ -115,7 +115,7 @@
 
 .pro-card__athlete:hover {
     border-color: var(--primary-cyan);
-    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(65, 144, 206, 0.1);
     transform: translateY(-3px);
 }
 
@@ -123,7 +123,7 @@
     color: var(--primary-cyan);
     font-size: 24px;
     margin-bottom: var(--spacing-sm);
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    text-shadow: 0 0 10px rgba(65, 144, 206, 0.3);
 }
 
 .pro-card__achievement {
@@ -154,7 +154,7 @@
 
 .success-story:hover {
     border-color: var(--secondary-purple);
-    box-shadow: 0 4px 20px rgba(157, 78, 221, 0.1);
+    box-shadow: 0 4px 20px rgba(246, 158, 28, 0.1);
     transform: translateY(-3px);
 }
 

@@ -11,10 +11,12 @@
 .nav__brand {
     display: flex;
     align-items: center;
+    padding-left: var(--spacing-lg);
+    padding-top: var(--spacing-md);
 }
 
 .nav__logo {
-    height: 55px;
+    height: 65px;
     width: auto;
 }
 
@@ -35,7 +37,7 @@
     background-color: var(--primary-cyan);
     transition: all 0.3s ease;
     border-radius: 2px;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(65, 144, 206, 0.5);
 }
 
 .nav__menu {
@@ -81,5 +83,28 @@
 
 .nav__link:hover {
     color: var(--primary-cyan);
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    text-shadow: 0 0 10px rgba(65, 144, 206, 0.5);
+}
+
+.nav__item--dropdown {
+    position: relative;
+}
+
+.nav__dropdown {
+    display: none;
+    padding-left: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+}
+
+.nav__item--dropdown.is-active .nav__dropdown {
+    display: block;
+}
+
+.nav__dropdown-item {
+    padding: var(--spacing-xs) 0;
+    border: none;
+}
+
+.nav__cta {
+    margin-top: var(--spacing-md);
 }

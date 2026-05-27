@@ -55,17 +55,42 @@ project-root/
 - Ensure proper file permissions
 - Configure web server for SPA routing
 
-### 4. GitHub Pages Deployment
-```bash
-# Push to main branch
-git add .
-git commit -m "Deploy to production"
-git push origin main
+### 4. GitHub Pages Deployment (staging / preview)
 
-# Enable GitHub Pages in repository settings
-# Set source to main branch
-# Site will be available at: https://username.github.io/repository-name
+**Live URL:** [https://dev-pipeline-145.github.io/INBA-PNBA-mountain-states/](https://dev-pipeline-145.github.io/INBA-PNBA-mountain-states/)
+
+**Branch strategy:** `main` stays the stable default branch. The public preview is built from **`sh/updates`** only—merging to `main` does not change the live site until you change that setup.
+
+Pushes to **`sh/updates`** run `.github/workflows/pages.yml`, which copies the site onto the **`gh-pages`** branch.
+
+#### One-time setup (repo admin)
+
+In [Settings → Pages](https://github.com/Dev-Pipeline-145/INBA-PNBA-mountain-states/settings/pages):
+
+1. **Source:** Deploy from a branch  
+2. **Branch:** `gh-pages` · **Folder:** `/ (root)`  
+3. Save  
+
+Do **not** use `main` for Pages—`main` is older and missing assets (e.g. the INBA logo under `src/assets/images/`).
+
+After the first green workflow run, wait 1–2 minutes and hard-refresh the preview URL.
+
+#### Deploy updates
+
+```bash
+git checkout sh/updates
+git add .
+git commit -m "Your message"
+git push origin sh/updates
 ```
+
+Check progress under the repo’s **Actions** tab. The site usually updates within 1–2 minutes after the workflow succeeds.
+
+#### Notes
+
+- `.nojekyll` at the project root tells GitHub not to run Jekyll (avoids issues with paths and assets).
+- Use **relative** links (`index.html`, `../index.html`), not root-absolute paths (`/`), so links work under the project subpath.
+- The shop’s `/api/process-payment` endpoint requires the Node server (`server.js`); checkout will not work on GitHub Pages alone.
 
 ### 5. Netlify Deployment
 1. Connect GitHub repository to Netlify

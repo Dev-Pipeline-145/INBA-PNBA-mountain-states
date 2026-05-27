@@ -1,0 +1,33 @@
+# Publish sh/updates to the gh-pages branch (works without "GitHub Actions" Pages source).
+# Repo admin: Settings → Pages → Deploy from branch → gh-pages → / (root)
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [sh/updates]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout sh/updates
+        uses: actions/checkout@v4
+        with:
+          ref: sh/updates
+
+      - name: Publish site to gh-pages branch
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: .
+          clean: true
+          single-commit: true
